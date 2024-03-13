@@ -1,0 +1,79 @@
+interface Entity
+  {
+    id: Uriorcurie!
+  }
+
+type Identifier
+  {
+    value: String!
+    system: String
+  }
+
+type Participant
+  {
+    id: Uriorcurie!
+    associatedPerson: Person
+    identity: Identifier
+    description: String
+    memberOfResearchStudy: ResearchStudy
+    ageAtEnrollment: String
+    primaryDiagnosisCondition: String
+    primaryDiagnosisSite: String
+    indexTimepoint: String
+    originatingSite: String
+  }
+
+type Person
+  {
+    id: Uriorcurie!
+    identity: Identifier
+    species: String
+    breed: String
+    sex: SexEnum
+    ethnicity: String
+    race: String
+    yearOfBirth: Integer
+    vitalStatus: String
+    ageAtDeath: String
+    yearOfDeath: Integer
+    causeOfDeath: String
+  }
+
+type ResearchStudy
+  {
+    id: Uriorcurie!
+    identity: Identifier
+    name: String
+    nameShortened: String
+    description: String
+    descriptionShortened: String
+    sponsor: String
+    dateStarted: TimePoint
+    dateEnded: TimePoint
+    url: Uriorcurie
+    partOf: ResearchStudy
+    researchProjectType: String
+    associatedTimepoints: [TimePoint]
+    principalInvestigator: [String]
+  }
+
+type ResearchStudyCollection
+  {
+    entries: [ResearchStudy]
+  }
+
+type TimePeriod
+  {
+    periodStart: TimePoint
+    periodEnd: TimePoint
+  }
+
+type TimePoint
+  {
+    id: Uriorcurie!
+    dateTime: Datetime
+    indexTimePoint: TimePoint
+    offsetFromIndex: String
+    eventType: String
+  }
+

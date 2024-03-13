@@ -1,0 +1,27 @@
+{
+  "template": "https://github.com/linkml/linkml-project-cookiecutter",
+  "commit": "07462f015a240ff3a68f52e25df027b33b364b1b",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "bdchm",
+      "__project_slug": "bdc_cdm",
+      "github_org": "nhlbidatastage",
+      "__source_path": "src/bdc_cdm/schema/bdc_cdm.yaml",
+      "project_description": "This is the project description.",
+      "full_name": "Brian Furner",
+      "email": "bfurner@uchicago.edu",
+      "__author": "Brian Furner <bfurner@uchicago.edu>",
+      "license": "MIT",
+      "main_schema_class": "Person",
+      "create_python_classes": "Yes",
+      "use_schemasheets": "No",
+      "google_sheet_id": "1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ",
+      "google_sheet_tabs": "personinfo enums",
+      "__google_sheet_module": "personinfo_enums",
+      "github_token_for_pypi_deployment": "PYPI_PASSWORD",
+      "_template": "https://github.com/linkml/linkml-project-cookiecutter"
+    }
+  },
+  "directory": null
+}

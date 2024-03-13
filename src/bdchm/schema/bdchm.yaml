@@ -1,0 +1,226 @@
+---
+id: https://w3id.org/nhlbidatastage/bdchm
+name: bdchm
+title: BioData Catalyst Harmonized Model (bdchm)
+description: |-
+  This is the harmonized data model for use in the BioData Catalyst project.
+license: MIT
+see_also:
+  - https://nhlbidatastage.github.io/bdchm
+
+prefixes:
+  bdc_cdm: https://w3id.org/nhlbidatastage/bdchm/
+  linkml: https://w3id.org/linkml/
+  biolink: https://w3id.org/biolink/
+  schema: http://schema.org/
+  PATO: http://purl.obolibrary.org/obo/PATO_
+  example: https://example.org/
+  omop: https://athena.ohdsi.org/search-terms/terms/
+default_prefix: bdchm
+default_range: string
+
+imports:
+  - linkml:types
+
+classes:
+
+  Entity:
+    abstract: true
+    description: >-
+      Any resource that has its own identifier
+    slots:
+      - id
+    class_uri: schema:Thing
+
+  Person:
+    is_a: Entity
+    description: >-
+      Demographics and other administrative information about an individual or animal receiving care or other health-related services.
+    attributes:
+      species:
+        range: string
+        description: The scientific binomial name for the species of the Person (e.g. Homo sapiens, Mus musculus, etc.)
+      breed:
+        range: string
+        description: A label given to a group of animals homogeneous in appearance and other characteristics that distinguish it from other animals of the same species.
+      sex:
+        range: SexEnum
+        description: The biologic character or quality that distinguishes male and female from one another as expressed by analysis of the person's gonadal, morphologic (internal and external), chromosomal, and hormonal characteristics.
+      ethnicity:
+        range: string
+        description: An individual's self-described social and cultural grouping, specifically whether an individual describes themselves as Hispanic or Latino. The provided values are based on the categories defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau
+      race:
+        range: string
+        description: An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution. The provided values are based on the categories defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau.
+      year_of_birth:
+        range: integer
+        description: Numeric value to represent the calendar year in which an individual was born.
+      vital_status:
+        range: string
+        description: Coded value indicating the state or condition of being living or deceased; also includes the case where the vital status is unknown.
+      age_at_death:
+        range: string
+        description: The age of an individual at the time of death, expressed in days since birth
+      year_of_death:
+        range: integer
+        description: Numeric value to represent the calendar year in which an individual died.
+      cause_of_death:
+        range: string
+        description: Coded value indicating the circumstance or condition that results in the death of the individual.
+    slots:
+      - identity
+
+  Participant:
+    is_a: Entity
+    description: >-
+       A Participant is the entity of interest in a research study, typically a human being or an animal, but can also be a device, group of humans or animals, or a tissue sample. Human research subjects are usually not traceable to a particular person to protect the subject’s privacy.
+    attributes:
+      description:
+        range: string
+        description: A free text field to capture additional info/explanation about the research subject.
+      member_of_research_study:
+        range: ResearchStudy
+        description: A reference to the Study(s) of which this Participant is a member
+      age_at_enrollment:
+        range: string
+        description: The age in days when the Participant enrolled on the ResearchStudy
+      primary_diagnosis_condition:
+        range: string
+        description: This attribute represents the disease that qualified the subject for inclusion on the ResearchStudy
+      primary_diagnosis_site:
+        range: string
+        description: The text term used to describe the primary site of disease, as categorized by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O). This categorization groups cases into general categories.  This attribute represents the primary site of disease that qualified the subject for inclusion on the ResearchStudy.
+      index_timepoint:
+        range: string
+        description: The text term used to describe the reference or anchor date used for date obfuscation, where a single date is obscured by creating one or more date ranges in relation to this date. 
+      originating_site:
+        range: string
+        description: The Organization through which a subject was enrolled on a ResearchStudy.
+    slots:
+      - associated_person
+      - identity
+
+  ResearchStudy:
+    is_a: Entity
+    description: >-
+      A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge. This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques. A ResearchStudy involves the gathering of information about human or animal subjects.
+    attributes:
+      - name:
+          range: string
+          description: An unabridged name of a research program, project, or study.
+      - name_shortened:
+          range: string
+          description: An abbreviated name of a research program, project, or study.
+      - description:
+          range: string
+          description: An unabridged description of a research program, project, or study.
+      - description_shortened:
+          range: string
+          description: An abbreviated description of a research program, project, or study.
+      - sponsor:
+          range: string
+          description: An entity that is responsible for the initiation, management, and/or financing of a research project.
+      - date_started:
+          range: TimePoint
+          description: The date when the research project began.
+      - date_ended:
+          range: TimePoint
+          description: The date when the research project ended.
+      - url:
+          range: uriorcurie
+          description: A URL address for a resource that provides information about a research program, project, or study.
+      - part_of:
+          range: ResearchStudy
+          description: A reference to a parent ResearchStudy (e.g. a link to the overarching CPTAC ResearchStudy from a substudy of CPTAC)
+      - research_project_type:
+          range: string
+          description: The 'type' of ResearchStudy represented (e.g. a broad-based Program like 'CPTAC' or a more focused Project like 'CPTAC PDAC Discovery Study')
+      - associated_timepoints:
+          range: TimePoint
+          multivalued: true
+          description: A collection of timepoint observations that are relevant to research projects (e.g. date of IACUC approval, date of IRB approval, date of embargo end, etc.)
+      - principal_investigator:
+          range: string
+          multivalued: true
+          description: The investigator or investigators leading a project.
+    slots:
+      - identity
+
+  TimePoint:
+    is_a: Entity
+    description: >-
+      A structured representation of a single point in time that allows direct/explicit declaration as a dateTime, specification in terms of offset from a defined index, or description of an event type as a proxy for the time point when it occurred.
+    attributes:
+      - date_time:
+          range: datetime
+          description: An explicitly specified timepoint described in terms of a date and optionally a time on that date.
+      - index_time_point:
+          range: TimePoint
+          description: Another TimePoint from which this point is offset.
+      - offset_from_index:
+          range: string
+          description: A quantity of time that, together with the index date or event, can be used to derive a specific timepoint.
+      - event_type:
+          range: string
+          description: An event that occurred at the point in time specified by this TimePoint.
+
+  TimePeriod:
+    description: >-
+      A period of time between a start and end time point.
+    attributes:
+      - period_start:
+          range: TimePoint
+          description: When a period of time started.
+      - period_end:
+          range: TimePoint
+          description: When a period of time ended.
+
+  Identifier:
+    description: >-
+      An Identifier is associated with a unique object or entity within a given system.  
+    attributes:
+      - value:
+          range: string
+          required: true
+          description: The value of the identifier, as defined by the system.
+      - system:
+          range: string
+          description: The system or namespace that defines the identifier.
+
+  ResearchStudyCollection:
+    tree_root: true
+    description: >-
+      A holder for ResearchStudy objects
+    attributes:
+      entries:
+        range: ResearchStudy
+        multivalued: true
+        inlined: true
+
+
+slots:
+  id:
+    identifier: true
+    slot_uri: schema:identifier
+    range: uriorcurie
+    description: The 'logical' identifier of the entity within the system of record.  The simple value of this attribute stands for an identifier of this data object within the system, it can be used as a reference from other objects within the same system (i.e. primary and foreign keys), and it should be unique per type of object. The same data object copied to a different system will likely have a different "id" in the new system since "id" values are system specific and do not represent persistent business identifiers. Business identifiers are assigned outside the information system and are captured in the "identifier" field. The "id" field is more likely to be a serially or randomly generated value that is assigned to the data object as it is created in a system.
+  identity:
+    slot_uri: schema:identifier
+    range: Identifier
+    description: A 'business' identifier or accession number for the entity, typically as provided by an external system or authority, that are globally unique and persist across implementing systems. Also, since these identifiers are created outside the information system through a specific business process, the Identifier type has additional attributes to capture this additional metadata so the actual identifier values are qualified by the context that created those values. This additional context allows "identifier" instances to be transmitted as business data across systems while still being able to trace them back to the system of origin.
+  associated_person:
+    range: Person
+    description: A reference to the Person that is associated with this record.
+
+
+enums:
+  SexEnum:
+    permissible_values:
+      MALE:
+        description: A person who belongs to the sex that normally produces sperm.
+        meaning: omop:8507
+      FEMALE:
+        description: A person who belongs to the sex that normally produces ova.
+        meaning: omop:8532
+      UNKNOWN:
+        description: Not known, observed, recorded; or reported as unknown by the data contributor.

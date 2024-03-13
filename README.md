@@ -1,10 +1,6 @@
 # bdchm
 
-This is the project description.
-
-## Website
-
-[https://bfurner.github.io/bdchm](https://bfurner.github.io/bdchm)
+This is the LinkML model repository for the BioData Catalyst Harmonized Model (bdchm).
 
 ## Repository Structure
 

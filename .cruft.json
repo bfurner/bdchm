@@ -1,13 +1,13 @@
 {
   "template": "https://github.com/linkml/linkml-project-cookiecutter",
-  "commit": "07462f015a240ff3a68f52e25df027b33b364b1b",
+  "commit": "d9b85bbbdcc49163416a3e3e18e23fe2ecce501b",
   "checkout": null,
   "context": {
     "cookiecutter": {
       "project_name": "bdchm",
-      "__project_slug": "bdc_cdm",
+      "__project_slug": "bdchm",
       "github_org": "nhlbidatastage",
-      "__source_path": "src/bdc_cdm/schema/bdc_cdm.yaml",
+      "__source_path": "src/bdchm/schema/bdchm.yaml",
       "project_description": "This is the project description.",
       "full_name": "Brian Furner",
       "email": "bfurner@uchicago.edu",

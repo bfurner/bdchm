@@ -1,397 +1,397 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/</loc>
+         <loc>https://bfurner.github.io/bdchm/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/Boolean/</loc>
+         <loc>https://bfurner.github.io/bdchm/Boolean/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/CellularOrganismSpeciesEnum/</loc>
+         <loc>https://bfurner.github.io/bdchm/CellularOrganismSpeciesEnum/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/Curie/</loc>
+         <loc>https://bfurner.github.io/bdchm/Curie/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/DataUseEnum/</loc>
+         <loc>https://bfurner.github.io/bdchm/DataUseEnum/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/Date/</loc>
+         <loc>https://bfurner.github.io/bdchm/Date/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/DateOrDatetime/</loc>
+         <loc>https://bfurner.github.io/bdchm/DateOrDatetime/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/Datetime/</loc>
+         <loc>https://bfurner.github.io/bdchm/Datetime/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/Decimal/</loc>
+         <loc>https://bfurner.github.io/bdchm/Decimal/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/Double/</loc>
+         <loc>https://bfurner.github.io/bdchm/Double/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/Entity/</loc>
+         <loc>https://bfurner.github.io/bdchm/Entity/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/Float/</loc>
+         <loc>https://bfurner.github.io/bdchm/Float/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/Identifier/</loc>
+         <loc>https://bfurner.github.io/bdchm/Identifier/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/Integer/</loc>
+         <loc>https://bfurner.github.io/bdchm/Integer/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/Jsonpath/</loc>
+         <loc>https://bfurner.github.io/bdchm/Jsonpath/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/Jsonpointer/</loc>
+         <loc>https://bfurner.github.io/bdchm/Jsonpointer/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/Ncname/</loc>
+         <loc>https://bfurner.github.io/bdchm/Ncname/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/Nodeidentifier/</loc>
+         <loc>https://bfurner.github.io/bdchm/Nodeidentifier/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/Objectidentifier/</loc>
+         <loc>https://bfurner.github.io/bdchm/Objectidentifier/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/Organization/</loc>
+         <loc>https://bfurner.github.io/bdchm/Organization/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/Participant/</loc>
+         <loc>https://bfurner.github.io/bdchm/Participant/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/Person/</loc>
+         <loc>https://bfurner.github.io/bdchm/Person/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/RaceEnum/</loc>
+         <loc>https://bfurner.github.io/bdchm/RaceEnum/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/ResearchStudy/</loc>
+         <loc>https://bfurner.github.io/bdchm/ResearchStudy/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/ResearchStudyCollection/</loc>
+         <loc>https://bfurner.github.io/bdchm/ResearchStudyCollection/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/SexEnum/</loc>
+         <loc>https://bfurner.github.io/bdchm/SexEnum/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/Sparqlpath/</loc>
+         <loc>https://bfurner.github.io/bdchm/Sparqlpath/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/String/</loc>
+         <loc>https://bfurner.github.io/bdchm/String/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/Time/</loc>
+         <loc>https://bfurner.github.io/bdchm/Time/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/TimePeriod/</loc>
+         <loc>https://bfurner.github.io/bdchm/TimePeriod/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/TimePoint/</loc>
+         <loc>https://bfurner.github.io/bdchm/TimePoint/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/Uri/</loc>
+         <loc>https://bfurner.github.io/bdchm/Uri/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/Uriorcurie/</loc>
+         <loc>https://bfurner.github.io/bdchm/Uriorcurie/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/VertebrateBreedEnum/</loc>
+         <loc>https://bfurner.github.io/bdchm/VertebrateBreedEnum/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/VitalStatusEnum/</loc>
+         <loc>https://bfurner.github.io/bdchm/VitalStatusEnum/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/about/</loc>
+         <loc>https://bfurner.github.io/bdchm/about/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/age_at_death/</loc>
+         <loc>https://bfurner.github.io/bdchm/age_at_death/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/age_at_enrollment/</loc>
+         <loc>https://bfurner.github.io/bdchm/age_at_enrollment/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/alias/</loc>
+         <loc>https://bfurner.github.io/bdchm/alias/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/associated_person/</loc>
+         <loc>https://bfurner.github.io/bdchm/associated_person/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/associated_timepoint/</loc>
+         <loc>https://bfurner.github.io/bdchm/associated_timepoint/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/bdchm/</loc>
+         <loc>https://bfurner.github.io/bdchm/bdchm/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/breed/</loc>
+         <loc>https://bfurner.github.io/bdchm/breed/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/cause_of_death/</loc>
+         <loc>https://bfurner.github.io/bdchm/cause_of_death/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/consent_code/</loc>
+         <loc>https://bfurner.github.io/bdchm/consent_code/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/date_ended/</loc>
+         <loc>https://bfurner.github.io/bdchm/date_ended/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/date_started/</loc>
+         <loc>https://bfurner.github.io/bdchm/date_started/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/date_time/</loc>
+         <loc>https://bfurner.github.io/bdchm/date_time/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/description/</loc>
+         <loc>https://bfurner.github.io/bdchm/description/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/description_shortened/</loc>
+         <loc>https://bfurner.github.io/bdchm/description_shortened/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/entries/</loc>
+         <loc>https://bfurner.github.io/bdchm/entries/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/ethnicity/</loc>
+         <loc>https://bfurner.github.io/bdchm/ethnicity/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/event_type/</loc>
+         <loc>https://bfurner.github.io/bdchm/event_type/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/id/</loc>
+         <loc>https://bfurner.github.io/bdchm/id/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/identity/</loc>
+         <loc>https://bfurner.github.io/bdchm/identity/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/index_time_point/</loc>
+         <loc>https://bfurner.github.io/bdchm/index_time_point/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/index_timepoint/</loc>
+         <loc>https://bfurner.github.io/bdchm/index_timepoint/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/member_of_research_study/</loc>
+         <loc>https://bfurner.github.io/bdchm/member_of_research_study/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/name/</loc>
+         <loc>https://bfurner.github.io/bdchm/name/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/name_shortened/</loc>
+         <loc>https://bfurner.github.io/bdchm/name_shortened/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/offset_from_index/</loc>
+         <loc>https://bfurner.github.io/bdchm/offset_from_index/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/organization_type/</loc>
+         <loc>https://bfurner.github.io/bdchm/organization_type/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/originating_site/</loc>
+         <loc>https://bfurner.github.io/bdchm/originating_site/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/part_of/</loc>
+         <loc>https://bfurner.github.io/bdchm/part_of/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/period_end/</loc>
+         <loc>https://bfurner.github.io/bdchm/period_end/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/period_start/</loc>
+         <loc>https://bfurner.github.io/bdchm/period_start/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/principal_investigator/</loc>
+         <loc>https://bfurner.github.io/bdchm/principal_investigator/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/race/</loc>
+         <loc>https://bfurner.github.io/bdchm/race/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/research_project_type/</loc>
+         <loc>https://bfurner.github.io/bdchm/research_project_type/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/sex/</loc>
+         <loc>https://bfurner.github.io/bdchm/sex/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/species/</loc>
+         <loc>https://bfurner.github.io/bdchm/species/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/sponsor/</loc>
+         <loc>https://bfurner.github.io/bdchm/sponsor/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/study_arm/</loc>
+         <loc>https://bfurner.github.io/bdchm/study_arm/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/system/</loc>
+         <loc>https://bfurner.github.io/bdchm/system/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/url/</loc>
+         <loc>https://bfurner.github.io/bdchm/url/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/value/</loc>
+         <loc>https://bfurner.github.io/bdchm/value/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/vital_status/</loc>
+         <loc>https://bfurner.github.io/bdchm/vital_status/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/year_of_birth/</loc>
+         <loc>https://bfurner.github.io/bdchm/year_of_birth/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nhlbidatastage.github.io/bdchm/year_of_death/</loc>
+         <loc>https://bfurner.github.io/bdchm/year_of_death/</loc>
          <lastmod>2024-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>

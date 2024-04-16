@@ -9,13 +9,17 @@ see_also:
   - https://nhlbidatastage.github.io/bdchm
 
 prefixes:
-  bdc_cdm: https://w3id.org/nhlbidatastage/bdchm/
+  bdchm: https://w3id.org/nhlbidatastage/bdchm/
   linkml: https://w3id.org/linkml/
   biolink: https://w3id.org/biolink/
   schema: http://schema.org/
   PATO: http://purl.obolibrary.org/obo/PATO_
   example: https://example.org/
   omop: https://athena.ohdsi.org/search-terms/terms/
+  duo: http://purl.obolibrary.org/obo/DUO_
+  vbo: http://purl.obolibrary.org/obo/VBO_
+  ncbitaxon: http://purl.obolibrary.org/obo/NCBITaxon_
+
 default_prefix: bdchm
 default_range: string
 
@@ -38,11 +42,11 @@ classes:
       Demographics and other administrative information about an individual or animal receiving care or other health-related services.
     attributes:
       species:
-        range: string
-        description: The scientific binomial name for the species of the Person (e.g. Homo sapiens, Mus musculus, etc.)
+        range: CellularOrganismSpeciesEnum
+        description: The scientific binomial name for the species of the Person (e.g. Homo sapiens, Mus musculus, etc.). Values should be derived from the NCBI organismal taxonomy (http://purl.obolibrary.org/obo/ncbitaxon.owl).
       breed:
-        range: string
-        description: A label given to a group of animals homogeneous in appearance and other characteristics that distinguish it from other animals of the same species.
+        range: VertebrateBreedEnum
+        description: A label given to a group of animals homogeneous in appearance and other characteristics that distinguish it from other animals of the same species. Values should be derived from the Vertebrate Breed Ontology (http://purl.obolibrary.org/obo/vbo.owl).
       sex:
         range: SexEnum
         description: The biologic character or quality that distinguishes male and female from one another as expressed by analysis of the person's gonadal, morphologic (internal and external), chromosomal, and hormonal characteristics.
@@ -50,16 +54,16 @@ classes:
         range: string
         description: An individual's self-described social and cultural grouping, specifically whether an individual describes themselves as Hispanic or Latino. The provided values are based on the categories defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau
       race:
-        range: string
+        range: RaceEnum
         description: An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution. The provided values are based on the categories defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau.
       year_of_birth:
         range: integer
         description: Numeric value to represent the calendar year in which an individual was born.
       vital_status:
-        range: string
+        range: VitalStatusEnum
         description: Coded value indicating the state or condition of being living or deceased; also includes the case where the vital status is unknown.
       age_at_death:
-        range: string
+        range: integer
         description: The age of an individual at the time of death, expressed in days since birth
       year_of_death:
         range: integer
@@ -82,20 +86,18 @@ classes:
         range: ResearchStudy
         description: A reference to the Study(s) of which this Participant is a member
       age_at_enrollment:
-        range: string
+        range: integer
         description: The age in days when the Participant enrolled on the ResearchStudy
-      primary_diagnosis_condition:
-        range: string
-        description: This attribute represents the disease that qualified the subject for inclusion on the ResearchStudy
-      primary_diagnosis_site:
-        range: string
-        description: The text term used to describe the primary site of disease, as categorized by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O). This categorization groups cases into general categories.  This attribute represents the primary site of disease that qualified the subject for inclusion on the ResearchStudy.
       index_timepoint:
         range: string
         description: The text term used to describe the reference or anchor date used for date obfuscation, where a single date is obscured by creating one or more date ranges in relation to this date. 
       originating_site:
-        range: string
+        range: Organization
         description: The Organization through which a subject was enrolled on a ResearchStudy.
+      study_arm:
+        range: string
+        description: The arm(s) of the study on which the Participant is enrolled
+        multivalued: true
     slots:
       - associated_person
       - identity
@@ -135,7 +137,7 @@ classes:
       - research_project_type:
           range: string
           description: The 'type' of ResearchStudy represented (e.g. a broad-based Program like 'CPTAC' or a more focused Project like 'CPTAC PDAC Discovery Study')
-      - associated_timepoints:
+      - associated_timepoint:
           range: TimePoint
           multivalued: true
           description: A collection of timepoint observations that are relevant to research projects (e.g. date of IACUC approval, date of IRB approval, date of embargo end, etc.)
@@ -143,6 +145,27 @@ classes:
           range: string
           multivalued: true
           description: The investigator or investigators leading a project.
+      - consent_code:
+          range: DataUseEnum
+          description: 'Data Use Restrictions that are used to indicate permissions/restrictions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used. Based on the Data Use Ontology : see http://www.obofoundry.org/ontology/duo.html'
+          multivalued: true
+    slots:
+      - identity
+
+  Organization:
+    is_a: Entity
+    description: >-
+      A grouping of people or organizations with a common purpose such as a data coordinating center, an university, or an institute within a university.
+    attributes:
+      name:
+        range: string
+        description: The full legal name by which the organization is known (e.g. 'National Cancer Institute')
+      alias:
+        range: string
+        description: A secondary name for the organization such as a short name or abbreviation (e.g. 'NCI')
+      organization_type:
+        range: string
+        description: The type of the organization (e.g. 'Cancer Genome Characterization Center') 
     slots:
       - identity
 
@@ -215,6 +238,43 @@ slots:
 
 
 enums:
+  DataUseEnum:
+    permissible_values:
+      GRU:
+        description: 'This data use permission indicates that use is allowed for general research use for any research purpose. This includes but is not limited to: health/medical/biomedical purposes, fundamental biology research, the study of population origins or ancestry, statistical methods and algorithms development, and social-sciences research.'
+        meaning: duo:0000042
+      HMB:
+        description: 'This data use permission indicates that use is allowed for health/medical/biomedical purposes; does not include the study of population origins or ancestry.'
+        meaning: duo:0000006
+      DS:
+        description: 'This data use permission indicates that use is allowed provided it is related to the specified disease. This term should be coupled with a term describing a disease from an ontology to specify the disease the restriction applies to. DUO recommends MONDO be used, to provide the basis for automated evaluation. For more information see https://github.com/EBISPOT/DUO/blob/master/MONDO_Overview.md Other resources, such as the Disease Ontology, HPO, SNOMED-CT or others, can also be used. When those other resources are being used, this may require an extra mapping step to leverage automated matching algorithms.'
+        meaning: duo:0000007
+      NPUNCU:
+        description: 'This data use modifier indicates that use of the data is limited to not-for-profit organizations and not-for-profit use, non-commercial use.'
+        meaning: duo:0000018
+      IRB:
+        description: 'This data use modifier indicates that the requestor must provide documentation of local IRB/ERB approval.'
+        meaning: duo:0000021
+  RaceEnum:
+    permissible_values:
+      AMERICAN INDIAN OR ALASKA NATIVE:
+        description: 'A person having origins in any of the original peoples of North and South America (including Central America) and who maintains tribal affiliation or community attachment. (OMB)'
+        meaning: omop:8657
+      ASIAN:
+        description: 'A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian subcontinent, including for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam. (OMB)'
+        meaning: omop:8515
+      BLACK OR AFRICAN AMERICAN:
+        description: 'A person having origins in any of the Black racial groups of Africa. Terms such as "Haitian" or "Negro" can be used in addition to "Black or African American". (OMB)'
+        meaning: omop:8516
+      NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER:
+        description: 'Denotes a person having origins in any of the original peoples of Hawaii, Guam, Samoa, or other Pacific Islands. The term covers particularly people who identify themselves as part-Hawaiian, Native Hawaiian, Guamanian or Chamorro, Carolinian, Samoan, Chuukese (Trukese), Fijian, Kosraean, Melanesian, Micronesian, Northern Mariana Islander, Palauan, Papua New Guinean, Pohnpeian, Polynesian, Solomon Islander, Tahitian, Tokelauan, Tongan, Yapese, or Pacific Islander, not specified.'
+        meaning: omop:8557
+      UNKNOWN:
+        description: 'Not known, not observed, not recorded, or refused.'
+        meaning: omop:8552
+      WHITE:
+        description: 'Denotes person with European, Middle Eastern, or North African ancestral origin who identifies, or is identified, as White.'
+        meaning: omop:8527
   SexEnum:
     permissible_values:
       MALE:
@@ -225,3 +285,28 @@ enums:
         meaning: omop:8532
       UNKNOWN:
         description: Not known, observed, recorded; or reported as unknown by the data contributor.
+  CellularOrganismSpeciesEnum:
+    reachable_from:
+      source_ontology: obo:ncbitaxon
+      source_nodes:
+        - ncbitaxon:131567 ## Cellular Organisms
+      include_self: false
+      relationship_types:
+        - rdfs:subClassOf
+  VitalStatusEnum:
+    permissible_values:
+      ALIVE:
+        description: 'Showing characteristics of life; displaying signs of life. (NCIt)'
+        meaning: omop:4230556
+      DEAD:
+        description: 'The cessation of life. (NCIt)'
+        meaning: omop:434489
+  VertebrateBreedEnum:
+    reachable_from:
+      source_ontology: obo:vbo
+      source_nodes:
+        - vbo:0400000 ## Vertebrate Breed
+      include_self: false
+      relationship_types:
+        - rdfs:subClassOf
+  

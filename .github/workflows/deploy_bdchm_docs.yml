@@ -38,3 +38,9 @@ jobs:
           make gendoc
           ([ ! -f docs/about.md ] && cp src/docs/about.md docs/) || true
           make mkd-gh-deploy
+
+      - name: Deploy to GitHub Pages.
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages
+          preview: false

@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://nhlbidatastage.github.io/bdchm/research_project_type/">
+        <link rel="canonical" href="https://nhlbidatastage.github.io/bdchm/CellularOrganismSpeciesEnum/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
     
     
       
-        <title>Slot: research_project_type - BioData Catalyst Harmonized Model</title>
+        <title>Enum: CellularOrganismSpeciesEnum - BioData Catalyst Harmonized Model</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-research_project_type" class="md-skip">
+        <a href="#enum-cellularorganismspeciesenum" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: research_project_type
+              Enum: CellularOrganismSpeciesEnum
             
           </span>
         </div>
@@ -256,15 +256,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#applicable-classes" class="md-nav__link">
-    Applicable Classes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    Properties
+  <a href="#slots" class="md-nav__link">
+    Slots
   </a>
   
 </li>
@@ -310,38 +303,30 @@
                 
                   
 
-  <a href="https://github.com/nhlbidatastage/bdchm/edit/master/docs/research_project_type.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/nhlbidatastage/bdchm/edit/master/docs/CellularOrganismSpeciesEnum.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-research_project_type">Slot: research_project_type</h1>
-<p><em>The 'type' of ResearchStudy represented (e.g. a broad-based Program like 'CPTAC' or a more focused Project like 'CPTAC PDAC Discovery Study')</em></p>
-<p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/research_project_type">bdchm:research_project_type</a></p>
-<!-- no inheritance hierarchy -->
-
-<h2 id="applicable-classes">Applicable Classes</h2>
+<h1 id="enum-cellularorganismspeciesenum">Enum: CellularOrganismSpeciesEnum</h1>
+<p>URI: <a href="./">CellularOrganismSpeciesEnum</a></p>
+<p><em>This is a dynamic enum</em></p>
+<h2 id="slots">Slots</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Description</th>
-<th>Modifies Slot</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="../ResearchStudy/">ResearchStudy</a></td>
-<td>A process where a researcher or organization plans and then executes a series...</td>
-<td>no</td>
+<td><a href="../species/">species</a></td>
+<td>The scientific binomial name for the species of the Person (e</td>
 </tr>
 </tbody>
 </table>
-<h2 id="properties">Properties</h2>
-<ul>
-<li>Range: <a href="../String/">String</a></li>
-</ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
@@ -350,16 +335,16 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: research_project_type
-description: The 'type' of ResearchStudy represented (e.g. a broad-based Program like
-  'CPTAC' or a more focused Project like 'CPTAC PDAC Discovery Study')
+<pre><code class="language-yaml">name: CellularOrganismSpeciesEnum
 from_schema: https://w3id.org/nhlbidatastage/bdchm
 rank: 1000
-alias: research_project_type
-owner: ResearchStudy
-domain_of:
-- ResearchStudy
-range: string
+reachable_from:
+  source_ontology: obo:ncbitaxon
+  source_nodes:
+  - ncbitaxon:131567
+  relationship_types:
+  - rdfs:subClassOf
+  include_self: false
 
 </code></pre>
 

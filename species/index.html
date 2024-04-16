@@ -317,8 +317,8 @@
 
 
 <h1 id="slot-species">Slot: species</h1>
-<p><em>The scientific binomial name for the species of the Person (e.g. Homo sapiens, Mus musculus, etc.)</em></p>
-<p>URI: <a href="bdchm:species">bdchm:species</a></p>
+<p><em>The scientific binomial name for the species of the Person (e.g. Homo sapiens, Mus musculus, etc.). Values should be derived from the NCBI organismal taxonomy (http://purl.obolibrary.org/obo/ncbitaxon.owl).</em></p>
+<p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/species">bdchm:species</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -340,7 +340,7 @@
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../String/">String</a></li>
+<li>Range: <a href="../CellularOrganismSpeciesEnum/">CellularOrganismSpeciesEnum</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -352,14 +352,15 @@
 
 <pre><code class="language-yaml">name: species
 description: The scientific binomial name for the species of the Person (e.g. Homo
-  sapiens, Mus musculus, etc.)
+  sapiens, Mus musculus, etc.). Values should be derived from the NCBI organismal
+  taxonomy (http://purl.obolibrary.org/obo/ncbitaxon.owl).
 from_schema: https://w3id.org/nhlbidatastage/bdchm
 rank: 1000
 alias: species
 owner: Person
 domain_of:
 - Person
-range: string
+range: CellularOrganismSpeciesEnum
 
 </code></pre>
 

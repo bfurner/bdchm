@@ -206,7 +206,7 @@
 </a>
 <h1 id="class-person">Class: Person</h1>
 <p><em>Demographics and other administrative information about an individual or animal receiving care or other health-related services.</em></p>
-<p>URI: <a href="bdchm:Person">bdchm:Person</a></p>
+<p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/Person">bdchm:Person</a></p>
 <div class="mermaid"> classDiagram
     class Person
       Entity &lt;|-- Person
@@ -214,6 +214,8 @@
       Person : age_at_death
 
       Person : breed
+
+          Person --&gt; VertebrateBreedEnum : breed
 
       Person : cause_of_death
 
@@ -227,13 +229,19 @@
 
       Person : race
 
+          Person --&gt; RaceEnum : race
+
       Person : sex
 
           Person --&gt; SexEnum : sex
 
       Person : species
 
+          Person --&gt; CellularOrganismSpeciesEnum : species
+
       Person : vital_status
+
+          Person --&gt; VitalStatusEnum : vital_status
 
       Person : year_of_birth
 
@@ -267,13 +275,13 @@
 </tr>
 <tr>
 <td><a href="../species/">species</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="../CellularOrganismSpeciesEnum/">CellularOrganismSpeciesEnum</a></td>
 <td>The scientific binomial name for the species of the Person (e</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../breed/">breed</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="../VertebrateBreedEnum/">VertebrateBreedEnum</a></td>
 <td>A label given to a group of animals homogeneous in appearance and other chara...</td>
 <td>direct</td>
 </tr>
@@ -291,7 +299,7 @@
 </tr>
 <tr>
 <td><a href="../race/">race</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="../RaceEnum/">RaceEnum</a></td>
 <td>An arbitrary classification of a taxonomic group that is a division of a spec...</td>
 <td>direct</td>
 </tr>
@@ -303,13 +311,13 @@
 </tr>
 <tr>
 <td><a href="../vital_status/">vital_status</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="../VitalStatusEnum/">VitalStatusEnum</a></td>
 <td>Coded value indicating the state or condition of being living or deceased; al...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../age_at_death/">age_at_death</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
 <td>The age of an individual at the time of death, expressed in days since birth</td>
 <td>direct</td>
 </tr>
@@ -391,17 +399,19 @@ attributes:
   species:
     name: species
     description: The scientific binomial name for the species of the Person (e.g.
-      Homo sapiens, Mus musculus, etc.)
+      Homo sapiens, Mus musculus, etc.). Values should be derived from the NCBI organismal
+      taxonomy (http://purl.obolibrary.org/obo/ncbitaxon.owl).
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
-    range: string
+    range: CellularOrganismSpeciesEnum
   breed:
     name: breed
     description: A label given to a group of animals homogeneous in appearance and
       other characteristics that distinguish it from other animals of the same species.
+      Values should be derived from the Vertebrate Breed Ontology (http://purl.obolibrary.org/obo/vbo.owl).
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
-    range: string
+    range: VertebrateBreedEnum
   sex:
     name: sex
     description: The biologic character or quality that distinguishes male and female
@@ -429,7 +439,7 @@ attributes:
       Management and Business and used by the U.S. Census Bureau.
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
-    range: string
+    range: RaceEnum
   year_of_birth:
     name: year_of_birth
     description: Numeric value to represent the calendar year in which an individual
@@ -443,14 +453,14 @@ attributes:
       deceased; also includes the case where the vital status is unknown.
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
-    range: string
+    range: VitalStatusEnum
   age_at_death:
     name: age_at_death
     description: The age of an individual at the time of death, expressed in days
       since birth
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
-    range: string
+    range: integer
   year_of_death:
     name: year_of_death
     description: Numeric value to represent the calendar year in which an individual
@@ -479,25 +489,27 @@ attributes:
   species:
     name: species
     description: The scientific binomial name for the species of the Person (e.g.
-      Homo sapiens, Mus musculus, etc.)
+      Homo sapiens, Mus musculus, etc.). Values should be derived from the NCBI organismal
+      taxonomy (http://purl.obolibrary.org/obo/ncbitaxon.owl).
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
     alias: species
     owner: Person
     domain_of:
     - Person
-    range: string
+    range: CellularOrganismSpeciesEnum
   breed:
     name: breed
     description: A label given to a group of animals homogeneous in appearance and
       other characteristics that distinguish it from other animals of the same species.
+      Values should be derived from the Vertebrate Breed Ontology (http://purl.obolibrary.org/obo/vbo.owl).
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
     alias: breed
     owner: Person
     domain_of:
     - Person
-    range: string
+    range: VertebrateBreedEnum
   sex:
     name: sex
     description: The biologic character or quality that distinguishes male and female
@@ -537,7 +549,7 @@ attributes:
     owner: Person
     domain_of:
     - Person
-    range: string
+    range: RaceEnum
   year_of_birth:
     name: year_of_birth
     description: Numeric value to represent the calendar year in which an individual
@@ -559,7 +571,7 @@ attributes:
     owner: Person
     domain_of:
     - Person
-    range: string
+    range: VitalStatusEnum
   age_at_death:
     name: age_at_death
     description: The age of an individual at the time of death, expressed in days
@@ -570,7 +582,7 @@ attributes:
     owner: Person
     domain_of:
     - Person
-    range: string
+    range: integer
   year_of_death:
     name: year_of_death
     description: Numeric value to represent the calendar year in which an individual
@@ -614,6 +626,7 @@ attributes:
     - Person
     - Participant
     - ResearchStudy
+    - Organization
     range: Identifier
   id:
     name: id

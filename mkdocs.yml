@@ -15,8 +15,8 @@ nav:
   # - Home: home.md
   - Index: index.md
   - About: about.md
-site_url: https://nhlbidatastage.github.io/bdchm
-repo_url: https://github.com/nhlbidatastage/bdchm
+site_url: https://bfurner.github.io/bdchm
+repo_url: https://github.com/bfurner/bdchm
 
 # Uncomment this block to enable use of Google Analytics.
 # Replace the property value with your own ID.

@@ -1,41 +1,41 @@
 # Configuration of generators (defaults illustrated)
 ---
 generator_args:
-  excel:
-    mergeimports: true
-  owl:
-    mergeimports: true
-    metaclasses: true
-    type_objects: true
+#  excel:
+#    mergeimports: false
+#  owl:
+    # mergeimports: false
+    # metaclasses: false
+    # type_objects: false
     # throws 'Cannot handle metadata profile: rdfs'
     # metadata_profile: rdfs
   markdown:
     mergeimports: true
-  graphql:
-    mergeimports: true
-  java:
-    mergeimports: true
-    metadata: true
-  jsonld:
-    mergeimports: true
-  jsonschema:
-    mergeimports: true
-  jsonldcontext:
-    mergeimports: true
+  # graphql:
+  #   mergeimports: false
+  # java:
+  #   mergeimports: false
+  #   metadata: false
+  # jsonld:
+  #   mergeimports: false
+  # jsonschema:
+  #   mergeimports: false
+  # jsonldcontext:
+  #   mergeimports: false
   python:
     mergeimports: true
-  prefixmap:
-    mergeimports: true
-  proto:
-    mergeimports: true
-  shacl:
-    mergeimports: true
-  shex:
-    mergeimports: true
-  sqlddl:
-    mergeimports: true
-  typescript:
-    mergeimports: true
-    metadata: true
+  # prefixmap:
+  #   mergeimports: false
+  # proto:
+  #   mergeimports: false
+  # shacl:
+  #   mergeimports: false
+  # shex:
+  #   mergeimports: false
+  # sqlddl:
+  #   mergeimports: false
+  # typescript:
+  #   mergeimports: false
+  #   metadata: false
 
 ...

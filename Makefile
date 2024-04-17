@@ -55,7 +55,8 @@ endif
 
 
 # basename of a YAML file in model/
-.PHONY: all clean setup gen-project gen-examples gendoc git-init-add git-init git-add git-commit git-status
+#.PHONY: all clean setup gen-project gen-examples gendoc git-init-add git-init git-add git-commit git-status
+.PHONY: all clean setup gen-project gendoc
 
 # note: "help" MUST be the first target in the file,
 # when the user types "make" they should get help info
@@ -77,7 +78,8 @@ status: check-config
 	@echo "Source: $(SOURCE_SCHEMA_PATH)"
 
 # generate products and add everything to github
-setup: check-config git-init install gen-project gen-examples gendoc git-add git-commit
+#setup: check-config git-init install gen-project gen-examples gendoc git-add git-commit
+setup: check-config install gen-project gendoc
 
 # install any dependencies required for building
 install:
@@ -117,7 +119,7 @@ compile-sheets:
 
 # In future this will be done by conversion
 gen-examples:
-	cp src/data/examples/* $(EXAMPLEDIR)
+#	cp src/data/examples/* $(EXAMPLEDIR)
 
 # generates all project files
 

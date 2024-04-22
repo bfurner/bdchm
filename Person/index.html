@@ -221,6 +221,8 @@
 
       Person : ethnicity
 
+          Person --&gt; EthnicityEnum : ethnicity
+
       Person : id
 
       Person : identity
@@ -293,7 +295,7 @@
 </tr>
 <tr>
 <td><a href="../ethnicity/">ethnicity</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="../EthnicityEnum/">EthnicityEnum</a></td>
 <td>An individual's self-described social and cultural grouping, specifically whe...</td>
 <td>direct</td>
 </tr>
@@ -428,7 +430,7 @@ attributes:
       and Business and used by the U.S. Census Bureau
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
-    range: string
+    range: EthnicityEnum
   race:
     name: race
     description: An arbitrary classification of a taxonomic group that is a division
@@ -534,7 +536,7 @@ attributes:
     owner: Person
     domain_of:
     - Person
-    range: string
+    range: EthnicityEnum
   race:
     name: race
     description: An arbitrary classification of a taxonomic group that is a division

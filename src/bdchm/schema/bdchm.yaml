@@ -65,6 +65,8 @@ classes:
       age_at_death:
         range: integer
         description: The age of an individual at the time of death, expressed in days since birth
+        unit:
+          ucum_code: d
       year_of_death:
         range: integer
         description: Numeric value to represent the calendar year in which an individual died.
@@ -88,6 +90,8 @@ classes:
       age_at_enrollment:
         range: integer
         description: The age in days when the Participant enrolled on the ResearchStudy
+        unit:
+          ucum_code: d
       index_timepoint:
         range: string
         description: The text term used to describe the reference or anchor date used for date obfuscation, where a single date is obscured by creating one or more date ranges in relation to this date. 
@@ -151,6 +155,27 @@ classes:
           multivalued: true
     slots:
       - identity
+
+  Visit:
+    is_a: Entity
+    description: >-
+      Events where Persons engage with the healthcare system for a duration of time. They are often also called “Encounters”. Visits are defined by a configuration of circumstances under which they occur, such as (i) whether the patient comes to a healthcare institution, the other way around, or the interaction is remote, (ii) whether and what kind of trained medical staff is delivering the service during the Visit, and (iii) whether the Visit is transient or for a longer period involving a stay in bed. (OMOP)
+    attributes:
+      - visit_category:
+          range: string
+          description: A value representing the kind (or category) of visit, like inpatient or outpatient.
+      - age_at_visit_start:
+          range: integer
+          description: The age of the Participant (in days) at the start of the Visit.
+      - age_at_visit_end:
+          range: integer
+          description: The age of the Participant (in days) at the end of the Visit.
+      - visit_provenance:
+          range: string
+          description: A value representing the provenance of the visit record, or where the record comes from.
+      - related_participant:
+          range: Participant
+          description: A reference to the Participant for whom this Visit occurred.
 
   Organization:
     is_a: Entity

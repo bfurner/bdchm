@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://bfurner.github.io/bdchm/Entity/" rel="canonical"/>
+<link href="https://bfurner.github.io/bdchm/Visit/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-8.5.10" name="generator"/>
-<title>Class: Entity - BioData Catalyst Harmonized Model</title>
+<title>Class: Visit - BioData Catalyst Harmonized Model</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -21,7 +21,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#class-entity">
+<a class="md-skip" href="#class-visit">
           Skip to content
         </a>
 </div>
@@ -45,7 +45,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Class: Entity
+              Class: Visit
             
           </span>
 </div>
@@ -196,37 +196,36 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/bfurner/bdchm/edit/master/docs/Entity.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/bfurner/bdchm/edit/master/docs/Visit.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="class-entity">Class: Entity</h1>
-<p><em>Any resource that has its own identifier</em></p>
-<ul>
-<li><strong>NOTE</strong>: this is an abstract class and should not be instantiated directly</li>
-</ul>
-<p>URI: <a href="http://schema.org/Thing">schema:Thing</a></p>
+<h1 id="class-visit">Class: Visit</h1>
+<p><em>Events where Persons engage with the healthcare system for a duration of time. They are often also called “Encounters”. Visits are defined by a configuration of circumstances under which they occur, such as (i) whether the patient comes to a healthcare institution, the other way around, or the interaction is remote, (ii) whether and what kind of trained medical staff is delivering the service during the Visit, and (iii) whether the Visit is transient or for a longer period involving a stay in bed. (OMOP)</em></p>
+<p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/Visit">bdchm:Visit</a></p>
 <div class="mermaid"> classDiagram
-    class Entity
-      Entity &lt;|-- Person
-      Entity &lt;|-- Participant
-      Entity &lt;|-- ResearchStudy
+    class Visit
       Entity &lt;|-- Visit
-      Entity &lt;|-- Organization
-      Entity &lt;|-- TimePoint
 
-      Entity : id
+      Visit : age_at_visit_end
+
+      Visit : age_at_visit_start
+
+      Visit : id
+
+      Visit : related_participant
+
+          Visit --&gt; Participant : related_participant
+
+      Visit : visit_category
+
+      Visit : visit_provenance
 
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
-<li><strong>Entity</strong><ul>
-<li><a href="../Person/">Person</a></li>
-<li><a href="../Participant/">Participant</a></li>
-<li><a href="../ResearchStudy/">ResearchStudy</a></li>
-<li><a href="../Visit/">Visit</a></li>
-<li><a href="../Organization/">Organization</a></li>
-<li><a href="../TimePoint/">TimePoint</a></li>
+<li><a href="../Entity/">Entity</a><ul>
+<li><strong>Visit</strong></li>
 </ul>
 </li>
 </ul>
@@ -242,10 +241,40 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../visit_category/">visit_category</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A value representing the kind (or category) of visit, like inpatient or outpa...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../age_at_visit_start/">age_at_visit_start</a></td>
+<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>The age of the Participant (in days) at the start of the Visit</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../age_at_visit_end/">age_at_visit_end</a></td>
+<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>The age of the Participant (in days) at the end of the Visit</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../visit_provenance/">visit_provenance</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A value representing the provenance of the visit record, or where the record ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../related_participant/">related_participant</a></td>
+<td>0..1 <br/> <a href="../Participant/">Participant</a></td>
+<td>A reference to the Participant for whom this Visit occurred</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../id/">id</a></td>
 <td>1..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
 <td>The 'logical' identifier of the entity within the system of record</td>
-<td>direct</td>
+<td><a href="../Entity/">Entity</a></td>
 </tr>
 </tbody>
 </table>
@@ -265,11 +294,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>schema:Thing</td>
+<td>bdchm:Visit</td>
 </tr>
 <tr>
 <td>native</td>
-<td>bdchm:Entity</td>
+<td>bdchm:Visit</td>
 </tr>
 </tbody>
 </table>
@@ -277,23 +306,117 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: Entity
-description: Any resource that has its own identifier
+<pre><code class="language-yaml">name: Visit
+description: Events where Persons engage with the healthcare system for a duration
+  of time. They are often also called “Encounters”. Visits are defined by a configuration
+  of circumstances under which they occur, such as (i) whether the patient comes to
+  a healthcare institution, the other way around, or the interaction is remote, (ii)
+  whether and what kind of trained medical staff is delivering the service during
+  the Visit, and (iii) whether the Visit is transient or for a longer period involving
+  a stay in bed. (OMOP)
 from_schema: https://w3id.org/nhlbidatastage/bdchm
-abstract: true
-slots:
-- id
-class_uri: schema:Thing
+is_a: Entity
+attributes:
+  visit_category:
+    name: visit_category
+    description: A value representing the kind (or category) of visit, like inpatient
+      or outpatient.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    range: string
+  age_at_visit_start:
+    name: age_at_visit_start
+    description: The age of the Participant (in days) at the start of the Visit.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    range: integer
+  age_at_visit_end:
+    name: age_at_visit_end
+    description: The age of the Participant (in days) at the end of the Visit.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    range: integer
+  visit_provenance:
+    name: visit_provenance
+    description: A value representing the provenance of the visit record, or where
+      the record comes from.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    range: string
+  related_participant:
+    name: related_participant
+    description: A reference to the Participant for whom this Visit occurred.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    range: Participant
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: Entity
-description: Any resource that has its own identifier
+<pre><code class="language-yaml">name: Visit
+description: Events where Persons engage with the healthcare system for a duration
+  of time. They are often also called “Encounters”. Visits are defined by a configuration
+  of circumstances under which they occur, such as (i) whether the patient comes to
+  a healthcare institution, the other way around, or the interaction is remote, (ii)
+  whether and what kind of trained medical staff is delivering the service during
+  the Visit, and (iii) whether the Visit is transient or for a longer period involving
+  a stay in bed. (OMOP)
 from_schema: https://w3id.org/nhlbidatastage/bdchm
-abstract: true
+is_a: Entity
 attributes:
+  visit_category:
+    name: visit_category
+    description: A value representing the kind (or category) of visit, like inpatient
+      or outpatient.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    alias: visit_category
+    owner: Visit
+    domain_of:
+    - Visit
+    range: string
+  age_at_visit_start:
+    name: age_at_visit_start
+    description: The age of the Participant (in days) at the start of the Visit.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    alias: age_at_visit_start
+    owner: Visit
+    domain_of:
+    - Visit
+    range: integer
+  age_at_visit_end:
+    name: age_at_visit_end
+    description: The age of the Participant (in days) at the end of the Visit.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    alias: age_at_visit_end
+    owner: Visit
+    domain_of:
+    - Visit
+    range: integer
+  visit_provenance:
+    name: visit_provenance
+    description: A value representing the provenance of the visit record, or where
+      the record comes from.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    alias: visit_provenance
+    owner: Visit
+    domain_of:
+    - Visit
+    range: string
+  related_participant:
+    name: related_participant
+    description: A reference to the Participant for whom this Visit occurred.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    alias: related_participant
+    owner: Visit
+    domain_of:
+    - Visit
+    range: Participant
   id:
     name: id
     description: The 'logical' identifier of the entity within the system of record.  The
@@ -311,11 +434,11 @@ attributes:
     slot_uri: schema:identifier
     identifier: true
     alias: id
-    owner: Entity
+    owner: Visit
     domain_of:
     - Entity
     range: uriorcurie
-class_uri: schema:Thing
+    required: true
 
 </code></pre>
 </details>

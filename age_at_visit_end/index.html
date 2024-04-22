@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://bfurner.github.io/bdchm/id/">
+        <link rel="canonical" href="https://bfurner.github.io/bdchm/age_at_visit_end/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
     
     
       
-        <title>Slot: id - BioData Catalyst Harmonized Model</title>
+        <title>Slot: age_at_visit_end - BioData Catalyst Harmonized Model</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-id" class="md-skip">
+        <a href="#slot-age_at_visit_end" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: id
+              Slot: age_at_visit_end
             
           </span>
         </div>
@@ -310,15 +310,15 @@
                 
                   
 
-  <a href="https://github.com/bfurner/bdchm/edit/master/docs/id.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/bfurner/bdchm/edit/master/docs/age_at_visit_end.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-id">Slot: id</h1>
-<p><em>The 'logical' identifier of the entity within the system of record.  The simple value of this attribute stands for an identifier of this data object within the system, it can be used as a reference from other objects within the same system (i.e. primary and foreign keys), and it should be unique per type of object. The same data object copied to a different system will likely have a different "id" in the new system since "id" values are system specific and do not represent persistent business identifiers. Business identifiers are assigned outside the information system and are captured in the "identifier" field. The "id" field is more likely to be a serially or randomly generated value that is assigned to the data object as it is created in a system.</em></p>
-<p>URI: <a href="http://schema.org/identifier">schema:identifier</a></p>
+<h1 id="slot-age_at_visit_end">Slot: age_at_visit_end</h1>
+<p><em>The age of the Participant (in days) at the end of the Visit.</em></p>
+<p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/age_at_visit_end">bdchm:age_at_visit_end</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -332,50 +332,15 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Entity/">Entity</a></td>
-<td>Any resource that has its own identifier</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Person/">Person</a></td>
-<td>Demographics and other administrative information about an individual or anim...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Participant/">Participant</a></td>
-<td>A Participant is the entity of interest in a research study, typically a huma...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ResearchStudy/">ResearchStudy</a></td>
-<td>A process where a researcher or organization plans and then executes a series...</td>
-<td>no</td>
-</tr>
-<tr>
 <td><a href="../Visit/">Visit</a></td>
 <td>Events where Persons engage with the healthcare system for a duration of time</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Organization/">Organization</a></td>
-<td>A grouping of people or organizations with a common purpose such as a data co...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../TimePoint/">TimePoint</a></td>
-<td>A structured representation of a single point in time that allows direct/expl...</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>
-<p>Range: <a href="../Uriorcurie/">Uriorcurie</a></p>
-</li>
-<li>
-<p>Required: True</p>
-</li>
+<li>Range: <a href="../Integer/">Integer</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -385,26 +350,15 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: id
-description: The 'logical' identifier of the entity within the system of record.  The
-  simple value of this attribute stands for an identifier of this data object within
-  the system, it can be used as a reference from other objects within the same system
-  (i.e. primary and foreign keys), and it should be unique per type of object. The
-  same data object copied to a different system will likely have a different &quot;id&quot;
-  in the new system since &quot;id&quot; values are system specific and do not represent persistent
-  business identifiers. Business identifiers are assigned outside the information
-  system and are captured in the &quot;identifier&quot; field. The &quot;id&quot; field is more likely
-  to be a serially or randomly generated value that is assigned to the data object
-  as it is created in a system.
+<pre><code class="language-yaml">name: age_at_visit_end
+description: The age of the Participant (in days) at the end of the Visit.
 from_schema: https://w3id.org/nhlbidatastage/bdchm
 rank: 1000
-slot_uri: schema:identifier
-identifier: true
-alias: id
+alias: age_at_visit_end
+owner: Visit
 domain_of:
-- Entity
-range: uriorcurie
-required: true
+- Visit
+range: integer
 
 </code></pre>
 

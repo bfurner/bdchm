@@ -176,6 +176,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bfurner.github.io/bdchm/Visit/</loc>
+         <lastmod>2024-04-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bfurner.github.io/bdchm/VitalStatusEnum/</loc>
          <lastmod>2024-04-22</lastmod>
          <changefreq>daily</changefreq>
@@ -192,6 +197,16 @@
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/age_at_enrollment/</loc>
+         <lastmod>2024-04-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bfurner.github.io/bdchm/age_at_visit_end/</loc>
+         <lastmod>2024-04-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bfurner.github.io/bdchm/age_at_visit_start/</loc>
          <lastmod>2024-04-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -346,6 +361,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bfurner.github.io/bdchm/related_participant/</loc>
+         <lastmod>2024-04-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bfurner.github.io/bdchm/research_project_type/</loc>
          <lastmod>2024-04-22</lastmod>
          <changefreq>daily</changefreq>
@@ -382,6 +402,16 @@
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/value/</loc>
+         <lastmod>2024-04-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bfurner.github.io/bdchm/visit_category/</loc>
+         <lastmod>2024-04-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bfurner.github.io/bdchm/visit_provenance/</loc>
          <lastmod>2024-04-22</lastmod>
          <changefreq>daily</changefreq>
     </url>

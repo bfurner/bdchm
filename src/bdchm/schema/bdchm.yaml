@@ -51,7 +51,7 @@ classes:
         range: SexEnum
         description: The biologic character or quality that distinguishes male and female from one another as expressed by analysis of the person's gonadal, morphologic (internal and external), chromosomal, and hormonal characteristics.
       ethnicity:
-        range: string
+        range: EthnicityEnum
         description: An individual's self-described social and cultural grouping, specifically whether an individual describes themselves as Hispanic or Latino. The provided values are based on the categories defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau
       race:
         range: RaceEnum
@@ -255,6 +255,14 @@ enums:
       IRB:
         description: 'This data use modifier indicates that the requestor must provide documentation of local IRB/ERB approval.'
         meaning: duo:0000021
+  EthnicityEnum:
+    permissible_values:
+      HISPANIC OR LATINO:
+        description: 'A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race. The term, "Spanish origin" can be used in addition to "Hispanic or Latino". (OMB)'
+        meaning: omop:38003563
+      NOT HISPANIC OR LATINO:
+        description: 'A person not of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race.'
+        meaning: omop:38003564
   RaceEnum:
     permissible_values:
       AMERICAN INDIAN OR ALASKA NATIVE:

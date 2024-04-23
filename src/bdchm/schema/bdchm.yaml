@@ -11,10 +11,7 @@ see_also:
 prefixes:
   bdchm: https://w3id.org/nhlbidatastage/bdchm/
   linkml: https://w3id.org/linkml/
-  biolink: https://w3id.org/biolink/
   schema: http://schema.org/
-  PATO: http://purl.obolibrary.org/obo/PATO_
-  example: https://example.org/
   OMOP: https://athena.ohdsi.org/search-terms/terms/
   DUO: http://purl.obolibrary.org/obo/DUO_
   VBO: http://purl.obolibrary.org/obo/VBO_
@@ -264,6 +261,8 @@ slots:
 
 enums:
   DataUseEnum:
+    description: >-
+      A constrained set of enumerative values drawn from the Data Use Ontology (DUO). The DUO is an ontology which represent data use conditions.
     permissible_values:
       GRU:
         description: 'This data use permission indicates that use is allowed for general research use for any research purpose. This includes but is not limited to: health/medical/biomedical purposes, fundamental biology research, the study of population origins or ancestry, statistical methods and algorithms development, and social-sciences research.'
@@ -281,6 +280,8 @@ enums:
         description: 'This data use modifier indicates that the requestor must provide documentation of local IRB/ERB approval.'
         meaning: DUO:0000021
   EthnicityEnum:
+    description: >-
+      A constrained set of enumerative values containing the United States Office of Management and Budget (OMB) values for ethnicity.
     permissible_values:
       HISPANIC_OR_LATINO:
         description: 'A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race. The term, "Spanish origin" can be used in addition to "Hispanic or Latino". (OMB)'
@@ -289,6 +290,8 @@ enums:
         description: 'A person not of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race.'
         meaning: OMOP:38003564
   RaceEnum:
+    description: >-
+      A constrained set of enumerative values containing the United States Office of Management and Budget (OMB) values for race.
     permissible_values:
       AMERICAN_INDIAN_OR_ALASKA_NATIVE:
         description: 'A person having origins in any of the original peoples of North and South America (including Central America) and who maintains tribal affiliation or community attachment. (OMB)'

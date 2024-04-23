@@ -15,9 +15,9 @@ prefixes:
   schema: http://schema.org/
   PATO: http://purl.obolibrary.org/obo/PATO_
   example: https://example.org/
-  omop: https://athena.ohdsi.org/search-terms/terms/
-  duo: http://purl.obolibrary.org/obo/DUO_
-  vbo: http://purl.obolibrary.org/obo/VBO_
+  OMOP: https://athena.ohdsi.org/search-terms/terms/
+  DUO: http://purl.obolibrary.org/obo/DUO_
+  VBO: http://purl.obolibrary.org/obo/VBO_
   ncbitaxon: http://purl.obolibrary.org/obo/NCBITaxon_
 
 default_prefix: bdchm
@@ -267,57 +267,58 @@ enums:
     permissible_values:
       GRU:
         description: 'This data use permission indicates that use is allowed for general research use for any research purpose. This includes but is not limited to: health/medical/biomedical purposes, fundamental biology research, the study of population origins or ancestry, statistical methods and algorithms development, and social-sciences research.'
-        meaning: duo:0000042
+        meaning: DUO:0000042
       HMB:
         description: 'This data use permission indicates that use is allowed for health/medical/biomedical purposes; does not include the study of population origins or ancestry.'
-        meaning: duo:0000006
+        meaning: DUO:0000006
       DS:
         description: 'This data use permission indicates that use is allowed provided it is related to the specified disease. This term should be coupled with a term describing a disease from an ontology to specify the disease the restriction applies to. DUO recommends MONDO be used, to provide the basis for automated evaluation. For more information see https://github.com/EBISPOT/DUO/blob/master/MONDO_Overview.md Other resources, such as the Disease Ontology, HPO, SNOMED-CT or others, can also be used. When those other resources are being used, this may require an extra mapping step to leverage automated matching algorithms.'
-        meaning: duo:0000007
+        meaning: DUO:0000007
       NPUNCU:
         description: 'This data use modifier indicates that use of the data is limited to not-for-profit organizations and not-for-profit use, non-commercial use.'
-        meaning: duo:0000018
+        meaning: DUO:0000018
       IRB:
         description: 'This data use modifier indicates that the requestor must provide documentation of local IRB/ERB approval.'
-        meaning: duo:0000021
+        meaning: DUO:0000021
   EthnicityEnum:
     permissible_values:
-      HISPANIC OR LATINO:
+      HISPANIC_OR_LATINO:
         description: 'A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race. The term, "Spanish origin" can be used in addition to "Hispanic or Latino". (OMB)'
-        meaning: omop:38003563
-      NOT HISPANIC OR LATINO:
+        meaning: OMOP:38003563
+      NOT_HISPANIC_OR_LATINO:
         description: 'A person not of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race.'
-        meaning: omop:38003564
+        meaning: OMOP:38003564
   RaceEnum:
     permissible_values:
-      AMERICAN INDIAN OR ALASKA NATIVE:
+      AMERICAN_INDIAN_OR_ALASKA_NATIVE:
         description: 'A person having origins in any of the original peoples of North and South America (including Central America) and who maintains tribal affiliation or community attachment. (OMB)'
-        meaning: omop:8657
+        meaning: OMOP:8657
       ASIAN:
         description: 'A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian subcontinent, including for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam. (OMB)'
-        meaning: omop:8515
-      BLACK OR AFRICAN AMERICAN:
+        meaning: OMOP:8515
+      BLACK_OR_AFRICAN_AMERICAN:
         description: 'A person having origins in any of the Black racial groups of Africa. Terms such as "Haitian" or "Negro" can be used in addition to "Black or African American". (OMB)'
-        meaning: omop:8516
-      NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER:
+        meaning: OMOP:8516
+      NATIVE_HAWAIIAN_OR_OTHER_PACIFIC_ISLANDER:
         description: 'Denotes a person having origins in any of the original peoples of Hawaii, Guam, Samoa, or other Pacific Islands. The term covers particularly people who identify themselves as part-Hawaiian, Native Hawaiian, Guamanian or Chamorro, Carolinian, Samoan, Chuukese (Trukese), Fijian, Kosraean, Melanesian, Micronesian, Northern Mariana Islander, Palauan, Papua New Guinean, Pohnpeian, Polynesian, Solomon Islander, Tahitian, Tokelauan, Tongan, Yapese, or Pacific Islander, not specified.'
-        meaning: omop:8557
+        meaning: OMOP:8557
       UNKNOWN:
         description: 'Not known, not observed, not recorded, or refused.'
-        meaning: omop:8552
+        meaning: OMOP:8552
       WHITE:
         description: 'Denotes person with European, Middle Eastern, or North African ancestral origin who identifies, or is identified, as White.'
-        meaning: omop:8527
+        meaning: OMOP:8527
   SexEnum:
     permissible_values:
       MALE:
         description: A person who belongs to the sex that normally produces sperm.
-        meaning: omop:8507
+        meaning: OMOP:8507
       FEMALE:
         description: A person who belongs to the sex that normally produces ova.
-        meaning: omop:8532
+        meaning: OMOP:8532
       UNKNOWN:
-        description: Not known, observed, recorded; or reported as unknown by the data contributor.
+        description: 'Not known, not observed, not recorded, or refused.'
+        meaning: OMOP:8552
   CellularOrganismSpeciesEnum:
     reachable_from:
       source_ontology: obo:ncbitaxon
@@ -330,15 +331,15 @@ enums:
     permissible_values:
       ALIVE:
         description: 'Showing characteristics of life; displaying signs of life. (NCIt)'
-        meaning: omop:4230556
+        meaning: OMOP:4230556
       DEAD:
         description: 'The cessation of life. (NCIt)'
-        meaning: omop:434489
+        meaning: OMOP:434489
   VertebrateBreedEnum:
     reachable_from:
       source_ontology: obo:vbo
       source_nodes:
-        - vbo:0400000 ## Vertebrate Breed
+        - VBO:0400000 ## Vertebrate Breed
       include_self: false
       relationship_types:
         - rdfs:subClassOf

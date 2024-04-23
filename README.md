@@ -7,10 +7,10 @@ This is the LinkML model repository for the BioData Catalyst Harmonized Model (b
 * [examples/](examples/) - example data
 * [project/](project/) - project files (do not edit these)
 * [src/](src/) - source files (edit these)
-  * [bdc_cdm](src/bdc_cdm)
-    * [schema](src/bdc_cdm/schema) -- LinkML schema
+  * [bdchm](src/bdchm)
+    * [schema](src/bdchm/schema) -- LinkML schema
       (edit this)
-    * [datamodel](src/bdc_cdm/datamodel) -- generated
+    * [datamodel](src/bdchm/datamodel) -- generated
       Python datamodel
 * [tests/](tests/) - Python tests
 

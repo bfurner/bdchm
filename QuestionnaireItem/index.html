@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://bfurner.github.io/bdchm/ResearchStudy/" rel="canonical"/>
+<link href="https://bfurner.github.io/bdchm/QuestionnaireItem/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-8.5.10" name="generator"/>
-<title>Class: ResearchStudy - BioData Catalyst Harmonized Model</title>
+<title>Class: QuestionnaireItem - BioData Catalyst Harmonized Model</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -21,7 +21,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#class-researchstudy">
+<a class="md-skip" href="#class-questionnaireitem">
           Skip to content
         </a>
 </div>
@@ -45,7 +45,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Class: ResearchStudy
+              Class: QuestionnaireItem
             
           </span>
 </div>
@@ -201,64 +201,36 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/bfurner/bdchm/edit/master/docs/ResearchStudy.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/bfurner/bdchm/edit/master/docs/QuestionnaireItem.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="class-researchstudy">Class: ResearchStudy</h1>
-<p><em>A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge. This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques. A ResearchStudy involves the gathering of information about human or animal subjects.</em></p>
-<p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/ResearchStudy">bdchm:ResearchStudy</a></p>
+<h1 id="class-questionnaireitem">Class: QuestionnaireItem</h1>
+<p><em>QuestionnaireItem defines a question or section within the Questionnaire</em></p>
+<p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/QuestionnaireItem">bdchm:QuestionnaireItem</a></p>
 <div class="mermaid"> classDiagram
-    class ResearchStudy
-      Entity &lt;|-- ResearchStudy
+    class QuestionnaireItem
+      Entity &lt;|-- QuestionnaireItem
 
-      ResearchStudy : associated_timepoint
+      QuestionnaireItem : code
 
-          ResearchStudy --&gt; TimePoint : associated_timepoint
+      QuestionnaireItem : id
 
-      ResearchStudy : consent_code
+      QuestionnaireItem : identity
 
-          ResearchStudy --&gt; DataUseEnum : consent_code
+          QuestionnaireItem --&gt; Identifier : identity
 
-      ResearchStudy : date_ended
+      QuestionnaireItem : part_of
 
-          ResearchStudy --&gt; TimePoint : date_ended
+          QuestionnaireItem --&gt; QuestionnaireItem : part_of
 
-      ResearchStudy : date_started
-
-          ResearchStudy --&gt; TimePoint : date_started
-
-      ResearchStudy : description
-
-      ResearchStudy : description_shortened
-
-      ResearchStudy : id
-
-      ResearchStudy : identity
-
-          ResearchStudy --&gt; Identifier : identity
-
-      ResearchStudy : name
-
-      ResearchStudy : name_shortened
-
-      ResearchStudy : part_of
-
-          ResearchStudy --&gt; ResearchStudy : part_of
-
-      ResearchStudy : principal_investigator
-
-      ResearchStudy : research_project_type
-
-      ResearchStudy : sponsor
-
-      ResearchStudy : url
+      QuestionnaireItem : text
 
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>
-<li><strong>ResearchStudy</strong></li>
+<li><strong>QuestionnaireItem</strong></li>
 </ul>
 </li>
 </ul>
@@ -280,81 +252,21 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../name/">name</a></td>
+<td><a href="../text/">text</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>An unabridged name of a research program, project, or study</td>
+<td>Name for group or question text</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../name_shortened/">name_shortened</a></td>
+<td><a href="../code/">code</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>An abbreviated name of a research program, project, or study</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../description/">description</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>An unabridged description of a research program, project, or study</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../description_shortened/">description_shortened</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>An abbreviated description of a research program, project, or study</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../sponsor/">sponsor</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>An entity that is responsible for the initiation, management, and/or financin...</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../date_started/">date_started</a></td>
-<td>0..1 <br/> <a href="../TimePoint/">TimePoint</a></td>
-<td>The date when the research project began</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../date_ended/">date_ended</a></td>
-<td>0..1 <br/> <a href="../TimePoint/">TimePoint</a></td>
-<td>The date when the research project ended</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../url/">url</a></td>
-<td>0..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
-<td>A URL address for a resource that provides information about a research progr...</td>
+<td>Corresponding concept for this item in a terminology</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../part_of/">part_of</a></td>
-<td>0..1 <br/> <a href="./">ResearchStudy</a></td>
-<td>A reference to a parent ResearchStudy (e</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../research_project_type/">research_project_type</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The 'type' of ResearchStudy represented (e</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../associated_timepoint/">associated_timepoint</a></td>
-<td>0..* <br/> <a href="../TimePoint/">TimePoint</a></td>
-<td>A collection of timepoint observations that are relevant to research projects...</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../principal_investigator/">principal_investigator</a></td>
-<td>0..* <br/> <a href="../String/">String</a></td>
-<td>The investigator or investigators leading a project</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../consent_code/">consent_code</a></td>
-<td>0..* <br/> <a href="../DataUseEnum/">DataUseEnum</a></td>
-<td>Data Use Restrictions that are used to indicate permissions/restrictions for ...</td>
+<td>0..1 <br/> <a href="./">QuestionnaireItem</a></td>
+<td>A reference to a parent QuestionnaireItem</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -377,22 +289,22 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Participant/">Participant</a></td>
-<td><a href="../member_of_research_study/">member_of_research_study</a></td>
+<td><a href="../Questionnaire/">Questionnaire</a></td>
+<td><a href="../items/">items</a></td>
 <td>range</td>
-<td><a href="./">ResearchStudy</a></td>
+<td><a href="./">QuestionnaireItem</a></td>
 </tr>
 <tr>
-<td><a href="./">ResearchStudy</a></td>
+<td><a href="./">QuestionnaireItem</a></td>
 <td><a href="../part_of/">part_of</a></td>
 <td>range</td>
-<td><a href="./">ResearchStudy</a></td>
+<td><a href="./">QuestionnaireItem</a></td>
 </tr>
 <tr>
-<td><a href="../ResearchStudyCollection/">ResearchStudyCollection</a></td>
-<td><a href="../entries/">entries</a></td>
+<td><a href="../QuestionnaireResponseItem/">QuestionnaireResponseItem</a></td>
+<td><a href="../has_questionnaire_item/">has_questionnaire_item</a></td>
 <td>range</td>
-<td><a href="./">ResearchStudy</a></td>
+<td><a href="./">QuestionnaireItem</a></td>
 </tr>
 </tbody>
 </table>
@@ -412,11 +324,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>bdchm:ResearchStudy</td>
+<td>bdchm:QuestionnaireItem</td>
 </tr>
 <tr>
 <td>native</td>
-<td>bdchm:ResearchStudy</td>
+<td>bdchm:QuestionnaireItem</td>
 </tr>
 </tbody>
 </table>
@@ -424,270 +336,71 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: ResearchStudy
-description: A process where a researcher or organization plans and then executes
-  a series of steps intended to increase the field of healthcare-related knowledge.
-  This includes studies of safety, efficacy, comparative effectiveness and other information
-  about medications, devices, therapies and other interventional and investigative
-  techniques. A ResearchStudy involves the gathering of information about human or
-  animal subjects.
+<pre><code class="language-yaml">name: QuestionnaireItem
+description: QuestionnaireItem defines a question or section within the Questionnaire
 from_schema: https://w3id.org/nhlbidatastage/bdchm
 is_a: Entity
 slots:
 - identity
 attributes:
-  name:
-    name: name
-    description: An unabridged name of a research program, project, or study.
+  text:
+    name: text
+    description: Name for group or question text
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
     range: string
-  name_shortened:
-    name: name_shortened
-    description: An abbreviated name of a research program, project, or study.
+  code:
+    name: code
+    description: Corresponding concept for this item in a terminology
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
     range: string
-  description:
-    name: description
-    description: An unabridged description of a research program, project, or study.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    range: string
-  description_shortened:
-    name: description_shortened
-    description: An abbreviated description of a research program, project, or study.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    range: string
-  sponsor:
-    name: sponsor
-    description: An entity that is responsible for the initiation, management, and/or
-      financing of a research project.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    range: string
-  date_started:
-    name: date_started
-    description: The date when the research project began.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    range: TimePoint
-  date_ended:
-    name: date_ended
-    description: The date when the research project ended.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    range: TimePoint
-  url:
-    name: url
-    description: A URL address for a resource that provides information about a research
-      program, project, or study.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    range: uriorcurie
   part_of:
     name: part_of
-    description: A reference to a parent ResearchStudy (e.g. a link to the overarching
-      CPTAC ResearchStudy from a substudy of CPTAC)
+    description: A reference to a parent QuestionnaireItem.
     from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    range: ResearchStudy
-  research_project_type:
-    name: research_project_type
-    description: The 'type' of ResearchStudy represented (e.g. a broad-based Program
-      like 'CPTAC' or a more focused Project like 'CPTAC PDAC Discovery Study')
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    range: string
-  associated_timepoint:
-    name: associated_timepoint
-    description: A collection of timepoint observations that are relevant to research
-      projects (e.g. date of IACUC approval, date of IRB approval, date of embargo
-      end, etc.)
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    multivalued: true
-    range: TimePoint
-  principal_investigator:
-    name: principal_investigator
-    description: The investigator or investigators leading a project.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    multivalued: true
-    range: string
-  consent_code:
-    name: consent_code
-    description: 'Data Use Restrictions that are used to indicate permissions/restrictions
-      for datasets and/or materials, and relates to the purposes for which datasets
-      and/or material might be removed, stored or used. Based on the Data Use Ontology
-      : see http://www.obofoundry.org/ontology/duo.html'
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    multivalued: true
-    range: DataUseEnum
+    range: QuestionnaireItem
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: ResearchStudy
-description: A process where a researcher or organization plans and then executes
-  a series of steps intended to increase the field of healthcare-related knowledge.
-  This includes studies of safety, efficacy, comparative effectiveness and other information
-  about medications, devices, therapies and other interventional and investigative
-  techniques. A ResearchStudy involves the gathering of information about human or
-  animal subjects.
+<pre><code class="language-yaml">name: QuestionnaireItem
+description: QuestionnaireItem defines a question or section within the Questionnaire
 from_schema: https://w3id.org/nhlbidatastage/bdchm
 is_a: Entity
 attributes:
-  name:
-    name: name
-    description: An unabridged name of a research program, project, or study.
+  text:
+    name: text
+    description: Name for group or question text
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
-    alias: name
-    owner: ResearchStudy
+    alias: text
+    owner: QuestionnaireItem
     domain_of:
-    - ResearchStudy
-    - Organization
-    - Questionnaire
-    - QuestionnaireResponseValue
+    - QuestionnaireItem
+    - QuestionnaireResponseItem
     range: string
-  name_shortened:
-    name: name_shortened
-    description: An abbreviated name of a research program, project, or study.
+  code:
+    name: code
+    description: Corresponding concept for this item in a terminology
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
-    alias: name_shortened
-    owner: ResearchStudy
+    alias: code
+    owner: QuestionnaireItem
     domain_of:
-    - ResearchStudy
+    - QuestionnaireItem
     range: string
-  description:
-    name: description
-    description: An unabridged description of a research program, project, or study.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    alias: description
-    owner: ResearchStudy
-    domain_of:
-    - Participant
-    - ResearchStudy
-    - Questionnaire
-    range: string
-  description_shortened:
-    name: description_shortened
-    description: An abbreviated description of a research program, project, or study.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    alias: description_shortened
-    owner: ResearchStudy
-    domain_of:
-    - ResearchStudy
-    range: string
-  sponsor:
-    name: sponsor
-    description: An entity that is responsible for the initiation, management, and/or
-      financing of a research project.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    alias: sponsor
-    owner: ResearchStudy
-    domain_of:
-    - ResearchStudy
-    range: string
-  date_started:
-    name: date_started
-    description: The date when the research project began.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    alias: date_started
-    owner: ResearchStudy
-    domain_of:
-    - ResearchStudy
-    range: TimePoint
-  date_ended:
-    name: date_ended
-    description: The date when the research project ended.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    alias: date_ended
-    owner: ResearchStudy
-    domain_of:
-    - ResearchStudy
-    range: TimePoint
-  url:
-    name: url
-    description: A URL address for a resource that provides information about a research
-      program, project, or study.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    alias: url
-    owner: ResearchStudy
-    domain_of:
-    - ResearchStudy
-    - Questionnaire
-    range: uriorcurie
   part_of:
     name: part_of
-    description: A reference to a parent ResearchStudy (e.g. a link to the overarching
-      CPTAC ResearchStudy from a substudy of CPTAC)
+    description: A reference to a parent QuestionnaireItem.
     from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
     alias: part_of
-    owner: ResearchStudy
+    owner: QuestionnaireItem
     domain_of:
     - ResearchStudy
     - QuestionnaireItem
-    range: ResearchStudy
-  research_project_type:
-    name: research_project_type
-    description: The 'type' of ResearchStudy represented (e.g. a broad-based Program
-      like 'CPTAC' or a more focused Project like 'CPTAC PDAC Discovery Study')
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    alias: research_project_type
-    owner: ResearchStudy
-    domain_of:
-    - ResearchStudy
-    range: string
-  associated_timepoint:
-    name: associated_timepoint
-    description: A collection of timepoint observations that are relevant to research
-      projects (e.g. date of IACUC approval, date of IRB approval, date of embargo
-      end, etc.)
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    multivalued: true
-    alias: associated_timepoint
-    owner: ResearchStudy
-    domain_of:
-    - ResearchStudy
-    range: TimePoint
-  principal_investigator:
-    name: principal_investigator
-    description: The investigator or investigators leading a project.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    multivalued: true
-    alias: principal_investigator
-    owner: ResearchStudy
-    domain_of:
-    - ResearchStudy
-    range: string
-  consent_code:
-    name: consent_code
-    description: 'Data Use Restrictions that are used to indicate permissions/restrictions
-      for datasets and/or materials, and relates to the purposes for which datasets
-      and/or material might be removed, stored or used. Based on the Data Use Ontology
-      : see http://www.obofoundry.org/ontology/duo.html'
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    multivalued: true
-    alias: consent_code
-    owner: ResearchStudy
-    domain_of:
-    - ResearchStudy
-    range: DataUseEnum
+    range: QuestionnaireItem
   identity:
     name: identity
     description: A 'business' identifier or accession number for the entity, typically
@@ -704,7 +417,7 @@ attributes:
     slot_uri: schema:identifier
     multivalued: true
     alias: identity
-    owner: ResearchStudy
+    owner: QuestionnaireItem
     domain_of:
     - Person
     - Participant
@@ -730,7 +443,7 @@ attributes:
     slot_uri: schema:identifier
     identifier: true
     alias: id
-    owner: ResearchStudy
+    owner: QuestionnaireItem
     domain_of:
     - Entity
     range: uriorcurie

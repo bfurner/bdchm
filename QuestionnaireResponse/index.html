@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://bfurner.github.io/bdchm/Identifier/" rel="canonical"/>
+<link href="https://bfurner.github.io/bdchm/QuestionnaireResponse/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-8.5.10" name="generator"/>
-<title>Class: Identifier - BioData Catalyst Harmonized Model</title>
+<title>Class: QuestionnaireResponse - BioData Catalyst Harmonized Model</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -21,7 +21,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#class-identifier">
+<a class="md-skip" href="#class-questionnaireresponse">
           Skip to content
         </a>
 </div>
@@ -45,7 +45,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Class: Identifier
+              Class: QuestionnaireResponse
             
           </span>
 </div>
@@ -142,13 +142,13 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#slots">
-    Slots
+<a class="md-nav__link" href="#inheritance">
+    Inheritance
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#usages">
-    Usages
+<a class="md-nav__link" href="#slots">
+    Slots
   </a>
 </li>
 <li class="md-nav__item">
@@ -196,21 +196,37 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/bfurner/bdchm/edit/master/docs/Identifier.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/bfurner/bdchm/edit/master/docs/QuestionnaireResponse.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="class-identifier">Class: Identifier</h1>
-<p>_An Identifier is associated with a unique object or entity within a given system.  _</p>
-<p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/Identifier">bdchm:Identifier</a></p>
+<h1 id="class-questionnaireresponse">Class: QuestionnaireResponse</h1>
+<p><em>QuestionnaireResponse provides a complete or partial list of answers to a set of questions filled when responding to a questionnaire. (FHIR)</em></p>
+<p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/QuestionnaireResponse">bdchm:QuestionnaireResponse</a></p>
 <div class="mermaid"> classDiagram
-    class Identifier
-      Identifier : system
+    class QuestionnaireResponse
+      Entity &lt;|-- QuestionnaireResponse
 
-      Identifier : value
+      QuestionnaireResponse : age_at_response
+
+      QuestionnaireResponse : has_visit
+
+          QuestionnaireResponse --&gt; Visit : has_visit
+
+      QuestionnaireResponse : id
+
+      QuestionnaireResponse : items
+
+          QuestionnaireResponse --&gt; QuestionnaireResponseItem : items
 
 
 </div>
-<!-- no inheritance hierarchy -->
+<h2 id="inheritance">Inheritance</h2>
+<ul>
+<li><a href="../Entity/">Entity</a><ul>
+<li><strong>QuestionnaireResponse</strong></li>
+</ul>
+</li>
+</ul>
 <h2 id="slots">Slots</h2>
 <table>
 <thead>
@@ -223,65 +239,28 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../value/">value</a></td>
-<td>1..1 <br/> <a href="../String/">String</a></td>
-<td>The value of the identifier, as defined by the system</td>
+<td><a href="../age_at_response/">age_at_response</a></td>
+<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>The age (in days) of the Participant when the QuestionnaireResponse was captu...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../system/">system</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The system or namespace that defines the identifier</td>
+<td><a href="../items/">items</a></td>
+<td>1..* <br/> <a href="../QuestionnaireResponseItem/">QuestionnaireResponseItem</a></td>
+<td>A collection of QuestionnaireResponseItem objects which encapsulate the quest...</td>
 <td>direct</td>
 </tr>
-</tbody>
-</table>
-<h2 id="usages">Usages</h2>
-<table>
-<thead>
 <tr>
-<th>used by</th>
-<th>used in</th>
-<th>type</th>
-<th>used</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Person/">Person</a></td>
-<td><a href="../identity/">identity</a></td>
-<td>range</td>
-<td><a href="./">Identifier</a></td>
+<td><a href="../has_visit/">has_visit</a></td>
+<td>0..1 <br/> <a href="../Visit/">Visit</a></td>
+<td>A reference to the Visit during which this QuestionnaireResponse was captured</td>
+<td>direct</td>
 </tr>
 <tr>
-<td><a href="../Participant/">Participant</a></td>
-<td><a href="../identity/">identity</a></td>
-<td>range</td>
-<td><a href="./">Identifier</a></td>
-</tr>
-<tr>
-<td><a href="../ResearchStudy/">ResearchStudy</a></td>
-<td><a href="../identity/">identity</a></td>
-<td>range</td>
-<td><a href="./">Identifier</a></td>
-</tr>
-<tr>
-<td><a href="../Organization/">Organization</a></td>
-<td><a href="../identity/">identity</a></td>
-<td>range</td>
-<td><a href="./">Identifier</a></td>
-</tr>
-<tr>
-<td><a href="../Questionnaire/">Questionnaire</a></td>
-<td><a href="../identity/">identity</a></td>
-<td>range</td>
-<td><a href="./">Identifier</a></td>
-</tr>
-<tr>
-<td><a href="../QuestionnaireItem/">QuestionnaireItem</a></td>
-<td><a href="../identity/">identity</a></td>
-<td>range</td>
-<td><a href="./">Identifier</a></td>
+<td><a href="../id/">id</a></td>
+<td>1..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>The 'logical' identifier of the entity within the system of record</td>
+<td><a href="../Entity/">Entity</a></td>
 </tr>
 </tbody>
 </table>
@@ -301,11 +280,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>bdchm:Identifier</td>
+<td>bdchm:QuestionnaireResponse</td>
 </tr>
 <tr>
 <td>native</td>
-<td>bdchm:Identifier</td>
+<td>bdchm:QuestionnaireResponse</td>
 </tr>
 </tbody>
 </table>
@@ -313,54 +292,102 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: Identifier
-description: 'An Identifier is associated with a unique object or entity within a
-  given system.  '
+<pre><code class="language-yaml">name: QuestionnaireResponse
+description: QuestionnaireResponse provides a complete or partial list of answers
+  to a set of questions filled when responding to a questionnaire. (FHIR)
 from_schema: https://w3id.org/nhlbidatastage/bdchm
+is_a: Entity
 attributes:
-  value:
-    name: value
-    description: The value of the identifier, as defined by the system.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    range: string
-    required: true
-  system:
-    name: system
-    description: The system or namespace that defines the identifier.
+  age_at_response:
+    name: age_at_response
+    description: The age (in days) of the Participant when the QuestionnaireResponse
+      was captured.
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
-    range: string
+    range: integer
+  items:
+    name: items
+    description: A collection of QuestionnaireResponseItem objects which encapsulate
+      the question being asked and the response.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    multivalued: true
+    range: QuestionnaireResponseItem
+    required: true
+  has_visit:
+    name: has_visit
+    description: A reference to the Visit during which this QuestionnaireResponse
+      was captured.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    range: Visit
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: Identifier
-description: 'An Identifier is associated with a unique object or entity within a
-  given system.  '
+<pre><code class="language-yaml">name: QuestionnaireResponse
+description: QuestionnaireResponse provides a complete or partial list of answers
+  to a set of questions filled when responding to a questionnaire. (FHIR)
 from_schema: https://w3id.org/nhlbidatastage/bdchm
+is_a: Entity
 attributes:
-  value:
-    name: value
-    description: The value of the identifier, as defined by the system.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    alias: value
-    owner: Identifier
-    domain_of:
-    - Identifier
-    - QuestionnaireResponseValue
-    range: string
-    required: true
-  system:
-    name: system
-    description: The system or namespace that defines the identifier.
+  age_at_response:
+    name: age_at_response
+    description: The age (in days) of the Participant when the QuestionnaireResponse
+      was captured.
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
-    alias: system
-    owner: Identifier
+    alias: age_at_response
+    owner: QuestionnaireResponse
     domain_of:
-    - Identifier
-    range: string
+    - QuestionnaireResponse
+    range: integer
+  items:
+    name: items
+    description: A collection of QuestionnaireResponseItem objects which encapsulate
+      the question being asked and the response.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    multivalued: true
+    alias: items
+    owner: QuestionnaireResponse
+    domain_of:
+    - Questionnaire
+    - QuestionnaireResponse
+    range: QuestionnaireResponseItem
+    required: true
+  has_visit:
+    name: has_visit
+    description: A reference to the Visit during which this QuestionnaireResponse
+      was captured.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    alias: has_visit
+    owner: QuestionnaireResponse
+    domain_of:
+    - QuestionnaireResponse
+    range: Visit
+  id:
+    name: id
+    description: The 'logical' identifier of the entity within the system of record.  The
+      simple value of this attribute stands for an identifier of this data object
+      within the system, it can be used as a reference from other objects within the
+      same system (i.e. primary and foreign keys), and it should be unique per type
+      of object. The same data object copied to a different system will likely have
+      a different "id" in the new system since "id" values are system specific and
+      do not represent persistent business identifiers. Business identifiers are assigned
+      outside the information system and are captured in the "identifier" field. The
+      "id" field is more likely to be a serially or randomly generated value that
+      is assigned to the data object as it is created in a system.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    slot_uri: schema:identifier
+    identifier: true
+    alias: id
+    owner: QuestionnaireResponse
+    domain_of:
+    - Entity
+    range: uriorcurie
+    required: true
 
 </code></pre>
 </details>

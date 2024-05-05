@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://bfurner.github.io/bdchm/description/">
+        <link rel="canonical" href="https://bfurner.github.io/bdchm/response_value/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
     
     
       
-        <title>Slot: description - BioData Catalyst Harmonized Model</title>
+        <title>Slot: response_value - BioData Catalyst Harmonized Model</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-description" class="md-skip">
+        <a href="#slot-response_value" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: description
+              Slot: response_value
             
           </span>
         </div>
@@ -274,6 +274,19 @@
     Identifier and Mapping Information
   </a>
   
+    <nav class="md-nav" aria-label="Identifier and Mapping Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-source" class="md-nav__link">
+    Schema Source
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -297,14 +310,14 @@
                 
                   
 
-  <a href="https://github.com/bfurner/bdchm/edit/master/docs/description.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/bfurner/bdchm/edit/master/docs/response_value.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-description">Slot: description</h1>
-<p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/description">bdchm:description</a></p>
+<h1 id="slot-response_value">Slot: response_value</h1>
+<p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/response_value">bdchm:response_value</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -318,37 +331,38 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Participant/">Participant</a></td>
-<td>A Participant is the entity of interest in a research study, typically a huma...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ResearchStudy/">ResearchStudy</a></td>
-<td>A process where a researcher or organization plans and then executes a series...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Questionnaire/">Questionnaire</a></td>
-<td>A Questionnaire is an organized collection of questions intended to solicit i...</td>
+<td><a href="../QuestionnaireResponseItem/">QuestionnaireResponseItem</a></td>
+<td>QuestionnaireResponseItem provides a complete or partial list of answers to a...</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../String/">String</a></li>
+<li>
+<p>Range: <a href="../QuestionnaireResponseValue/">QuestionnaireResponseValue</a></p>
+</li>
+<li>
+<p>Required: True</p>
+</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
+<h3 id="schema-source">Schema Source</h3>
+<ul>
+<li>from schema: https://w3id.org/nhlbidatastage/bdchm</li>
+</ul>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: description
-alias: description
+<pre><code class="language-yaml">name: response_value
+from_schema: https://w3id.org/nhlbidatastage/bdchm
+rank: 1000
+alias: response_value
+owner: QuestionnaireResponseItem
 domain_of:
-- Participant
-- ResearchStudy
-- Questionnaire
-range: string
+- QuestionnaireResponseItem
+range: QuestionnaireResponseValue
+required: true
 
 </code></pre>
 

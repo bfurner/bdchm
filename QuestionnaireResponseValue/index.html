@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://bfurner.github.io/bdchm/Identifier/" rel="canonical"/>
+<link href="https://bfurner.github.io/bdchm/QuestionnaireResponseValue/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-8.5.10" name="generator"/>
-<title>Class: Identifier - BioData Catalyst Harmonized Model</title>
+<title>Class: QuestionnaireResponseValue - BioData Catalyst Harmonized Model</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -21,7 +21,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#class-identifier">
+<a class="md-skip" href="#class-questionnaireresponsevalue">
           Skip to content
         </a>
 </div>
@@ -45,7 +45,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Class: Identifier
+              Class: QuestionnaireResponseValue
             
           </span>
 </div>
@@ -142,6 +142,11 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#inheritance">
+    Inheritance
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#slots">
     Slots
   </a>
@@ -196,21 +201,35 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/bfurner/bdchm/edit/master/docs/Identifier.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/bfurner/bdchm/edit/master/docs/QuestionnaireResponseValue.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="class-identifier">Class: Identifier</h1>
-<p>_An Identifier is associated with a unique object or entity within a given system.  _</p>
-<p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/Identifier">bdchm:Identifier</a></p>
+<h1 id="class-questionnaireresponsevalue">Class: QuestionnaireResponseValue</h1>
+<p><em>Single-valued answer to the question. (FHIR)</em></p>
+<p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/QuestionnaireResponseValue">bdchm:QuestionnaireResponseValue</a></p>
 <div class="mermaid"> classDiagram
-    class Identifier
-      Identifier : system
+    class QuestionnaireResponseValue
+      QuestionnaireResponseValue &lt;|-- QuestionnaireResponseValueDecimal
+      QuestionnaireResponseValue &lt;|-- QuestionnaireResponseValueBoolean
+      QuestionnaireResponseValue &lt;|-- QuestionnaireResponseValueString
 
-      Identifier : value
+      QuestionnaireResponseValue : name
+
+      QuestionnaireResponseValue : type
+
+      QuestionnaireResponseValue : value
 
 
 </div>
-<!-- no inheritance hierarchy -->
+<h2 id="inheritance">Inheritance</h2>
+<ul>
+<li><strong>QuestionnaireResponseValue</strong><ul>
+<li><a href="../QuestionnaireResponseValueDecimal/">QuestionnaireResponseValueDecimal</a></li>
+<li><a href="../QuestionnaireResponseValueBoolean/">QuestionnaireResponseValueBoolean</a></li>
+<li><a href="../QuestionnaireResponseValueString/">QuestionnaireResponseValueString</a></li>
+</ul>
+</li>
+</ul>
 <h2 id="slots">Slots</h2>
 <table>
 <thead>
@@ -224,14 +243,20 @@
 <tbody>
 <tr>
 <td><a href="../value/">value</a></td>
-<td>1..1 <br/> <a href="../String/">String</a></td>
-<td>The value of the identifier, as defined by the system</td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A general slot to hold a value</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../system/">system</a></td>
+<td><a href="../type/">type</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The system or namespace that defines the identifier</td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../name/">name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td></td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -248,40 +273,10 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Person/">Person</a></td>
-<td><a href="../identity/">identity</a></td>
+<td><a href="../QuestionnaireResponseItem/">QuestionnaireResponseItem</a></td>
+<td><a href="../response_value/">response_value</a></td>
 <td>range</td>
-<td><a href="./">Identifier</a></td>
-</tr>
-<tr>
-<td><a href="../Participant/">Participant</a></td>
-<td><a href="../identity/">identity</a></td>
-<td>range</td>
-<td><a href="./">Identifier</a></td>
-</tr>
-<tr>
-<td><a href="../ResearchStudy/">ResearchStudy</a></td>
-<td><a href="../identity/">identity</a></td>
-<td>range</td>
-<td><a href="./">Identifier</a></td>
-</tr>
-<tr>
-<td><a href="../Organization/">Organization</a></td>
-<td><a href="../identity/">identity</a></td>
-<td>range</td>
-<td><a href="./">Identifier</a></td>
-</tr>
-<tr>
-<td><a href="../Questionnaire/">Questionnaire</a></td>
-<td><a href="../identity/">identity</a></td>
-<td>range</td>
-<td><a href="./">Identifier</a></td>
-</tr>
-<tr>
-<td><a href="../QuestionnaireItem/">QuestionnaireItem</a></td>
-<td><a href="../identity/">identity</a></td>
-<td>range</td>
-<td><a href="./">Identifier</a></td>
+<td><a href="./">QuestionnaireResponseValue</a></td>
 </tr>
 </tbody>
 </table>
@@ -301,11 +296,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>bdchm:Identifier</td>
+<td>bdchm:QuestionnaireResponseValue</td>
 </tr>
 <tr>
 <td>native</td>
-<td>bdchm:Identifier</td>
+<td>bdchm:QuestionnaireResponseValue</td>
 </tr>
 </tbody>
 </table>
@@ -313,53 +308,62 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: Identifier
-description: 'An Identifier is associated with a unique object or entity within a
-  given system.  '
+<pre><code class="language-yaml">name: QuestionnaireResponseValue
+description: Single-valued answer to the question. (FHIR)
 from_schema: https://w3id.org/nhlbidatastage/bdchm
+slots:
+- value
 attributes:
-  value:
-    name: value
-    description: The value of the identifier, as defined by the system.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    range: string
-    required: true
-  system:
-    name: system
-    description: The system or namespace that defines the identifier.
+  type:
+    name: type
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
+    designates_type: true
+    range: string
+  name:
+    name: name
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
     range: string
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: Identifier
-description: 'An Identifier is associated with a unique object or entity within a
-  given system.  '
+<pre><code class="language-yaml">name: QuestionnaireResponseValue
+description: Single-valued answer to the question. (FHIR)
 from_schema: https://w3id.org/nhlbidatastage/bdchm
 attributes:
+  type:
+    name: type
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    designates_type: true
+    alias: type
+    owner: QuestionnaireResponseValue
+    domain_of:
+    - QuestionnaireResponseValue
+    range: string
+  name:
+    name: name
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    alias: name
+    owner: QuestionnaireResponseValue
+    domain_of:
+    - ResearchStudy
+    - Organization
+    - Questionnaire
+    - QuestionnaireResponseValue
+    range: string
   value:
     name: value
-    description: The value of the identifier, as defined by the system.
+    description: A general slot to hold a value.
     from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
     alias: value
-    owner: Identifier
+    owner: QuestionnaireResponseValue
     domain_of:
     - Identifier
     - QuestionnaireResponseValue
-    range: string
-    required: true
-  system:
-    name: system
-    description: The system or namespace that defines the identifier.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    alias: system
-    owner: Identifier
-    domain_of:
-    - Identifier
     range: string
 
 </code></pre>

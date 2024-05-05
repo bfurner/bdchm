@@ -317,7 +317,7 @@
 
 
 <h1 id="slot-value">Slot: value</h1>
-<p><em>The value of the identifier, as defined by the system.</em></p>
+<p><em>A general slot to hold a value.</em></p>
 <p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/value">bdchm:value</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -332,20 +332,35 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../QuestionnaireResponseValue/">QuestionnaireResponseValue</a></td>
+<td>Single-valued answer to the question</td>
+<td>no</td>
+</tr>
+<tr>
 <td><a href="../Identifier/">Identifier</a></td>
 <td>An Identifier is associated with a unique object or entity within a given sys...</td>
 <td>no</td>
+</tr>
+<tr>
+<td><a href="../QuestionnaireResponseValueDecimal/">QuestionnaireResponseValueDecimal</a></td>
+<td>Single-valued decimal answer to the question</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../QuestionnaireResponseValueBoolean/">QuestionnaireResponseValueBoolean</a></td>
+<td>Single-valued boolean answer to the question</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../QuestionnaireResponseValueString/">QuestionnaireResponseValueString</a></td>
+<td>Single-valued string answer to the question</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>
-<p>Range: <a href="../String/">String</a></p>
-</li>
-<li>
-<p>Required: True</p>
-</li>
+<li>Range: <a href="../String/">String</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -356,15 +371,14 @@
 <details>
 
 <pre><code class="language-yaml">name: value
-description: The value of the identifier, as defined by the system.
+description: A general slot to hold a value.
 from_schema: https://w3id.org/nhlbidatastage/bdchm
 rank: 1000
 alias: value
-owner: Identifier
 domain_of:
 - Identifier
+- QuestionnaireResponseValue
 range: string
-required: true
 
 </code></pre>
 

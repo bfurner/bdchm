@@ -274,19 +274,6 @@
     Identifier and Mapping Information
   </a>
   
-    <nav class="md-nav" aria-label="Identifier and Mapping Information">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#schema-source" class="md-nav__link">
-    Schema Source
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -317,7 +304,6 @@
 
 
 <h1 id="slot-url">Slot: url</h1>
-<p><em>A URL address for a resource that provides information about a research program, project, or study.</em></p>
 <p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/url">bdchm:url</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -336,30 +322,27 @@
 <td>A process where a researcher or organization plans and then executes a series...</td>
 <td>no</td>
 </tr>
+<tr>
+<td><a href="../Questionnaire/">Questionnaire</a></td>
+<td>A Questionnaire is an organized collection of questions intended to solicit i...</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../Uriorcurie/">Uriorcurie</a></li>
+<li>Range: <a href="../String/">String</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
-<h3 id="schema-source">Schema Source</h3>
-<ul>
-<li>from schema: https://w3id.org/nhlbidatastage/bdchm</li>
-</ul>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
 <pre><code class="language-yaml">name: url
-description: A URL address for a resource that provides information about a research
-  program, project, or study.
-from_schema: https://w3id.org/nhlbidatastage/bdchm
-rank: 1000
 alias: url
-owner: ResearchStudy
 domain_of:
 - ResearchStudy
-range: uriorcurie
+- Questionnaire
+range: string
 
 </code></pre>
 

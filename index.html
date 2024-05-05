@@ -409,6 +409,18 @@
 <td>Demographics and other administrative information about an individual or animal receiving care or other health-related services.</td>
 </tr>
 <tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Questionnaire/">Questionnaire</a></td>
+<td>A Questionnaire is an organized collection of questions intended to solicit information from patients, providers or other individuals involved in the healthcare domain. They may be simple flat lists of questions or can be hierarchically organized in groups and sub-groups, each containing questions. The Questionnaire defines the questions to be asked, how they are ordered and grouped, any intervening instructional text and what the constraints are on the allowed answers. The results of a Questionnaire can be communicated using the QuestionnaireResponse. (FHIR)</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="QuestionnaireItem/">QuestionnaireItem</a></td>
+<td>QuestionnaireItem defines a question or section within the Questionnaire</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="QuestionnaireResponse/">QuestionnaireResponse</a></td>
+<td>QuestionnaireResponse provides a complete or partial list of answers to a set of questions filled when responding to a questionnaire. (FHIR)</td>
+</tr>
+<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ResearchStudy/">ResearchStudy</a></td>
 <td>A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge. This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques. A ResearchStudy involves the gathering of information about human or animal subjects.</td>
 </tr>
@@ -423,6 +435,26 @@
 <tr>
 <td><a href="Identifier/">Identifier</a></td>
 <td>An Identifier is associated with a unique object or entity within a given system.</td>
+</tr>
+<tr>
+<td><a href="QuestionnaireResponseItem/">QuestionnaireResponseItem</a></td>
+<td>QuestionnaireResponseItem provides a complete or partial list of answers to a set of questions filled when responding to a questionnaire. (FHIR)</td>
+</tr>
+<tr>
+<td><a href="QuestionnaireResponseValue/">QuestionnaireResponseValue</a></td>
+<td>Single-valued answer to the question. (FHIR)</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="QuestionnaireResponseValueBoolean/">QuestionnaireResponseValueBoolean</a></td>
+<td>Single-valued boolean answer to the question</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="QuestionnaireResponseValueDecimal/">QuestionnaireResponseValueDecimal</a></td>
+<td>Single-valued decimal answer to the question</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="QuestionnaireResponseValueString/">QuestionnaireResponseValueString</a></td>
+<td>Single-valued string answer to the question</td>
 </tr>
 <tr>
 <td><a href="ResearchStudyCollection/">ResearchStudyCollection</a></td>
@@ -452,6 +484,10 @@
 <td>The age in days when the Participant enrolled on the ResearchStudy</td>
 </tr>
 <tr>
+<td><a href="age_at_response/">age_at_response</a></td>
+<td>The age (in days) of the Participant when the QuestionnaireResponse was captu...</td>
+</tr>
+<tr>
 <td><a href="age_at_visit_end/">age_at_visit_end</a></td>
 <td>The age of the Participant (in days) at the end of the Visit</td>
 </tr>
@@ -478,6 +514,10 @@
 <tr>
 <td><a href="cause_of_death/">cause_of_death</a></td>
 <td>Coded value indicating the circumstance or condition that results in the deat...</td>
+</tr>
+<tr>
+<td><a href="code/">code</a></td>
+<td>Corresponding concept for this item in a terminology</td>
 </tr>
 <tr>
 <td><a href="consent_code/">consent_code</a></td>
@@ -516,6 +556,14 @@
 <td>An event that occurred at the point in time specified by this TimePoint</td>
 </tr>
 <tr>
+<td><a href="has_questionnaire_item/">has_questionnaire_item</a></td>
+<td>A reference to the QuestionnaireItem that this QuestionnaireResponseItem resp...</td>
+</tr>
+<tr>
+<td><a href="has_visit/">has_visit</a></td>
+<td>A reference to the Visit during which this QuestionnaireResponse was captured</td>
+</tr>
+<tr>
 <td><a href="id/">id</a></td>
 <td>The 'logical' identifier of the entity within the system of record</td>
 </tr>
@@ -530,6 +578,10 @@
 <tr>
 <td><a href="index_timepoint/">index_timepoint</a></td>
 <td>The text term used to describe the reference or anchor date used for date obf...</td>
+</tr>
+<tr>
+<td><a href="items/">items</a></td>
+<td>A collection of QuestionnaireItem objects which encapsulate the question bein...</td>
 </tr>
 <tr>
 <td><a href="member_of_research_study/">member_of_research_study</a></td>
@@ -584,6 +636,10 @@
 <td>The 'type' of ResearchStudy represented (e</td>
 </tr>
 <tr>
+<td><a href="response_value/">response_value</a></td>
+<td></td>
+</tr>
+<tr>
 <td><a href="sex/">sex</a></td>
 <td>The biologic character or quality that distinguishes male and female from one...</td>
 </tr>
@@ -604,12 +660,24 @@
 <td>The system or namespace that defines the identifier</td>
 </tr>
 <tr>
+<td><a href="text/">text</a></td>
+<td>Name for group or question text</td>
+</tr>
+<tr>
+<td><a href="title/">title</a></td>
+<td>Name for this Questionnaire (human friendly)</td>
+</tr>
+<tr>
+<td><a href="type/">type</a></td>
+<td></td>
+</tr>
+<tr>
 <td><a href="url/">url</a></td>
 <td>A URL address for a resource that provides information about a research progr...</td>
 </tr>
 <tr>
 <td><a href="value/">value</a></td>
-<td>The value of the identifier, as defined by the system</td>
+<td>A general slot to hold a value</td>
 </tr>
 <tr>
 <td><a href="visit_category/">visit_category</a></td>

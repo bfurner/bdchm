@@ -30,7 +30,7 @@ classes:
     description: >-
       Any resource that has its own identifier
     slots:
-      - id
+      id
     class_uri: schema:Thing
 
   Person:
@@ -242,6 +242,110 @@ classes:
         multivalued: true
         inlined: true
 
+  Questionnaire:
+    is_a: Entity
+    description: A Questionnaire is an organized collection of questions intended to solicit information from patients, providers or other individuals involved in the healthcare domain. They may be simple flat lists of questions or can be hierarchically organized in groups and sub-groups, each containing questions. The Questionnaire defines the questions to be asked, how they are ordered and grouped, any intervening instructional text and what the constraints are on the allowed answers. The results of a Questionnaire can be communicated using the QuestionnaireResponse. (FHIR)
+    attributes:
+      name:
+        description: Name for this Questionnaire (computer friendly)
+        range: string
+      title:
+        description: Name for this Questionnaire (human friendly)
+        range: string
+      description:
+        description: Natural language description of the Questionnaire
+        range: string
+      url:
+        description: Canonical identifier for this Questionnaire, represented as an absolute URI (globally unique)
+        range: uriorcurie
+      items:
+        description: A collection of QuestionnaireItem objects which encapsulate the question being asked.
+        range: QuestionnaireItem
+        multivalued: true
+        required: true
+    slots:
+      - identity
+
+  QuestionnaireItem:
+    is_a: Entity
+    description: QuestionnaireItem defines a question or section within the Questionnaire
+    attributes:
+      text:
+        range: string
+        description: Name for group or question text
+      code:
+        range: string
+        description: Corresponding concept for this item in a terminology
+      part_of:
+        range: QuestionnaireItem
+        description: A reference to a parent QuestionnaireItem.
+    slots:
+      - identity
+
+
+  QuestionnaireResponse:
+    is_a: Entity
+    description: QuestionnaireResponse provides a complete or partial list of answers to a set of questions filled when responding to a questionnaire. (FHIR)
+    attributes:
+      age_at_response:
+        description: The age (in days) of the Participant when the QuestionnaireResponse was captured.
+        range: integer
+      items:
+        description: A collection of QuestionnaireResponseItem objects which encapsulate the question being asked and the response.
+        range: QuestionnaireResponseItem
+        multivalued: true
+        required: true
+      has_visit:
+        description: A reference to the Visit during which this QuestionnaireResponse was captured.
+        range: Visit
+    
+  QuestionnaireResponseItem:
+    description: QuestionnaireResponseItem provides a complete or partial list of answers to a set of questions filled when responding to a questionnaire. (FHIR)
+    attributes:
+      has_questionnaire_item:
+        range: QuestionnaireItem
+        description: A reference to the QuestionnaireItem that this QuestionnaireResponseItem responds to.
+      text:
+        range: string
+        description: Name for group or question text
+      response_value:
+        range: QuestionnaireResponseValue
+        required: true
+
+  QuestionnaireResponseValue:
+    description: Single-valued answer to the question. (FHIR)
+    attributes:
+      type:
+        range: string
+        designates_type: true
+      name:
+        range: string
+    slots:
+      - value
+  
+  QuestionnaireResponseValueDecimal:
+    is_a: QuestionnaireResponseValue
+    description: Single-valued decimal answer to the question
+    slot_usage:
+      value:
+        range: decimal
+        required: true
+
+  QuestionnaireResponseValueBoolean:
+    is_a: QuestionnaireResponseValue
+    description: Single-valued boolean answer to the question
+    slot_usage:
+      value:
+        range: boolean
+        required: true
+
+  QuestionnaireResponseValueString:
+    is_a: QuestionnaireResponseValue
+    description: Single-valued string answer to the question
+    slot_usage:
+      value:
+        range: string
+        required: true
 
 slots:
   id:
@@ -257,6 +361,9 @@ slots:
   associated_person:
     range: Person
     description: A reference to the Person that is associated with this record.
+  value:
+    range: string
+    description: A general slot to hold a value.
 
 
 enums:

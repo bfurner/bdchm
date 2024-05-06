@@ -1,0 +1,5 @@
+# Use the recommended rule set except for the standard_naming rule, checking for UPPER_SNAKE case of permissible values
+extends: recommended
+rules:
+  standard_naming:
+    permissible_values_upper_case: true

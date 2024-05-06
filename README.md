@@ -17,10 +17,17 @@ This is the LinkML model repository for the BioData Catalyst Harmonized Model (b
 ## Developer Documentation
 
 <details>
-Use the `make` command to generate project artefacts:
 
-* `make all`: make everything
-* `make deploy`: deploys site
+To setup a local development environment:
+
+* clone the repository
+* change directories to the model repository using `cd bdchm`
+* install all of the dependencies using `poetry install`
+* enter the poetry environment using `poetry shell`
+* use the `make` command to generate project artefacts:
+  * `make gendoc`: generates documentation
+  * `make serve`: starts a local webserver to allow for browsing of documentation
+
 </details>
 
 ## Credits

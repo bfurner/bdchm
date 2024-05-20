@@ -91,7 +91,7 @@ classes:
           ucum_code: d
       index_timepoint:
         range: string
-        description: The text term used to describe the reference or anchor date used for date obfuscation, where a single date is obscured by creating one or more date ranges in relation to this date. 
+        description: The text term used to describe the reference or anchor date used for date obfuscation, where a single date is obscured by creating one or more date ranges in relation to this date.
       originating_site:
         range: Organization
         description: The Organization through which a subject was enrolled on a ResearchStudy.
@@ -187,7 +187,7 @@ classes:
         description: A secondary name for the organization such as a short name or abbreviation (e.g. 'NCI')
       organization_type:
         range: string
-        description: The type of the organization (e.g. 'Cancer Genome Characterization Center') 
+        description: The type of the organization (e.g. 'Cancer Genome Characterization Center')
     slots:
       - identity
 
@@ -222,7 +222,7 @@ classes:
 
   Identifier:
     description: >-
-      An Identifier is associated with a unique object or entity within a given system.  
+      An Identifier is associated with a unique object or entity within a given system.
     attributes:
       - value:
           range: string
@@ -298,7 +298,7 @@ classes:
       has_visit:
         description: A reference to the Visit during which this QuestionnaireResponse was captured.
         range: Visit
-    
+
   QuestionnaireResponseItem:
     description: QuestionnaireResponseItem provides a complete or partial list of answers to a set of questions filled when responding to a questionnaire. (FHIR)
     attributes:
@@ -322,7 +322,7 @@ classes:
         range: string
     slots:
       - value
-  
+
   QuestionnaireResponseValueDecimal:
     is_a: QuestionnaireResponseValue
     description: Single-valued decimal answer to the question
@@ -453,4 +453,39 @@ enums:
       include_self: false
       relationship_types:
         - rdfs:subClassOf
-  
+
+  VisitCategoryEnum:
+    permissible_values:
+      INPATIENT:
+        description: Person visiting hospital, at a care stie, in bed, for duration of more than one day, with physicians and other Providers permanently available to deliver service around the clock
+        meaning: OMOP:9201
+      EMERGENCY_ROOM:
+        description: Person visiting dedicated healthcare institution for treating emergencies, at a Care Site, within one day, with physicians and Providers permanently available to deliver service around the clock
+        meaning: OMOP:9203
+      EMERGENCY_ROOM_AND_INPATIENT:
+        description: Person visiting ER followed by a subsequent Inpatient Visit, where Emergency department is part of hospital, and transition from the ER to other hospital departments is undefined
+        meaning: OMOP:262
+      NON_HOSPITAL_INSTITUTION:
+        description: Person visiting dedicated institution for reasons of poor health, at a Care Site, long-term or permanently, with no physician but possibly other Providers permanently available to deliver service around the clock
+        meaning: OMOP:42898160
+      OUTPATIENT:
+        description: Person visiting dedicated ambulatory healthcare institution, at a Care Site, within one day, without bed, with physicians or medical Providers delivering service during Visit
+        meaning: OMOP:9202
+      HOME:
+        description: Provider visiting Person, without a Care Site, within one day, delivering service
+        meaning: OMOP:581476
+      TELEHEALTH:
+        description: Patient engages with Provider through communication media
+        meaning: OMOP:5083
+      PHARMACY:
+        description: Person visiting pharmacy for dispensing of Drug, at a Care Site, within one day
+        meaning: OMOP:581458
+      LABORATORY:
+        description: Patient visiting dedicated institution, at a Care Site, within one day, for the purpose of a Measurement.
+        meaning: OMOP:32036
+      AMBULANCE:
+          description: Person using transportation service for the purpose of initiating one of the other Visits, without a Care Site, within one day, potentially with Providers accompanying the Visit and delivering service
+          meaning: OMOP:581478
+      CASE_MANAGEMENT:
+          description: Person interacting with healthcare system, without a Care Site, within a day, with no Providers involved, for administrative purposes
+          meaning: OMOP:38004193

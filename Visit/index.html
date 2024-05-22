@@ -223,7 +223,11 @@
 
       Visit : visit_category
 
+          Visit --&gt; VisitCategoryEnum : visit_category
+
       Visit : visit_provenance
+
+          Visit --&gt; VisitProvenanceEnum : visit_provenance
 
 
 </div>
@@ -247,7 +251,7 @@
 <tbody>
 <tr>
 <td><a href="../visit_category/">visit_category</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="../VisitCategoryEnum/">VisitCategoryEnum</a></td>
 <td>A value representing the kind (or category) of visit, like inpatient or outpa...</td>
 <td>direct</td>
 </tr>
@@ -265,7 +269,7 @@
 </tr>
 <tr>
 <td><a href="../visit_provenance/">visit_provenance</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="../VisitProvenanceEnum/">VisitProvenanceEnum</a></td>
 <td>A value representing the provenance of the visit record, or where the record ...</td>
 <td>direct</td>
 </tr>
@@ -347,7 +351,7 @@ attributes:
       or outpatient.
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
-    range: string
+    range: VisitCategoryEnum
   age_at_visit_start:
     name: age_at_visit_start
     description: The age of the Participant (in days) at the start of the Visit.
@@ -366,7 +370,7 @@ attributes:
       the record comes from.
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
-    range: string
+    range: VisitProvenanceEnum
   related_participant:
     name: related_participant
     description: A reference to the Participant for whom this Visit occurred.
@@ -399,7 +403,7 @@ attributes:
     owner: Visit
     domain_of:
     - Visit
-    range: string
+    range: VisitCategoryEnum
   age_at_visit_start:
     name: age_at_visit_start
     description: The age of the Participant (in days) at the start of the Visit.
@@ -430,7 +434,7 @@ attributes:
     owner: Visit
     domain_of:
     - Visit
-    range: string
+    range: VisitProvenanceEnum
   related_participant:
     name: related_participant
     description: A reference to the Participant for whom this Visit occurred.

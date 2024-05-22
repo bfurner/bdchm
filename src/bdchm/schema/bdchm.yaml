@@ -159,7 +159,7 @@ classes:
       Events where Persons engage with the healthcare system for a duration of time. They are often also called “Encounters”. Visits are defined by a configuration of circumstances under which they occur, such as (i) whether the patient comes to a healthcare institution, the other way around, or the interaction is remote, (ii) whether and what kind of trained medical staff is delivering the service during the Visit, and (iii) whether the Visit is transient or for a longer period involving a stay in bed. (OMOP)
     attributes:
       - visit_category:
-          range: string
+          range: VisitCategoryEnum
           description: A value representing the kind (or category) of visit, like inpatient or outpatient.
       - age_at_visit_start:
           range: integer
@@ -168,7 +168,7 @@ classes:
           range: integer
           description: The age of the Participant (in days) at the end of the Visit.
       - visit_provenance:
-          range: string
+          range: VisitProvenanceEnum
           description: A value representing the provenance of the visit record, or where the record comes from.
       - related_participant:
           range: Participant

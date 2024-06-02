@@ -2,527 +2,527 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://bfurner.github.io/bdchm/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Boolean/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/CellularOrganismSpeciesEnum/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Curie/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/DataUseEnum/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Date/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/DateOrDatetime/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Datetime/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Decimal/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Double/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Entity/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/EthnicityEnum/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Float/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Identifier/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Integer/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Jsonpath/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Jsonpointer/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Ncname/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Nodeidentifier/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Objectidentifier/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Organization/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Participant/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Person/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Questionnaire/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/QuestionnaireItem/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/QuestionnaireResponse/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/QuestionnaireResponseItem/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/QuestionnaireResponseValue/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/QuestionnaireResponseValueBoolean/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/QuestionnaireResponseValueDecimal/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/QuestionnaireResponseValueString/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/RaceEnum/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/ResearchStudy/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/ResearchStudyCollection/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/SexEnum/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Sparqlpath/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/String/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Time/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/TimePeriod/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/TimePoint/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Uri/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Uriorcurie/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/VertebrateBreedEnum/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/Visit/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/VisitCategoryEnum/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/VisitProvenanceEnum/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/VitalStatusEnum/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/about/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/age_at_death/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/age_at_enrollment/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/age_at_response/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/age_at_visit_end/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/age_at_visit_start/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/alias/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/associated_person/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/associated_timepoint/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/bdchm/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/breed/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/cause_of_death/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/code/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/consent_code/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/date_ended/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/date_started/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/date_time/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/description/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/description_shortened/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/entries/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/ethnicity/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/event_type/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/has_questionnaire_item/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/has_visit/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/id/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/identity/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/index_time_point/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/index_timepoint/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/items/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/member_of_research_study/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/name/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/name_shortened/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/offset_from_index/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/organization_type/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/originating_site/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/part_of/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/period_end/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/period_start/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/principal_investigator/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/race/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/related_participant/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/research_project_type/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/response_value/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/sex/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/species/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/sponsor/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/study_arm/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/system/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/text/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/title/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/type/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/url/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/value/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/visit_category/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/visit_provenance/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/vital_status/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/year_of_birth/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bfurner.github.io/bdchm/year_of_death/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

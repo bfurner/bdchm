@@ -170,7 +170,7 @@ classes:
       - visit_provenance:
           range: VisitProvenanceEnum
           description: A value representing the provenance of the visit record, or where the record comes from.
-      - related_participant:
+      - associated_participant:
           range: Participant
           description: A reference to the Participant for whom this Visit occurred.
 
@@ -282,7 +282,6 @@ classes:
     slots:
       - identity
 
-
   QuestionnaireResponse:
     is_a: Entity
     description: QuestionnaireResponse provides a complete or partial list of answers to a set of questions filled when responding to a questionnaire. (FHIR)
@@ -295,7 +294,7 @@ classes:
         range: QuestionnaireResponseItem
         multivalued: true
         required: true
-      has_visit:
+      associated_visit:
         description: A reference to the Visit during which this QuestionnaireResponse was captured.
         range: Visit
 
@@ -347,6 +346,39 @@ classes:
         range: string
         required: true
 
+  Condition:
+    is_a: Entity
+    description: >-
+       A Condition description will be forthcoming.
+    attributes:
+      condition_concept:
+        range: string
+        description: TBD
+      age_at_condition_start:
+        range: integer
+        description: The Participant's age (expressed in days) when the condition was first recorded.
+        unit:
+          ucum_code: d
+      age_at_condition_end:
+        range: integer
+        description: The Participant's age (expressed in days) when the condition was recorded as having been resolved.
+        unit:
+          ucum_code: d
+      condition_provenance:
+        range: string
+        description: A value representing the provenance of the Condition record
+      relationship_to_participant:
+        range: string
+        description: A value indicating the relationship between the Participant to which the Condition is attributed and the individual who had the reported Condition.  If the Condition is affecting the participant themselves, then 'Self' is the appropriate relationship.  If the Condition is affecting a family member (e.g. a parent of the Participant) then an appropriate relationship should be provided (e.g. 'Parent')
+      associated_participant:
+        range: Participant
+        description: A reference to the Participant to which the Condition is attributed.
+      associated_visit:
+        description: A reference to the Visit during which this QuestionnaireResponse was captured.
+        range: Visit
+    slots:
+      - identity
+    
 slots:
   id:
     identifier: true

@@ -7,8 +7,8 @@ classDiagram
     Participant "1..*" --> "1" Person : associated_person
     ResearchStudy "1..*" <-- "1" Participant : member_of_research_study
     ResearchStudy "0..1" <-- "1" ResearchStudy : part_of
-    Visit "0..*" --> "1" Participant : related_participant
-    QuestionnaireResponse "0..*" --> "1" Visit : has_visit
+    Visit "0..*" --> "1" Participant : associated_participant
+    QuestionnaireResponse "0..*" --> "1" Visit : associated_visit
     QuestionnaireResponseItem "1..*" <-- "1" QuestionnaireResponse : items
     QuestionnaireResponseValue "1" <-- "1" QuestionnaireResponseItem : response_value
     QuestionnaireResponseValue <|-- QuestionnaireResponseValueDecimal
@@ -17,6 +17,8 @@ classDiagram
     QuestionnaireItem "0..1" <-- "1" QuestionnaireResponseItem : has_questionnaire_item
     Questionnaire "1" --> "1..*" QuestionnaireItem : items
     QuestionnaireItem "1" --> "0..1" QuestionnaireItem : part_of
+    Condition "0..*" --> "0..1" Visit : associated_visit
+    Condition "0..*" --> "1" Participant : associated_participant
     Person : id
     Person : identity
     Person : species
@@ -73,6 +75,12 @@ classDiagram
     QuestionnaireResponseValueDecimal : value
     QuestionnaireResponseValueBoolean : value
     QuestionnaireResponseValueString : value
-        
+    Condition : id
+    Condition : identity
+    Condition : condition_concept
+    Condition : age_at_condition_start
+    Condition : age_at_condition_end
+    Condition : condition_provenance
+    Condition : relationship_to_participant
       
 ```

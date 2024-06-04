@@ -397,6 +397,10 @@
 <td>Any resource that has its own identifier</td>
 </tr>
 <tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Condition/">Condition</a></td>
+<td>A Condition description will be forthcoming.</td>
+</tr>
+<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Organization/">Organization</a></td>
 <td>A grouping of people or organizations with a common purpose such as a data coordinating center, an university, or an institute within a university.</td>
 </tr>
@@ -476,6 +480,14 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="age_at_condition_end/">age_at_condition_end</a></td>
+<td>The Participant's age (expressed in days) when the condition was recorded as ...</td>
+</tr>
+<tr>
+<td><a href="age_at_condition_start/">age_at_condition_start</a></td>
+<td>The Participant's age (expressed in days) when the condition was first record...</td>
+</tr>
+<tr>
 <td><a href="age_at_death/">age_at_death</a></td>
 <td>The age of an individual at the time of death, expressed in days since birth</td>
 </tr>
@@ -500,12 +512,20 @@
 <td>A secondary name for the organization such as a short name or abbreviation (e</td>
 </tr>
 <tr>
+<td><a href="associated_participant/">associated_participant</a></td>
+<td>A reference to the Participant for whom this Visit occurred</td>
+</tr>
+<tr>
 <td><a href="associated_person/">associated_person</a></td>
 <td>A reference to the Person that is associated with this record</td>
 </tr>
 <tr>
 <td><a href="associated_timepoint/">associated_timepoint</a></td>
 <td>A collection of timepoint observations that are relevant to research projects...</td>
+</tr>
+<tr>
+<td><a href="associated_visit/">associated_visit</a></td>
+<td>A reference to the Visit during which this QuestionnaireResponse was captured</td>
 </tr>
 <tr>
 <td><a href="breed/">breed</a></td>
@@ -518,6 +538,14 @@
 <tr>
 <td><a href="code/">code</a></td>
 <td>Corresponding concept for this item in a terminology</td>
+</tr>
+<tr>
+<td><a href="condition_concept/">condition_concept</a></td>
+<td>TBD</td>
+</tr>
+<tr>
+<td><a href="condition_provenance/">condition_provenance</a></td>
+<td>A value representing the provenance of the Condition record</td>
 </tr>
 <tr>
 <td><a href="consent_code/">consent_code</a></td>
@@ -558,10 +586,6 @@
 <tr>
 <td><a href="has_questionnaire_item/">has_questionnaire_item</a></td>
 <td>A reference to the QuestionnaireItem that this QuestionnaireResponseItem resp...</td>
-</tr>
-<tr>
-<td><a href="has_visit/">has_visit</a></td>
-<td>A reference to the Visit during which this QuestionnaireResponse was captured</td>
 </tr>
 <tr>
 <td><a href="id/">id</a></td>
@@ -628,8 +652,8 @@
 <td>An arbitrary classification of a taxonomic group that is a division of a spec...</td>
 </tr>
 <tr>
-<td><a href="related_participant/">related_participant</a></td>
-<td>A reference to the Participant for whom this Visit occurred</td>
+<td><a href="relationship_to_participant/">relationship_to_participant</a></td>
+<td>A value indicating the relationship between the Participant to which the Cond...</td>
 </tr>
 <tr>
 <td><a href="research_project_type/">research_project_type</a></td>

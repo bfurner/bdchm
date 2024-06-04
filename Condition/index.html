@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://bfurner.github.io/bdchm/Person/" rel="canonical"/>
+<link href="https://bfurner.github.io/bdchm/Condition/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-8.5.10" name="generator"/>
-<title>Class: Person - BioData Catalyst Harmonized Model</title>
+<title>Class: Condition - BioData Catalyst Harmonized Model</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -21,7 +21,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#class-person">
+<a class="md-skip" href="#class-condition">
           Skip to content
         </a>
 </div>
@@ -45,7 +45,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Class: Person
+              Class: Condition
             
           </span>
 </div>
@@ -152,11 +152,6 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#usages">
-    Usages
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#identifier-and-mapping-information">
     Identifier and Mapping Information
   </a>
@@ -201,60 +196,46 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/bfurner/bdchm/edit/master/docs/Person.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/bfurner/bdchm/edit/master/docs/Condition.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="class-person">Class: Person</h1>
-<p><em>Demographics and other administrative information about an individual or animal receiving care or other health-related services.</em></p>
-<p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/Person">bdchm:Person</a></p>
+<h1 id="class-condition">Class: Condition</h1>
+<p><em>A Condition description will be forthcoming.</em></p>
+<p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/Condition">bdchm:Condition</a></p>
 <div class="mermaid"> classDiagram
-    class Person
-      Entity &lt;|-- Person
+    class Condition
+      Entity &lt;|-- Condition
 
-      Person : age_at_death
+      Condition : age_at_condition_end
 
-      Person : breed
+      Condition : age_at_condition_start
 
-          Person --&gt; VertebrateBreedEnum : breed
+      Condition : associated_participant
 
-      Person : cause_of_death
+          Condition --&gt; Participant : associated_participant
 
-      Person : ethnicity
+      Condition : associated_visit
 
-          Person --&gt; EthnicityEnum : ethnicity
+          Condition --&gt; Visit : associated_visit
 
-      Person : id
+      Condition : condition_concept
 
-      Person : identity
+      Condition : condition_provenance
 
-          Person --&gt; Identifier : identity
+      Condition : id
 
-      Person : race
+      Condition : identity
 
-          Person --&gt; RaceEnum : race
+          Condition --&gt; Identifier : identity
 
-      Person : sex
-
-          Person --&gt; SexEnum : sex
-
-      Person : species
-
-          Person --&gt; CellularOrganismSpeciesEnum : species
-
-      Person : vital_status
-
-          Person --&gt; VitalStatusEnum : vital_status
-
-      Person : year_of_birth
-
-      Person : year_of_death
+      Condition : relationship_to_participant
 
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Entity/">Entity</a><ul>
-<li><strong>Person</strong></li>
+<li><strong>Condition</strong></li>
 </ul>
 </li>
 </ul>
@@ -276,63 +257,45 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../species/">species</a></td>
-<td>0..1 <br/> <a href="../CellularOrganismSpeciesEnum/">CellularOrganismSpeciesEnum</a></td>
-<td>The scientific binomial name for the species of the Person (e</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../breed/">breed</a></td>
-<td>0..1 <br/> <a href="../VertebrateBreedEnum/">VertebrateBreedEnum</a></td>
-<td>A label given to a group of animals homogeneous in appearance and other chara...</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../sex/">sex</a></td>
-<td>0..1 <br/> <a href="../SexEnum/">SexEnum</a></td>
-<td>The biologic character or quality that distinguishes male and female from one...</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../ethnicity/">ethnicity</a></td>
-<td>0..1 <br/> <a href="../EthnicityEnum/">EthnicityEnum</a></td>
-<td>An individual's self-described social and cultural grouping, specifically whe...</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../race/">race</a></td>
-<td>0..1 <br/> <a href="../RaceEnum/">RaceEnum</a></td>
-<td>An arbitrary classification of a taxonomic group that is a division of a spec...</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../year_of_birth/">year_of_birth</a></td>
-<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>Numeric value to represent the calendar year in which an individual was born</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../vital_status/">vital_status</a></td>
-<td>0..1 <br/> <a href="../VitalStatusEnum/">VitalStatusEnum</a></td>
-<td>Coded value indicating the state or condition of being living or deceased; al...</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../age_at_death/">age_at_death</a></td>
-<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The age of an individual at the time of death, expressed in days since birth</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../year_of_death/">year_of_death</a></td>
-<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>Numeric value to represent the calendar year in which an individual died</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../cause_of_death/">cause_of_death</a></td>
+<td><a href="../condition_concept/">condition_concept</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>Coded value indicating the circumstance or condition that results in the deat...</td>
+<td>TBD</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../age_at_condition_start/">age_at_condition_start</a></td>
+<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>The Participant's age (expressed in days) when the condition was first record...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../age_at_condition_end/">age_at_condition_end</a></td>
+<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>The Participant's age (expressed in days) when the condition was recorded as ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../condition_provenance/">condition_provenance</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A value representing the provenance of the Condition record</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../relationship_to_participant/">relationship_to_participant</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A value indicating the relationship between the Participant to which the Cond...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../associated_participant/">associated_participant</a></td>
+<td>0..1 <br/> <a href="../Participant/">Participant</a></td>
+<td>A reference to the Participant to which the Condition is attributed</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../associated_visit/">associated_visit</a></td>
+<td>0..1 <br/> <a href="../Visit/">Visit</a></td>
+<td>A reference to the Visit during which this QuestionnaireResponse was captured</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -340,25 +303,6 @@
 <td>1..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
 <td>The 'logical' identifier of the entity within the system of record</td>
 <td><a href="../Entity/">Entity</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="usages">Usages</h2>
-<table>
-<thead>
-<tr>
-<th>used by</th>
-<th>used in</th>
-<th>type</th>
-<th>used</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Participant/">Participant</a></td>
-<td><a href="../associated_person/">associated_person</a></td>
-<td>range</td>
-<td><a href="./">Person</a></td>
 </tr>
 </tbody>
 </table>
@@ -378,11 +322,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>bdchm:Person</td>
+<td>bdchm:Condition</td>
 </tr>
 <tr>
 <td>native</td>
-<td>bdchm:Person</td>
+<td>bdchm:Condition</td>
 </tr>
 </tbody>
 </table>
@@ -390,227 +334,157 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: Person
-description: Demographics and other administrative information about an individual
-  or animal receiving care or other health-related services.
+<pre><code class="language-yaml">name: Condition
+description: A Condition description will be forthcoming.
 from_schema: https://w3id.org/nhlbidatastage/bdchm
 is_a: Entity
 slots:
 - identity
 attributes:
-  species:
-    name: species
-    description: The scientific binomial name for the species of the Person (e.g.
-      Homo sapiens, Mus musculus, etc.). Values should be derived from the NCBI organismal
-      taxonomy (http://purl.obolibrary.org/obo/ncbitaxon.owl).
+  condition_concept:
+    name: condition_concept
+    description: TBD
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
-    range: CellularOrganismSpeciesEnum
-  breed:
-    name: breed
-    description: A label given to a group of animals homogeneous in appearance and
-      other characteristics that distinguish it from other animals of the same species.
-      Values should be derived from the Vertebrate Breed Ontology (http://purl.obolibrary.org/obo/vbo.owl).
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    range: VertebrateBreedEnum
-  sex:
-    name: sex
-    description: The biologic character or quality that distinguishes male and female
-      from one another as expressed by analysis of the person's gonadal, morphologic
-      (internal and external), chromosomal, and hormonal characteristics.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    range: SexEnum
-  ethnicity:
-    name: ethnicity
-    description: An individual's self-described social and cultural grouping, specifically
-      whether an individual describes themselves as Hispanic or Latino. The provided
-      values are based on the categories defined by the U.S. Office of Management
-      and Business and used by the U.S. Census Bureau
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    range: EthnicityEnum
-  race:
-    name: race
-    description: An arbitrary classification of a taxonomic group that is a division
-      of a species. It usually arises as a consequence of geographical isolation within
-      a species and is characterized by shared heredity, physical attributes and behavior,
-      and in the case of humans, by common history, nationality, or geographic distribution.
-      The provided values are based on the categories defined by the U.S. Office of
-      Management and Business and used by the U.S. Census Bureau.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    range: RaceEnum
-  year_of_birth:
-    name: year_of_birth
-    description: Numeric value to represent the calendar year in which an individual
-      was born.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    range: integer
-  vital_status:
-    name: vital_status
-    description: Coded value indicating the state or condition of being living or
-      deceased; also includes the case where the vital status is unknown.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    range: VitalStatusEnum
-  age_at_death:
-    name: age_at_death
-    description: The age of an individual at the time of death, expressed in days
-      since birth
+    range: string
+  age_at_condition_start:
+    name: age_at_condition_start
+    description: The Participant's age (expressed in days) when the condition was
+      first recorded.
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
     range: integer
     unit:
       ucum_code: d
-  year_of_death:
-    name: year_of_death
-    description: Numeric value to represent the calendar year in which an individual
-      died.
+  age_at_condition_end:
+    name: age_at_condition_end
+    description: The Participant's age (expressed in days) when the condition was
+      recorded as having been resolved.
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
     range: integer
-  cause_of_death:
-    name: cause_of_death
-    description: Coded value indicating the circumstance or condition that results
-      in the death of the individual.
+    unit:
+      ucum_code: d
+  condition_provenance:
+    name: condition_provenance
+    description: A value representing the provenance of the Condition record
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
     range: string
+  relationship_to_participant:
+    name: relationship_to_participant
+    description: A value indicating the relationship between the Participant to which
+      the Condition is attributed and the individual who had the reported Condition.  If
+      the Condition is affecting the participant themselves, then 'Self' is the appropriate
+      relationship.  If the Condition is affecting a family member (e.g. a parent
+      of the Participant) then an appropriate relationship should be provided (e.g.
+      'Parent')
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    range: string
+  associated_participant:
+    name: associated_participant
+    description: A reference to the Participant to which the Condition is attributed.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    range: Participant
+  associated_visit:
+    name: associated_visit
+    description: A reference to the Visit during which this QuestionnaireResponse
+      was captured.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    range: Visit
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: Person
-description: Demographics and other administrative information about an individual
-  or animal receiving care or other health-related services.
+<pre><code class="language-yaml">name: Condition
+description: A Condition description will be forthcoming.
 from_schema: https://w3id.org/nhlbidatastage/bdchm
 is_a: Entity
 attributes:
-  species:
-    name: species
-    description: The scientific binomial name for the species of the Person (e.g.
-      Homo sapiens, Mus musculus, etc.). Values should be derived from the NCBI organismal
-      taxonomy (http://purl.obolibrary.org/obo/ncbitaxon.owl).
+  condition_concept:
+    name: condition_concept
+    description: TBD
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
-    alias: species
-    owner: Person
+    alias: condition_concept
+    owner: Condition
     domain_of:
-    - Person
-    range: CellularOrganismSpeciesEnum
-  breed:
-    name: breed
-    description: A label given to a group of animals homogeneous in appearance and
-      other characteristics that distinguish it from other animals of the same species.
-      Values should be derived from the Vertebrate Breed Ontology (http://purl.obolibrary.org/obo/vbo.owl).
+    - Condition
+    range: string
+  age_at_condition_start:
+    name: age_at_condition_start
+    description: The Participant's age (expressed in days) when the condition was
+      first recorded.
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
-    alias: breed
-    owner: Person
+    alias: age_at_condition_start
+    owner: Condition
     domain_of:
-    - Person
-    range: VertebrateBreedEnum
-  sex:
-    name: sex
-    description: The biologic character or quality that distinguishes male and female
-      from one another as expressed by analysis of the person's gonadal, morphologic
-      (internal and external), chromosomal, and hormonal characteristics.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    alias: sex
-    owner: Person
-    domain_of:
-    - Person
-    range: SexEnum
-  ethnicity:
-    name: ethnicity
-    description: An individual's self-described social and cultural grouping, specifically
-      whether an individual describes themselves as Hispanic or Latino. The provided
-      values are based on the categories defined by the U.S. Office of Management
-      and Business and used by the U.S. Census Bureau
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    alias: ethnicity
-    owner: Person
-    domain_of:
-    - Person
-    range: EthnicityEnum
-  race:
-    name: race
-    description: An arbitrary classification of a taxonomic group that is a division
-      of a species. It usually arises as a consequence of geographical isolation within
-      a species and is characterized by shared heredity, physical attributes and behavior,
-      and in the case of humans, by common history, nationality, or geographic distribution.
-      The provided values are based on the categories defined by the U.S. Office of
-      Management and Business and used by the U.S. Census Bureau.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    alias: race
-    owner: Person
-    domain_of:
-    - Person
-    range: RaceEnum
-  year_of_birth:
-    name: year_of_birth
-    description: Numeric value to represent the calendar year in which an individual
-      was born.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    alias: year_of_birth
-    owner: Person
-    domain_of:
-    - Person
-    range: integer
-  vital_status:
-    name: vital_status
-    description: Coded value indicating the state or condition of being living or
-      deceased; also includes the case where the vital status is unknown.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    alias: vital_status
-    owner: Person
-    domain_of:
-    - Person
-    range: VitalStatusEnum
-  age_at_death:
-    name: age_at_death
-    description: The age of an individual at the time of death, expressed in days
-      since birth
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    alias: age_at_death
-    owner: Person
-    domain_of:
-    - Person
+    - Condition
     range: integer
     unit:
       ucum_code: d
-  year_of_death:
-    name: year_of_death
-    description: Numeric value to represent the calendar year in which an individual
-      died.
+  age_at_condition_end:
+    name: age_at_condition_end
+    description: The Participant's age (expressed in days) when the condition was
+      recorded as having been resolved.
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
-    alias: year_of_death
-    owner: Person
+    alias: age_at_condition_end
+    owner: Condition
     domain_of:
-    - Person
+    - Condition
     range: integer
-  cause_of_death:
-    name: cause_of_death
-    description: Coded value indicating the circumstance or condition that results
-      in the death of the individual.
+    unit:
+      ucum_code: d
+  condition_provenance:
+    name: condition_provenance
+    description: A value representing the provenance of the Condition record
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
-    alias: cause_of_death
-    owner: Person
+    alias: condition_provenance
+    owner: Condition
     domain_of:
-    - Person
+    - Condition
     range: string
+  relationship_to_participant:
+    name: relationship_to_participant
+    description: A value indicating the relationship between the Participant to which
+      the Condition is attributed and the individual who had the reported Condition.  If
+      the Condition is affecting the participant themselves, then 'Self' is the appropriate
+      relationship.  If the Condition is affecting a family member (e.g. a parent
+      of the Participant) then an appropriate relationship should be provided (e.g.
+      'Parent')
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    alias: relationship_to_participant
+    owner: Condition
+    domain_of:
+    - Condition
+    range: string
+  associated_participant:
+    name: associated_participant
+    description: A reference to the Participant to which the Condition is attributed.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    alias: associated_participant
+    owner: Condition
+    domain_of:
+    - Visit
+    - Condition
+    range: Participant
+  associated_visit:
+    name: associated_visit
+    description: A reference to the Visit during which this QuestionnaireResponse
+      was captured.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    alias: associated_visit
+    owner: Condition
+    domain_of:
+    - QuestionnaireResponse
+    - Condition
+    range: Visit
   identity:
     name: identity
     description: A 'business' identifier or accession number for the entity, typically
@@ -627,7 +501,7 @@ attributes:
     slot_uri: schema:identifier
     multivalued: true
     alias: identity
-    owner: Person
+    owner: Condition
     domain_of:
     - Person
     - Participant
@@ -654,7 +528,7 @@ attributes:
     slot_uri: schema:identifier
     identifier: true
     alias: id
-    owner: Person
+    owner: Condition
     domain_of:
     - Entity
     range: uriorcurie

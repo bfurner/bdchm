@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://bfurner.github.io/bdchm/related_participant/">
+        <link rel="canonical" href="https://bfurner.github.io/bdchm/associated_visit/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
     
     
       
-        <title>Slot: related_participant - BioData Catalyst Harmonized Model</title>
+        <title>Slot: associated_visit - BioData Catalyst Harmonized Model</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-related_participant" class="md-skip">
+        <a href="#slot-associated_visit" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: related_participant
+              Slot: associated_visit
             
           </span>
         </div>
@@ -274,19 +274,6 @@
     Identifier and Mapping Information
   </a>
   
-    <nav class="md-nav" aria-label="Identifier and Mapping Information">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#schema-source" class="md-nav__link">
-    Schema Source
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -310,15 +297,14 @@
                 
                   
 
-  <a href="https://github.com/bfurner/bdchm/edit/master/docs/related_participant.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/bfurner/bdchm/edit/master/docs/associated_visit.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-related_participant">Slot: related_participant</h1>
-<p><em>A reference to the Participant for whom this Visit occurred.</em></p>
-<p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/related_participant">bdchm:related_participant</a></p>
+<h1 id="slot-associated_visit">Slot: associated_visit</h1>
+<p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/associated_visit">bdchm:associated_visit</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -332,33 +318,31 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Visit/">Visit</a></td>
-<td>Events where Persons engage with the healthcare system for a duration of time</td>
+<td><a href="../QuestionnaireResponse/">QuestionnaireResponse</a></td>
+<td>QuestionnaireResponse provides a complete or partial list of answers to a set...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Condition/">Condition</a></td>
+<td>A Condition description will be forthcoming</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../Participant/">Participant</a></li>
+<li>Range: <a href="../String/">String</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
-<h3 id="schema-source">Schema Source</h3>
-<ul>
-<li>from schema: https://w3id.org/nhlbidatastage/bdchm</li>
-</ul>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: related_participant
-description: A reference to the Participant for whom this Visit occurred.
-from_schema: https://w3id.org/nhlbidatastage/bdchm
-rank: 1000
-alias: related_participant
-owner: Visit
+<pre><code class="language-yaml">name: associated_visit
+alias: associated_visit
 domain_of:
-- Visit
-range: Participant
+- QuestionnaireResponse
+- Condition
+range: string
 
 </code></pre>
 

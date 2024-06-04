@@ -215,11 +215,11 @@
 
       Visit : age_at_visit_start
 
+      Visit : associated_participant
+
+          Visit --&gt; Participant : associated_participant
+
       Visit : id
-
-      Visit : related_participant
-
-          Visit --&gt; Participant : related_participant
 
       Visit : visit_category
 
@@ -274,7 +274,7 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../related_participant/">related_participant</a></td>
+<td><a href="../associated_participant/">associated_participant</a></td>
 <td>0..1 <br/> <a href="../Participant/">Participant</a></td>
 <td>A reference to the Participant for whom this Visit occurred</td>
 <td>direct</td>
@@ -300,7 +300,13 @@
 <tbody>
 <tr>
 <td><a href="../QuestionnaireResponse/">QuestionnaireResponse</a></td>
-<td><a href="../has_visit/">has_visit</a></td>
+<td><a href="../associated_visit/">associated_visit</a></td>
+<td>range</td>
+<td><a href="./">Visit</a></td>
+</tr>
+<tr>
+<td><a href="../Condition/">Condition</a></td>
+<td><a href="../associated_visit/">associated_visit</a></td>
 <td>range</td>
 <td><a href="./">Visit</a></td>
 </tr>
@@ -371,8 +377,8 @@ attributes:
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
     range: VisitProvenanceEnum
-  related_participant:
-    name: related_participant
+  associated_participant:
+    name: associated_participant
     description: A reference to the Participant for whom this Visit occurred.
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
@@ -435,15 +441,16 @@ attributes:
     domain_of:
     - Visit
     range: VisitProvenanceEnum
-  related_participant:
-    name: related_participant
+  associated_participant:
+    name: associated_participant
     description: A reference to the Participant for whom this Visit occurred.
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
-    alias: related_participant
+    alias: associated_participant
     owner: Visit
     domain_of:
     - Visit
+    - Condition
     range: Participant
   id:
     name: id

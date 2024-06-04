@@ -208,9 +208,9 @@
 
       QuestionnaireResponse : age_at_response
 
-      QuestionnaireResponse : has_visit
+      QuestionnaireResponse : associated_visit
 
-          QuestionnaireResponse --&gt; Visit : has_visit
+          QuestionnaireResponse --&gt; Visit : associated_visit
 
       QuestionnaireResponse : id
 
@@ -251,7 +251,7 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../has_visit/">has_visit</a></td>
+<td><a href="../associated_visit/">associated_visit</a></td>
 <td>0..1 <br/> <a href="../Visit/">Visit</a></td>
 <td>A reference to the Visit during which this QuestionnaireResponse was captured</td>
 <td>direct</td>
@@ -313,8 +313,8 @@ attributes:
     multivalued: true
     range: QuestionnaireResponseItem
     required: true
-  has_visit:
-    name: has_visit
+  associated_visit:
+    name: associated_visit
     description: A reference to the Visit during which this QuestionnaireResponse
       was captured.
     from_schema: https://w3id.org/nhlbidatastage/bdchm
@@ -355,16 +355,17 @@ attributes:
     - QuestionnaireResponse
     range: QuestionnaireResponseItem
     required: true
-  has_visit:
-    name: has_visit
+  associated_visit:
+    name: associated_visit
     description: A reference to the Visit during which this QuestionnaireResponse
       was captured.
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
-    alias: has_visit
+    alias: associated_visit
     owner: QuestionnaireResponse
     domain_of:
     - QuestionnaireResponse
+    - Condition
     range: Visit
   id:
     name: id

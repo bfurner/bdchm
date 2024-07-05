@@ -2,22 +2,22 @@
 
 :+1: First of all: Thank you for taking the time to contribute!
 
-The following is a set of guidelines for contributing to
-bdchm. These guidelines are not strict rules.
-Use your best judgment, and feel free to propose changes to this document
-in a pull request.
+# BDCHM Collaboration Guidelines
+
+These guidelines give a broad overview of how to participate in development and maintenance of the BioData Catalyst Data Model (BDCHM). BDCHM was developed and is maintained by the BioData Catalyst (BDC) Data Management Core (DMC) Standards Team. Below an overview of the internal collaborative processes practiced by the DMC Standards Team and how people external to this team can participate in BDCHM development. BDCHM was designed as a data ingest schema using LinkML and was based on a year-long effort to document and analyze the landscape of available data standards and requirements to support the users of BioData Catalyst. 
 
 ## Table Of Contents
 
 * [Code of Conduct](#code-of-conduct)
-* [Guidelines for Contributions and Requests](#contributions)
+* [Quick Guidelines for Contributions and Requests](#contributions)
   * [Reporting issues and making requests](#reporting-issues)
-  * [Questions and Discussion](#questions-and-discussion)
   * [Adding new elements yourself](#adding-elements)
-* [Best Practices](#best-practices)
+* [GitHub Best Practices](#best-practices)
   * [How to write a great issue](#great-issues)
   * [How to create a great pull/merge request](#great-pulls)
-
+* [DMC Collaborative Process](#collab-process)
+* [Understanding LinkML](#understand-linkml)
+* [Modeling Best Practice](#model-best)
 <a id="code-of-conduct"></a>
 
 ## Code of Conduct
@@ -39,12 +39,6 @@ Please use our [Issue Tracker][issues] for any of the following:
 - Reporting problems
 - Requesting new schema elements
 
-<a id="questions-and-discussions"></a>
-
-### Questions and Discussions
-
-Please use our [Discussions forum][discussions] to ask general questions or contribute to discussions.
-
 <a id="adding-elements"></a>
 
 ### Adding new elements yourself
@@ -56,6 +50,7 @@ Please submit a [Pull Request][pulls] to submit a new term for consideration.
 ## Best Practices
 
 <a id="great-issues"></a>
+<a id="great-pulls"></a>
 
 ### GitHub Best Practice
 
@@ -78,6 +73,30 @@ Please submit a [Pull Request][pulls] to submit a new term for consideration.
     - In the case of git conflicts, the contributor should try and resolve the conflict
     - If a PR fails a GitHub action check, the contributor should try and resolve the issue in a timely fashion
 
+<a id="collab-process"></a>
+
+### DMC Collaborative Processes
+
+#### Decision-making Process
+All decisions made by the DMC Standards Team are documented in the DMC Google Drive. Discussion is as open as possible. The DMC Standards Team uses a “consensus seeking” process for making decisions. Any person may participate in the decision-making process either by attending meetings or by commenting on GitHub issues or PRs.
+#### Communication
+Our team is highly interdisciplinary and geographically distributed. As such, communication is challenging, but it is essential for a successful collaboration.
+##### Meetings
+The DMC Standards Team meets fortnightly. Each meeting has an agenda. At the end of each meeting, there is an outcome in the form of a list of decisions and/or assigned action items with deadlines. A Project Manager attends meetings to take notes and track progress. Unless otherwise stated, agendas and notes are shared on the DMC Google Drive platform. 
+##### Digital Communication
+The Data Management Core maintains a Slack workspace and a Google Calendar. Teams are encouraged to create Slack channels as needed to achieve their goals. Slack channels that have outlived their usefulness should be archived.
+#### Change Management
+This section provides guidance for addressing requests for changes to the BDCHM, BDCHM documentation, and BDCHM governance.
+##### Branches and Pull Requests
+All BDCHM artifacts are stored in a public GitHub repository. The master branch defines the most up-to-date, validated version of the schema or document. Direct pushes to master will not be allowed, except in making releases. Instead, amendments to the BDCHM repository must be performed by pushing changes to a branch, and then issuing a Pull Request (PR).  
+PRs can be created or commented on by any person, but may only be merged by members of the DMC Standards Team. Those creating a PR are encouraged to be abundantly clear in the notes and in the documentation as to what is being changed. Proposed changes (GitHub pull requests) will be discussed during regular calls of the DMC Standards Team. After allowing a reasonable amount of time for stakeholders to comment (one week), DMC Standards Team will merge or close PRs, as appropriate. Any person is free to propose changes in GitHub (via issue or PR) and attend meetings of the DMC Standards Team to discuss proposed changes. Discussion of an issue or PR in a meeting will be captured as a comment on the issue or PR.
+##### Versioning and Dependencies
+It is critical to alert users to any backwards-incompatible or breaking changes. BDCHM uses a semantic versioning scheme, in which version changes are identified as “major”, “minor”, and “patch” updates. Patch updates involve no new features, but only bug fixes. Minor updates involve new features, but no breaking changes. Major updates typically involve backwards-incompatible changes. Following the format “Major.Minor.Patch”, the version 2.3.1 differs from 2.3.0 only in bug fixes. Version 2.3.1 differs from 2.2.5 in substantive but backwards compatible changes, and may differ from 1.0.9 in myriad disturbing ways. 
+#### Governance documents
+Changes to BDCHM Code of Conduct or Collaboration Guidelines can be proposed by any person and are reviewed by the Data Management Core. 
+
+<a id="understand-linkml"></a>
+
 ### Understanding LinkML
 
 Core developers should read the material on the [LinkML site](https://linkml.io/linkml), in particular:
@@ -86,6 +105,8 @@ Core developers should read the material on the [LinkML site](https://linkml.io/
 - [Tutorial](https://linkml.io/linkml/intro/tutorial.html)
 - [Schemas](https://linkml.io/linkml/schemas/index.html)
 - [FAQ](https://linkml.io/linkml/faq/index.html)
+
+<a id="model-best"></a>
 
 ### Modeling Best Practice
 

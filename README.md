@@ -2,6 +2,8 @@
 
 This is the LinkML model repository for the BioData Catalyst Harmonized Model (bdchm).
 
+Please read the [Collaboration Guide](CONTRIBUTING.md) before contributing.
+
 ## Repository Structure
 
 * [examples/](examples/) - example data

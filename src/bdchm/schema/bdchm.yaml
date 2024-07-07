@@ -16,6 +16,8 @@ prefixes:
   DUO: http://purl.obolibrary.org/obo/DUO_
   VBO: http://purl.obolibrary.org/obo/VBO_
   ncbitaxon: http://purl.obolibrary.org/obo/NCBITaxon_
+  MONDO: http://purl.obolibrary.org/obo/MONDO_
+  HP: http://purl.obolibrary.org/obo/HP_
 
 default_prefix: bdchm
 default_range: string
@@ -164,9 +166,13 @@ classes:
       - age_at_visit_start:
           range: integer
           description: The age of the Participant (in days) at the start of the Visit.
+          unit:
+            ucum_code: d
       - age_at_visit_end:
           range: integer
           description: The age of the Participant (in days) at the end of the Visit.
+          unit:
+            ucum_code: d
       - visit_provenance:
           range: VisitProvenanceEnum
           description: A value representing the provenance of the visit record, or where the record comes from.
@@ -289,6 +295,8 @@ classes:
       age_at_response:
         description: The age (in days) of the Participant when the QuestionnaireResponse was captured.
         range: integer
+        unit:
+          ucum_code: d
       items:
         description: A collection of QuestionnaireResponseItem objects which encapsulate the question being asked and the response.
         range: QuestionnaireResponseItem
@@ -349,11 +357,11 @@ classes:
   Condition:
     is_a: Entity
     description: >-
-       A Condition description will be forthcoming.
+       Conditions are records of a Person suggesting the presence of a disease or medical condition stated as a diagnosis, a sign or a symptom, which is either observed by a Provider or reported by the patient. Conditions are recorded in different sources and levels of standardization. 
     attributes:
       condition_concept:
-        range: string
-        description: TBD
+        range: ConditionConceptEnum
+        description: The coded value for the presence of a disease or medical condition stated as a diagnosis, a sign or a symptom, coded to the Human Phenotype Ontology or MONDO.
       age_at_condition_start:
         range: integer
         description: The Participant's age (expressed in days) when the condition was first recorded.
@@ -462,6 +470,8 @@ enums:
         description: 'Not known, not observed, not recorded, or refused.'
         meaning: OMOP:8552
   CellularOrganismSpeciesEnum:
+    description: >-
+      A constrained set of enumerative values containing the NCBITaxon values for cellular organisms.
     reachable_from:
       source_ontology: obo:ncbitaxon
       source_nodes:
@@ -470,6 +480,8 @@ enums:
       relationship_types:
         - rdfs:subClassOf
   VitalStatusEnum:
+    description: >-
+      A constrained set of enumerative values containing the OMOP values for vital status.
     permissible_values:
       ALIVE:
         description: 'Showing characteristics of life; displaying signs of life. (NCIt)'
@@ -478,6 +490,8 @@ enums:
         description: 'The cessation of life. (NCIt)'
         meaning: OMOP:434489
   VertebrateBreedEnum:
+    description: >-
+      A constrained set of enumerative values containing the VBO values for vertebrate breeds.
     reachable_from:
       source_ontology: obo:vbo
       source_nodes:
@@ -487,6 +501,8 @@ enums:
         - rdfs:subClassOf
 
   VisitCategoryEnum:
+    description: >-
+      A constrained set of enumerative values containing the OMOP values for visit categories.
     permissible_values:
       INPATIENT:
         description: Person visiting hospital, at a care stie, in bed, for duration of more than one day, with physicians and other Providers permanently available to deliver service around the clock
@@ -523,6 +539,8 @@ enums:
           meaning: OMOP:38004193
 
   VisitProvenanceEnum:
+    description: >-
+      A constrained set of enumerative values containing the OMOP values for visit provenance.
     permissible_values:
       CASE_REPORT_FORM:
         description: Case Report Form
@@ -764,3 +782,32 @@ enums:
       VISION_CLAIM:
         description: Vision claim
         meaning: OMOP:32886
+
+  MondoHumanDiseaseEnum:
+    description: >-
+      A constrained set of enumerative values containing the MONDO values for human diseases.
+    reachable_from:
+      source_ontology: obo:mondo
+      source_nodes:
+        - MONDO:0700096 ## Human Disease
+      include_self: false
+      relationship_types:
+        - rdfs:subClassOf
+
+  HpoPhenotypicAbnormalityEnum:
+    description: >-
+      A constrained set of enumerative values containing the HPO values for phenotypic abnormalities.
+    reachable_from:
+      source_ontology: obo:hp
+      source_nodes:
+        - HP:0000118 ## Phenotypic Abnormality
+      include_self: false
+      relationship_types:
+        - rdfs:subClassOf
+
+  ConditionConceptEnum:
+    description: >-
+      A constrained set of enumerative values containing both the MONDO values for human diseases and the HPO values for phenotypic abnormalities.
+    inherits:
+      - MondoHumanDiseaseEnum
+      - HpoPhenotypicAbnormalityEnum

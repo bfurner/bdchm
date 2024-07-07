@@ -459,6 +459,8 @@ enums:
         description: 'Denotes person with European, Middle Eastern, or North African ancestral origin who identifies, or is identified, as White.'
         meaning: OMOP:8527
   SexEnum:
+    description: >-
+      A constrained set of enumerative values containing the OMOP values for sex.
     permissible_values:
       MALE:
         description: A person who belongs to the sex that normally produces sperm.

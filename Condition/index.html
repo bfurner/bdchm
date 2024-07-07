@@ -200,7 +200,7 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-condition">Class: Condition</h1>
-<p><em>A Condition description will be forthcoming.</em></p>
+<p>_Conditions are records of a Person suggesting the presence of a disease or medical condition stated as a diagnosis, a sign or a symptom, which is either observed by a Provider or reported by the patient. Conditions are recorded in different sources and levels of standardization. _</p>
 <p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/Condition">bdchm:Condition</a></p>
 <div class="mermaid"> classDiagram
     class Condition
@@ -219,6 +219,8 @@
           Condition --&gt; Visit : associated_visit
 
       Condition : condition_concept
+
+          Condition --&gt; ConditionConceptEnum : condition_concept
 
       Condition : condition_provenance
 
@@ -258,8 +260,8 @@
 </tr>
 <tr>
 <td><a href="../condition_concept/">condition_concept</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>TBD</td>
+<td>0..1 <br/> <a href="../ConditionConceptEnum/">ConditionConceptEnum</a></td>
+<td>The coded value for the presence of a disease or medical condition stated as ...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -335,7 +337,10 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: Condition
-description: A Condition description will be forthcoming.
+description: 'Conditions are records of a Person suggesting the presence of a disease
+  or medical condition stated as a diagnosis, a sign or a symptom, which is either
+  observed by a Provider or reported by the patient. Conditions are recorded in different
+  sources and levels of standardization. '
 from_schema: https://w3id.org/nhlbidatastage/bdchm
 is_a: Entity
 slots:
@@ -343,10 +348,12 @@ slots:
 attributes:
   condition_concept:
     name: condition_concept
-    description: TBD
+    description: The coded value for the presence of a disease or medical condition
+      stated as a diagnosis, a sign or a symptom, coded to the Human Phenotype Ontology
+      or MONDO.
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
-    range: string
+    range: ConditionConceptEnum
   age_at_condition_start:
     name: age_at_condition_start
     description: The Participant's age (expressed in days) when the condition was
@@ -399,20 +406,25 @@ attributes:
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: Condition
-description: A Condition description will be forthcoming.
+description: 'Conditions are records of a Person suggesting the presence of a disease
+  or medical condition stated as a diagnosis, a sign or a symptom, which is either
+  observed by a Provider or reported by the patient. Conditions are recorded in different
+  sources and levels of standardization. '
 from_schema: https://w3id.org/nhlbidatastage/bdchm
 is_a: Entity
 attributes:
   condition_concept:
     name: condition_concept
-    description: TBD
+    description: The coded value for the presence of a disease or medical condition
+      stated as a diagnosis, a sign or a symptom, coded to the Human Phenotype Ontology
+      or MONDO.
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
     alias: condition_concept
     owner: Condition
     domain_of:
     - Condition
-    range: string
+    range: ConditionConceptEnum
   age_at_condition_start:
     name: age_at_condition_start
     description: The Participant's age (expressed in days) when the condition was

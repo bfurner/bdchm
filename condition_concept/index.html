@@ -317,7 +317,7 @@
 
 
 <h1 id="slot-condition_concept">Slot: condition_concept</h1>
-<p><em>TBD</em></p>
+<p><em>The coded value for the presence of a disease or medical condition stated as a diagnosis, a sign or a symptom, coded to the Human Phenotype Ontology or MONDO.</em></p>
 <p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/condition_concept">bdchm:condition_concept</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -333,14 +333,14 @@
 <tbody>
 <tr>
 <td><a href="../Condition/">Condition</a></td>
-<td>A Condition description will be forthcoming</td>
+<td>Conditions are records of a Person suggesting the presence of a disease or me...</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../String/">String</a></li>
+<li>Range: <a href="../ConditionConceptEnum/">ConditionConceptEnum</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -351,14 +351,15 @@
 <details>
 
 <pre><code class="language-yaml">name: condition_concept
-description: TBD
+description: The coded value for the presence of a disease or medical condition stated
+  as a diagnosis, a sign or a symptom, coded to the Human Phenotype Ontology or MONDO.
 from_schema: https://w3id.org/nhlbidatastage/bdchm
 rank: 1000
 alias: condition_concept
 owner: Condition
 domain_of:
 - Condition
-range: string
+range: ConditionConceptEnum
 
 </code></pre>
 

@@ -209,7 +209,7 @@ classes:
           range: TimePoint
           description: Another TimePoint from which this point is offset.
       - offset_from_index:
-          range: string
+          range: integer
           description: A quantity of time that, together with the index date or event, can be used to derive a specific timepoint.
       - event_type:
           range: string
@@ -264,6 +264,22 @@ classes:
       url:
         description: Canonical identifier for this Questionnaire, represented as an absolute URI (globally unique)
         range: uriorcurie
+      version:
+        description: The identifier that is used to identify this version of the questionnaire when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the questionnaire author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
+        range: string
+      publisher:
+        description: Name of the publisher/steward (organization or individual) of this Questionnaire
+        range: string
+      copyright:
+        description: Textual description of any use and/or publishing restrictions
+        range: string
+      copyright_label:
+        description: Copyright holder and year(s)
+        range: string
+      language:
+        description: The language(s) in which questions are presented.
+        range: string
+        multivalued: true
       items:
         description: A collection of QuestionnaireItem objects which encapsulate the question being asked.
         range: QuestionnaireItem
@@ -373,7 +389,7 @@ classes:
         unit:
           ucum_code: d
       condition_provenance:
-        range: string
+        range: ConditionProvenanceEnum
         description: A value representing the provenance of the Condition record
       relationship_to_participant:
         range: string
@@ -813,3 +829,34 @@ enums:
     inherits:
       - MondoHumanDiseaseEnum
       - HpoPhenotypicAbnormalityEnum
+  
+  ConditionProvenanceEnum:
+    description: >-
+      A constrained set of enumerative values containing the OMOP values for visit provenance.
+    permissible_values:
+      EHR_BILLING_DIAGNOSIS:
+        meaning: OMOP:4822159
+      EHR_CHIEF_COMPLAINT:
+        meaning: OMOP:4822124
+      EHR_ENCOUNTER_DIAGNOSIS:
+        meaning: OMOP:4822160
+      EHR_EPISODE_ENTRY:
+        meaning: OMOP:4822135
+      EHR_PROBLEM_LIST_ENTRY:
+        meaning: OMOP:4822121
+      FIRST_POSITION_CONDITION:
+        meaning: OMOP:4822128
+      NLP_DERIVED:
+        meaning: OMOP:4822058
+      OBSERVATION_RECORDED_FROM_EHR:
+        meaning: OMOP:4822126
+      PATIENT_SELF-REPORTED_CONDITION:
+        meaning: OMOP:4822157
+      PRIMARY_CONDITION:
+        meaning: OMOP:4822127
+      REFERRAL_RECORD:
+        meaning: OMOP:4822125
+      SECONDARY_CONDITION:
+        meaning: OMOP:4822129
+      TUMOR_REGISTRY:
+        meaning: OMOP:4822266

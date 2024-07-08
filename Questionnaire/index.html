@@ -206,6 +206,10 @@
     class Questionnaire
       Entity &lt;|-- Questionnaire
 
+      Questionnaire : copyright
+
+      Questionnaire : copyright_label
+
       Questionnaire : description
 
       Questionnaire : id
@@ -218,11 +222,17 @@
 
           Questionnaire --&gt; QuestionnaireItem : items
 
+      Questionnaire : language
+
       Questionnaire : name
+
+      Questionnaire : publisher
 
       Questionnaire : title
 
       Questionnaire : url
+
+      Questionnaire : version
 
 
 </div>
@@ -272,6 +282,36 @@
 <td><a href="../url/">url</a></td>
 <td>0..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
 <td>Canonical identifier for this Questionnaire, represented as an absolute URI (...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../version/">version</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The identifier that is used to identify this version of the questionnaire whe...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../publisher/">publisher</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Name of the publisher/steward (organization or individual) of this Questionna...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../copyright/">copyright</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Textual description of any use and/or publishing restrictions</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../copyright_label/">copyright_label</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Copyright holder and year(s)</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../language/">language</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
+<td>The language(s) in which questions are presented</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -351,6 +391,43 @@ attributes:
       URI (globally unique)
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     range: uriorcurie
+  version:
+    name: version
+    description: The identifier that is used to identify this version of the questionnaire
+      when it is referenced in a specification, model, design or instance. This is
+      an arbitrary value managed by the questionnaire author and is not expected to
+      be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if
+      a managed version is not available. There is also no expectation that versions
+      can be placed in a lexicographical sequence.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    range: string
+  publisher:
+    name: publisher
+    description: Name of the publisher/steward (organization or individual) of this
+      Questionnaire
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    range: string
+  copyright:
+    name: copyright
+    description: Textual description of any use and/or publishing restrictions
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    range: string
+  copyright_label:
+    name: copyright_label
+    description: Copyright holder and year(s)
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    range: string
+  language:
+    name: language
+    description: The language(s) in which questions are presented.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    multivalued: true
+    range: string
   items:
     name: items
     description: A collection of QuestionnaireItem objects which encapsulate the question
@@ -420,6 +497,63 @@ attributes:
     - ResearchStudy
     - Questionnaire
     range: uriorcurie
+  version:
+    name: version
+    description: The identifier that is used to identify this version of the questionnaire
+      when it is referenced in a specification, model, design or instance. This is
+      an arbitrary value managed by the questionnaire author and is not expected to
+      be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if
+      a managed version is not available. There is also no expectation that versions
+      can be placed in a lexicographical sequence.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    alias: version
+    owner: Questionnaire
+    domain_of:
+    - Questionnaire
+    range: string
+  publisher:
+    name: publisher
+    description: Name of the publisher/steward (organization or individual) of this
+      Questionnaire
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    alias: publisher
+    owner: Questionnaire
+    domain_of:
+    - Questionnaire
+    range: string
+  copyright:
+    name: copyright
+    description: Textual description of any use and/or publishing restrictions
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    alias: copyright
+    owner: Questionnaire
+    domain_of:
+    - Questionnaire
+    range: string
+  copyright_label:
+    name: copyright_label
+    description: Copyright holder and year(s)
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    alias: copyright_label
+    owner: Questionnaire
+    domain_of:
+    - Questionnaire
+    range: string
+  language:
+    name: language
+    description: The language(s) in which questions are presented.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    multivalued: true
+    alias: language
+    owner: Questionnaire
+    domain_of:
+    - Questionnaire
+    range: string
   items:
     name: items
     description: A collection of QuestionnaireItem objects which encapsulate the question

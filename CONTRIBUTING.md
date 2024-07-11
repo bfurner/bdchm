@@ -4,7 +4,7 @@
 
 # BDCHM Collaboration Guidelines
 
-These guidelines give a broad overview of how to participate in development and maintenance of the BioData Catalyst Data Model (BDCHM). BDCHM was developed and is maintained by the BioData Catalyst (BDC) Data Management Core (DMC) Standards Team. Below an overview of the internal collaborative processes practiced by the DMC Standards Team and how people external to this team can participate in BDCHM development. BDCHM was designed as a data ingest schema using LinkML and was based on a year-long effort to document and analyze the landscape of available data standards and requirements to support the users of BioData Catalyst. 
+These guidelines give a broad overview of how to participate in development and maintenance of the BioData Catalyst Data Model (BDCHM). BDCHM was developed and is maintained by the BioData Catalyst (BDC) Data Management Core (DMC) Standards Team. Below is an overview of the internal collaborative processes practiced by the DMC Standards Team and how people external to this team can participate in BDCHM development. BDCHM was designed as a data ingest schema using LinkML and was based on a year-long effort to document and analyze the landscape of available data standards and requirements to support the users of BioData Catalyst. 
 
 ## Table Of Contents
 

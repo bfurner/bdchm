@@ -53,7 +53,7 @@ We always welcome questions and feedback via our GitHub issue tracker, but pleas
 ### How do I request a feature or report a bug/error?
 Please submit any bugs or feature requests to our tracker, but please familiarize yourself with BDCHM Contribution Guidelines first.
 
-### How do I know if my data conform to BDCHM?
+### How do I know if my data conform to BDCHM? What do I do if it doesn't?
 Answer TBD
 
 ### How do I request a new or updated mapping? How do I request changes to a value set (enums)? How do I request a change to the model entities or attributes?

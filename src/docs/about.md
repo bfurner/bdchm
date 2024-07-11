@@ -62,6 +62,11 @@ classDiagram
     Questionnaire : title
     Questionnaire : description
     Questionnaire : url
+    Questionnaire : version
+    Questionnaire : publisher
+    Questionnaire : copyright
+    Questionnaire : copyright_label
+    Questionnaire : language
     QuestionnaireItem : id
     QuestionnaireItem : identity
     QuestionnaireItem : text

@@ -180,52 +180,6 @@ classes:
           range: Participant
           description: A reference to the Participant for whom this Visit occurred.
 
-Condition:
-  is_a: Entity
-  description: >-
-    This table contains records of conditions or diagnoses recorded about a person at a certain time.
-  attributes:
-    - condition_id:
-        description: A unique identifier for each condition occurrence.
-        required: true
-        identifier: true
-    - person_id:
-        description: A foreign key identifier to the Person about whom the condition is recorded.
-        required: true
-    - condition_concept_id:
-        description: A foreign key that refers to a standard condition Concept identifier in the Standardized Vocabularies.
-        required: true
-    - condition_start_date:
-        description: The date when the instance of the condition is recorded as having started.
-        required: true
-    - condition_start_datetime:
-        description: The date and time when the instance of the condition is recorded as having started.
-    - condition_end_date:
-        description: The date when the instance of the condition is recorded as having ended.
-    - condition_end_datetime:
-        description: The date and time when the instance of the condition is recorded as having ended.
-    -  condition_type_concept_id:
-        description: A foreign key to the predefined Concept identifier in the Standardized Vocabularies reflecting the source data from which the condition was recorded.
-        required: true
-    - condition_status_concept_id:
-        description: A foreign key to the predefined Concept identifier in the Standardized Vocabularies reflecting the status of the condition.
-    - stop_reason:
-        description: The reason, if available, that the condition was no longer present.
-    - provider_id:
-        description: A foreign key to the Provider in the PROVIDER table who was responsible for determining the condition.
-    - visit_id:
-        description: A foreign key to the Visit in the VISIT_OCCURRENCE table during which the condition was determined.
-    - visit_detail_id:
-        description: A foreign key to the Visit Detail in the VISIT_DETAIL table during which the condition was determined.
-    - condition_source_value:
-        range: string
-        description: The source code for the condition as it appears in the source data.
-    - condition_source_concept_id:
-        description: A foreign key to a Condition Concept that refers to the code used in the source.
-    - condition_status_source_value:
-        range: string
-        description: The source value associated with the condition status.
-
   Organization:
     is_a: Entity
     description: >-

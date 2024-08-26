@@ -38,7 +38,7 @@ classes:
   Person:
     is_a: Entity
     description: >-
-      Demographics and other administrative information about an individual or animal receiving care or other health-related services.
+      Administrative information about an individual or animal receiving care or other health-related services.
     attributes:
       species:
         range: CellularOrganismSpeciesEnum
@@ -46,15 +46,6 @@ classes:
       breed:
         range: VertebrateBreedEnum
         description: A label given to a group of animals homogeneous in appearance and other characteristics that distinguish it from other animals of the same species. Values should be derived from the Vertebrate Breed Ontology (http://purl.obolibrary.org/obo/vbo.owl).
-      sex:
-        range: SexEnum
-        description: The biologic character or quality that distinguishes male and female from one another as expressed by analysis of the person's gonadal, morphologic (internal and external), chromosomal, and hormonal characteristics.
-      ethnicity:
-        range: EthnicityEnum
-        description: An individual's self-described social and cultural grouping, specifically whether an individual describes themselves as Hispanic or Latino. The provided values are based on the categories defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau
-      race:
-        range: RaceEnum
-        description: An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution. The provided values are based on the categories defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau.
       year_of_birth:
         range: integer
         description: Numeric value to represent the calendar year in which an individual was born.
@@ -74,6 +65,25 @@ classes:
         description: Coded value indicating the circumstance or condition that results in the death of the individual.
     slots:
       - identity
+
+  Demography:
+    is_a: Entity
+    description: >-
+      Demographics about an individual or animal receiving care or other health-related services.
+    attributes:
+      sex:
+        range: SexEnum
+        description: The biologic character or quality that distinguishes male and female from one another as expressed by analysis of the person's gonadal, morphologic (internal and external), chromosomal, and hormonal characteristics.
+      ethnicity:
+        range: EthnicityEnum
+        description: An individual's self-described social and cultural grouping, specifically whether an individual describes themselves as Hispanic or Latino. The provided values are based on the categories defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau
+      race:
+        range: RaceEnum
+        description: An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution. The provided values are based on the categories defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau.
+    slots:
+      - identity
+      - associated_participant
+
 
   Participant:
     is_a: Entity
@@ -391,6 +401,9 @@ classes:
       condition_provenance:
         range: ConditionProvenanceEnum
         description: A value representing the provenance of the Condition record
+      condition_status:
+        range: ConditionStatusEnum
+        description: A value indicating whether the medical condition described in this record is present, absent, or unknown for this individual patient.
       relationship_to_participant:
         range: string
         description: A value indicating the relationship between the Participant to which the Condition is attributed and the individual who had the reported Condition.  If the Condition is affecting the participant themselves, then 'Self' is the appropriate relationship.  If the Condition is affecting a family member (e.g. a parent of the Participant) then an appropriate relationship should be provided (e.g. 'Parent')
@@ -420,6 +433,9 @@ slots:
   value:
     range: string
     description: A general slot to hold a value.
+  associated_participant:
+    range: Participant
+    description: A reference to the Participant that is associated with this record.
 
 
 enums:
@@ -442,6 +458,7 @@ enums:
       IRB:
         description: 'This data use modifier indicates that the requestor must provide documentation of local IRB/ERB approval.'
         meaning: DUO:0000021
+
   EthnicityEnum:
     description: >-
       A constrained set of enumerative values containing the United States Office of Management and Budget (OMB) values for ethnicity.
@@ -452,6 +469,7 @@ enums:
       NOT_HISPANIC_OR_LATINO:
         description: 'A person not of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race.'
         meaning: OMOP:38003564
+
   RaceEnum:
     description: >-
       A constrained set of enumerative values containing the United States Office of Management and Budget (OMB) values for race.
@@ -474,6 +492,7 @@ enums:
       WHITE:
         description: 'Denotes person with European, Middle Eastern, or North African ancestral origin who identifies, or is identified, as White.'
         meaning: OMOP:8527
+
   SexEnum:
     description: >-
       A constrained set of enumerative values containing the OMOP values for sex.
@@ -487,6 +506,7 @@ enums:
       UNKNOWN:
         description: 'Not known, not observed, not recorded, or refused.'
         meaning: OMOP:8552
+
   CellularOrganismSpeciesEnum:
     description: >-
       A constrained set of enumerative values containing the NCBITaxon values for cellular organisms.
@@ -497,6 +517,7 @@ enums:
       include_self: false
       relationship_types:
         - rdfs:subClassOf
+
   VitalStatusEnum:
     description: >-
       A constrained set of enumerative values containing the OMOP values for vital status.
@@ -507,6 +528,7 @@ enums:
       DEAD:
         description: 'The cessation of life. (NCIt)'
         meaning: OMOP:434489
+
   VertebrateBreedEnum:
     description: >-
       A constrained set of enumerative values containing the VBO values for vertebrate breeds.
@@ -860,3 +882,14 @@ enums:
         meaning: OMOP:4822129
       TUMOR_REGISTRY:
         meaning: OMOP:4822266
+
+  ConditionStatusEnum:
+    description: >-
+      A constrained set of enumerative values indicating whether a Condition is present, absent, or its status is unknown.
+    permissible_values:
+      PRESENT:
+        description: The condition is/was present in the patient.
+      ABSENT:
+        description: The condition is/was absent in the patient.
+      UNKNOWN:
+        description: The condition is/was of unknown status in the patient.

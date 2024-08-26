@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://bfurner.github.io/bdchm/year_of_birth/">
+        <link rel="canonical" href="https://bfurner.github.io/bdchm/ConditionStatusEnum/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
     
     
       
-        <title>Slot: year_of_birth - BioData Catalyst Harmonized Model</title>
+        <title>Enum: ConditionStatusEnum - BioData Catalyst Harmonized Model</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-year_of_birth" class="md-skip">
+        <a href="#enum-conditionstatusenum" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: year_of_birth
+              Enum: ConditionStatusEnum
             
           </span>
         </div>
@@ -256,15 +256,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#applicable-classes" class="md-nav__link">
-    Applicable Classes
+  <a href="#permissible-values" class="md-nav__link">
+    Permissible Values
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    Properties
+  <a href="#slots" class="md-nav__link">
+    Slots
   </a>
   
 </li>
@@ -310,38 +310,57 @@
                 
                   
 
-  <a href="https://github.com/bfurner/bdchm/edit/master/docs/year_of_birth.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/bfurner/bdchm/edit/master/docs/ConditionStatusEnum.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-year_of_birth">Slot: year_of_birth</h1>
-<p><em>Numeric value to represent the calendar year in which an individual was born.</em></p>
-<p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/year_of_birth">bdchm:year_of_birth</a></p>
-<!-- no inheritance hierarchy -->
-
-<h2 id="applicable-classes">Applicable Classes</h2>
+<h1 id="enum-conditionstatusenum">Enum: ConditionStatusEnum</h1>
+<p><em>A constrained set of enumerative values indicating whether a Condition is present, absent, or its status is unknown.</em></p>
+<p>URI: <a href="./">ConditionStatusEnum</a></p>
+<h2 id="permissible-values">Permissible Values</h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PRESENT</td>
+<td>None</td>
+<td>The condition is/was present in the patient</td>
+</tr>
+<tr>
+<td>ABSENT</td>
+<td>None</td>
+<td>The condition is/was absent in the patient</td>
+</tr>
+<tr>
+<td>UNKNOWN</td>
+<td>None</td>
+<td>The condition is/was of unknown status in the patient</td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots">Slots</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Description</th>
-<th>Modifies Slot</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="../Person/">Person</a></td>
-<td>Administrative information about an individual or animal receiving care or ot...</td>
-<td>no</td>
+<td><a href="../condition_status/">condition_status</a></td>
+<td>A value indicating whether the medical condition described in this record is ...</td>
 </tr>
 </tbody>
 </table>
-<h2 id="properties">Properties</h2>
-<ul>
-<li>Range: <a href="../Integer/">Integer</a></li>
-</ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
@@ -350,16 +369,21 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: year_of_birth
-description: Numeric value to represent the calendar year in which an individual was
-  born.
+<pre><code class="language-yaml">name: ConditionStatusEnum
+description: A constrained set of enumerative values indicating whether a Condition
+  is present, absent, or its status is unknown.
 from_schema: https://w3id.org/nhlbidatastage/bdchm
 rank: 1000
-alias: year_of_birth
-owner: Person
-domain_of:
-- Person
-range: integer
+permissible_values:
+  PRESENT:
+    text: PRESENT
+    description: The condition is/was present in the patient.
+  ABSENT:
+    text: ABSENT
+    description: The condition is/was absent in the patient.
+  UNKNOWN:
+    text: UNKNOWN
+    description: The condition is/was of unknown status in the patient.
 
 </code></pre>
 

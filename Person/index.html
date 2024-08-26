@@ -205,7 +205,7 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-person">Class: Person</h1>
-<p><em>Demographics and other administrative information about an individual or animal receiving care or other health-related services.</em></p>
+<p><em>Administrative information about an individual or animal receiving care or other health-related services.</em></p>
 <p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/Person">bdchm:Person</a></p>
 <div class="mermaid"> classDiagram
     class Person
@@ -219,23 +219,11 @@
 
       Person : cause_of_death
 
-      Person : ethnicity
-
-          Person --&gt; EthnicityEnum : ethnicity
-
       Person : id
 
       Person : identity
 
           Person --&gt; Identifier : identity
-
-      Person : race
-
-          Person --&gt; RaceEnum : race
-
-      Person : sex
-
-          Person --&gt; SexEnum : sex
 
       Person : species
 
@@ -285,24 +273,6 @@
 <td><a href="../breed/">breed</a></td>
 <td>0..1 <br/> <a href="../VertebrateBreedEnum/">VertebrateBreedEnum</a></td>
 <td>A label given to a group of animals homogeneous in appearance and other chara...</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../sex/">sex</a></td>
-<td>0..1 <br/> <a href="../SexEnum/">SexEnum</a></td>
-<td>The biologic character or quality that distinguishes male and female from one...</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../ethnicity/">ethnicity</a></td>
-<td>0..1 <br/> <a href="../EthnicityEnum/">EthnicityEnum</a></td>
-<td>An individual's self-described social and cultural grouping, specifically whe...</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../race/">race</a></td>
-<td>0..1 <br/> <a href="../RaceEnum/">RaceEnum</a></td>
-<td>An arbitrary classification of a taxonomic group that is a division of a spec...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -391,8 +361,8 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: Person
-description: Demographics and other administrative information about an individual
-  or animal receiving care or other health-related services.
+description: Administrative information about an individual or animal receiving care
+  or other health-related services.
 from_schema: https://w3id.org/nhlbidatastage/bdchm
 is_a: Entity
 slots:
@@ -414,34 +384,6 @@ attributes:
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
     range: VertebrateBreedEnum
-  sex:
-    name: sex
-    description: The biologic character or quality that distinguishes male and female
-      from one another as expressed by analysis of the person's gonadal, morphologic
-      (internal and external), chromosomal, and hormonal characteristics.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    range: SexEnum
-  ethnicity:
-    name: ethnicity
-    description: An individual's self-described social and cultural grouping, specifically
-      whether an individual describes themselves as Hispanic or Latino. The provided
-      values are based on the categories defined by the U.S. Office of Management
-      and Business and used by the U.S. Census Bureau
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    range: EthnicityEnum
-  race:
-    name: race
-    description: An arbitrary classification of a taxonomic group that is a division
-      of a species. It usually arises as a consequence of geographical isolation within
-      a species and is characterized by shared heredity, physical attributes and behavior,
-      and in the case of humans, by common history, nationality, or geographic distribution.
-      The provided values are based on the categories defined by the U.S. Office of
-      Management and Business and used by the U.S. Census Bureau.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    range: RaceEnum
   year_of_birth:
     name: year_of_birth
     description: Numeric value to represent the calendar year in which an individual
@@ -485,8 +427,8 @@ attributes:
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: Person
-description: Demographics and other administrative information about an individual
-  or animal receiving care or other health-related services.
+description: Administrative information about an individual or animal receiving care
+  or other health-related services.
 from_schema: https://w3id.org/nhlbidatastage/bdchm
 is_a: Entity
 attributes:
@@ -514,46 +456,6 @@ attributes:
     domain_of:
     - Person
     range: VertebrateBreedEnum
-  sex:
-    name: sex
-    description: The biologic character or quality that distinguishes male and female
-      from one another as expressed by analysis of the person's gonadal, morphologic
-      (internal and external), chromosomal, and hormonal characteristics.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    alias: sex
-    owner: Person
-    domain_of:
-    - Person
-    range: SexEnum
-  ethnicity:
-    name: ethnicity
-    description: An individual's self-described social and cultural grouping, specifically
-      whether an individual describes themselves as Hispanic or Latino. The provided
-      values are based on the categories defined by the U.S. Office of Management
-      and Business and used by the U.S. Census Bureau
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    alias: ethnicity
-    owner: Person
-    domain_of:
-    - Person
-    range: EthnicityEnum
-  race:
-    name: race
-    description: An arbitrary classification of a taxonomic group that is a division
-      of a species. It usually arises as a consequence of geographical isolation within
-      a species and is characterized by shared heredity, physical attributes and behavior,
-      and in the case of humans, by common history, nationality, or geographic distribution.
-      The provided values are based on the categories defined by the U.S. Office of
-      Management and Business and used by the U.S. Census Bureau.
-    from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
-    alias: race
-    owner: Person
-    domain_of:
-    - Person
-    range: RaceEnum
   year_of_birth:
     name: year_of_birth
     description: Numeric value to represent the calendar year in which an individual
@@ -630,6 +532,7 @@ attributes:
     owner: Person
     domain_of:
     - Person
+    - Demography
     - Participant
     - ResearchStudy
     - Organization

@@ -385,7 +385,6 @@ attributes:
     name: associated_participant
     description: A reference to the Participant for whom this Visit occurred.
     from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
     range: Participant
 
 </code></pre>
@@ -453,10 +452,10 @@ attributes:
     name: associated_participant
     description: A reference to the Participant for whom this Visit occurred.
     from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
     alias: associated_participant
     owner: Visit
     domain_of:
+    - Demography
     - Visit
     - Condition
     range: Participant

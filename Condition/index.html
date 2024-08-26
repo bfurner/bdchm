@@ -226,6 +226,10 @@
 
           Condition --&gt; ConditionProvenanceEnum : condition_provenance
 
+      Condition : condition_status
+
+          Condition --&gt; ConditionStatusEnum : condition_status
+
       Condition : id
 
       Condition : identity
@@ -282,6 +286,12 @@
 <td><a href="../condition_provenance/">condition_provenance</a></td>
 <td>0..1 <br/> <a href="../ConditionProvenanceEnum/">ConditionProvenanceEnum</a></td>
 <td>A value representing the provenance of the Condition record</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../condition_status/">condition_status</a></td>
+<td>0..1 <br/> <a href="../ConditionStatusEnum/">ConditionStatusEnum</a></td>
+<td>A value indicating whether the medical condition described in this record is ...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -380,6 +390,13 @@ attributes:
     from_schema: https://w3id.org/nhlbidatastage/bdchm
     rank: 1000
     range: ConditionProvenanceEnum
+  condition_status:
+    name: condition_status
+    description: A value indicating whether the medical condition described in this
+      record is present, absent, or unknown for this individual patient.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    range: ConditionStatusEnum
   relationship_to_participant:
     name: relationship_to_participant
     description: A value indicating the relationship between the Participant to which
@@ -463,6 +480,17 @@ attributes:
     domain_of:
     - Condition
     range: ConditionProvenanceEnum
+  condition_status:
+    name: condition_status
+    description: A value indicating whether the medical condition described in this
+      record is present, absent, or unknown for this individual patient.
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    alias: condition_status
+    owner: Condition
+    domain_of:
+    - Condition
+    range: ConditionStatusEnum
   relationship_to_participant:
     name: relationship_to_participant
     description: A value indicating the relationship between the Participant to which
@@ -485,6 +513,7 @@ attributes:
     alias: associated_participant
     owner: Condition
     domain_of:
+    - Demography
     - Visit
     - Condition
     range: Participant
@@ -518,6 +547,7 @@ attributes:
     owner: Condition
     domain_of:
     - Person
+    - Demography
     - Participant
     - ResearchStudy
     - Organization

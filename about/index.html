@@ -150,6 +150,7 @@
 <p>This is a high-level class diagram of the core entities present in the BioData Catalyst Harmonized Model (BDCHM).</p>
 <div class="mermaid">classDiagram
     Participant "1..*" --&gt; "1" Person : associated_person
+    Demography "1..*" --&gt; "1" Participant : associated_participant
     ResearchStudy "1..*" &lt;-- "1" Participant : member_of_research_study
     ResearchStudy "0..1" &lt;-- "1" ResearchStudy : part_of
     Visit "0..*" --&gt; "1" Participant : associated_participant
@@ -168,13 +169,15 @@
     Person : identity
     Person : species
     Person : breed
-    Person : sex
-    Person : race
-    Person : ethnicity
     Person : year_of_birth
     Person : vital_status
     Person : age_at_death
     Person : cause_of_death
+    Demography : id
+    Demography : identity
+    Demography : sex
+    Demography : race
+    Demography : ethnicity
     Participant : id
     Participant : identity
     Participant : description
@@ -231,6 +234,7 @@
     Condition : age_at_condition_start
     Condition : age_at_condition_end
     Condition : condition_provenance
+    Condition : condition_status
     Condition : relationship_to_participant
 
 </div>

@@ -397,12 +397,32 @@
 <td>Any resource that has its own identifier</td>
 </tr>
 <tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="BiologicProduct/">BiologicProduct</a></td>
+<td>A living organism, or a metabolically active biological system such as a cell culture, tissue culture, or organoid that is maintained or propagated in vitro.</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="BodySite/">BodySite</a></td>
+<td>A site in the body of an organism, typically described in terms of an anatomical concept and optional qualifiers (e.g. left/right, upper/lower). But body sites as defined here may include non-canonical sites, such as an implanted medical device.</td>
+</tr>
+<tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Condition/">Condition</a></td>
 <td>Conditions are records of a Person suggesting the presence of a disease or medical condition stated as a diagnosis, a sign or a symptom, which is either observed by a Provider or reported by the patient. Conditions are recorded in different sources and levels of standardization.</td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Demography/">Demography</a></td>
 <td>Demographics about an individual or animal receiving care or other health-related services.</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DimensionalObservation/">DimensionalObservation</a></td>
+<td>A structured object that describes a single data item about the physical dimensions  of an entity (e.g. length width, area), as generated through a point-in-time observation or measurement.</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DimensionalObservationSet/">DimensionalObservationSet</a></td>
+<td>A set of one or more discrete observations about the physical dimensions of an object (e.g. length, width, area).</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Document/">Document</a></td>
+<td>A collection of information intented to be understood together as a whole, and codified in human-readable form.</td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Organization/">Organization</a></td>
@@ -415,6 +435,10 @@
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Person/">Person</a></td>
 <td>Administrative information about an individual or animal receiving care or other health-related services.</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Quantity/">Quantity</a></td>
+<td>A structured object to represent an amount of something (e.g., weight, mass, length, duration of time) - including a value and unit.</td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Questionnaire/">Questionnaire</a></td>
@@ -431,6 +455,46 @@
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ResearchStudy/">ResearchStudy</a></td>
 <td>A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge. This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques. A ResearchStudy involves the gathering of information about human or animal subjects.</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Specimen/">Specimen</a></td>
+<td>Any material taken as a sample from a biological entity (living or dead), or from a physical object or the environment. Specimens are usually collected as an example of their kind, often for use in some investigation.</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="SpecimenContainer/">SpecimenContainer</a></td>
+<td>A vessel in which a specimen is held or to which it is attached - for storage or as a substrate for growth (e.g. a cell culture dish) or analysis (e.g. a microscope slide or 96-well plate)</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="SpecimenCreationActivity/">SpecimenCreationActivity</a></td>
+<td>The process of creating a specimen. This may occur through observing and/or collecting material from an biological source or natural setting, or through derivation from an existing specimen (e.g. via portioning or aliquoting).</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="SpecimenProcessingActivity/">SpecimenProcessingActivity</a></td>
+<td>An activity that modifies the physical structure, composition, or state of a specimen. Unlike SpecimenCreation, SpecimenProcessing activities do not result in the generation of new entities - they take a single specimen as input, and output that same specimen.</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="SpecimenQualityObservation/">SpecimenQualityObservation</a></td>
+<td>A structured object that describes a characteristic of a specimen indicative of its quality or suitability for use, as generated through a point-in-time observation or measurement.</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="SpecimenQuantityObservation/">SpecimenQuantityObservation</a></td>
+<td>A structured object that describes a single data item about the quantity of an entity, as generated through a point-in-time observation or measurement.</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="SpecimenStorageActivity/">SpecimenStorageActivity</a></td>
+<td>An activity in which a specimen is stored or maintained in a particular location, container, or state. Unlike 'processing' activities, storage does not alter the</td>
+</tr>
+<tr>
+<td>intrinsic physical nature of a specimen.</td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="SpecimenTransportActivity/">SpecimenTransportActivity</a></td>
+<td>An activity through which a specimen is transported between locations or organizations.</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Substance/">Substance</a></td>
+<td>A type of material substance, or instance thereof,  as used in a particular application. May include information about the role the substance played in a particular application.</td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="TimePoint/">TimePoint</a></td>
@@ -484,6 +548,14 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="activity_type/">activity_type</a></td>
+<td>The high-level type of creation activity</td>
+</tr>
+<tr>
+<td><a href="additive/">additive</a></td>
+<td>A material substance added to the container (typically to support the primary...</td>
+</tr>
+<tr>
 <td><a href="age_at_condition_end/">age_at_condition_end</a></td>
 <td>The Participant's age (expressed in days) when the condition was recorded as ...</td>
 </tr>
@@ -516,6 +588,10 @@
 <td>A secondary name for the organization such as a short name or abbreviation (e</td>
 </tr>
 <tr>
+<td><a href="analyte_type/">analyte_type</a></td>
+<td>For specimens of type 'analyte' (or an 'aliquot' derived from an analyte), th...</td>
+</tr>
+<tr>
 <td><a href="associated_participant/">associated_participant</a></td>
 <td>A reference to the Participant that is associated with this record</td>
 </tr>
@@ -536,12 +612,28 @@
 <td>A label given to a group of animals homogeneous in appearance and other chara...</td>
 </tr>
 <tr>
+<td><a href="category/">category</a></td>
+<td>The general category of observation described</td>
+</tr>
+<tr>
 <td><a href="cause_of_death/">cause_of_death</a></td>
 <td>Coded value indicating the circumstance or condition that results in the deat...</td>
 </tr>
 <tr>
+<td><a href="cellular_composition_type/">cellular_composition_type</a></td>
+<td>A term describing the type of cell or cellular material comprising a specimen</td>
+</tr>
+<tr>
 <td><a href="code/">code</a></td>
 <td>Corresponding concept for this item in a terminology</td>
+</tr>
+<tr>
+<td><a href="collection_method_type/">collection_method_type</a></td>
+<td>The type of method applied in collecting a sample from its original source</td>
+</tr>
+<tr>
+<td><a href="collection_site/">collection_site</a></td>
+<td>The anatomic site from which a specimen was collected</td>
 </tr>
 <tr>
 <td><a href="condition_concept/">condition_concept</a></td>
@@ -560,12 +652,32 @@
 <td>Data Use Restrictions that are used to indicate permissions/restrictions for ...</td>
 </tr>
 <tr>
+<td><a href="contained_in/">contained_in</a></td>
+<td>A physical container in which a specimen is presently held or attached -  as ...</td>
+</tr>
+<tr>
+<td><a href="container/">container</a></td>
+<td>A container in which the specimen is held or affixed during its storage</td>
+</tr>
+<tr>
+<td><a href="container_number/">container_number</a></td>
+<td>Informal number by which the container is referenced  or identified (e</td>
+</tr>
+<tr>
+<td><a href="container_type/">container_type</a></td>
+<td>The kind of the container</td>
+</tr>
+<tr>
 <td><a href="copyright/">copyright</a></td>
 <td>Textual description of any use and/or publishing restrictions</td>
 </tr>
 <tr>
 <td><a href="copyright_label/">copyright_label</a></td>
 <td>Copyright holder and year(s)</td>
+</tr>
+<tr>
+<td><a href="creation_activity/">creation_activity</a></td>
+<td>The activity through which a specimen was created, by removing material from ...</td>
 </tr>
 <tr>
 <td><a href="date_ended/">date_ended</a></td>
@@ -580,12 +692,32 @@
 <td>An explicitly specified timepoint described in terms of a date and optionally...</td>
 </tr>
 <tr>
+<td><a href="derivation_method_type/">derivation_method_type</a></td>
+<td>The type of method applied to derive a new specimen from an existing one</td>
+</tr>
+<tr>
+<td><a href="derived_product/">derived_product</a></td>
+<td>A 'living' biologically active product that was derived from the specimen (e</td>
+</tr>
+<tr>
 <td><a href="description/">description</a></td>
 <td>A free text field to capture additional info/explanation about the research s...</td>
 </tr>
 <tr>
 <td><a href="description_shortened/">description_shortened</a></td>
 <td>An abbreviated description of a research program, project, or study</td>
+</tr>
+<tr>
+<td><a href="dimensional_measures/">dimensional_measures</a></td>
+<td>Observations about the current physical dimensions of an object (e</td>
+</tr>
+<tr>
+<td><a href="document_type/">document_type</a></td>
+<td>The high-level type of the document (e</td>
+</tr>
+<tr>
+<td><a href="duration/">duration</a></td>
+<td>The length of time over which the activity was performed</td>
 </tr>
 <tr>
 <td><a href="entries/">entries</a></td>
@@ -598,6 +730,14 @@
 <tr>
 <td><a href="event_type/">event_type</a></td>
 <td>An event that occurred at the point in time specified by this TimePoint</td>
+</tr>
+<tr>
+<td><a href="focus/">focus</a></td>
+<td>The entity that the report is primarily about</td>
+</tr>
+<tr>
+<td><a href="growth_rate/">growth_rate</a></td>
+<td>When the specimen an actively growing model system, such as a cell or tissue ...</td>
 </tr>
 <tr>
 <td><a href="has_questionnaire_item/">has_questionnaire_item</a></td>
@@ -632,12 +772,24 @@
 <td>A reference to the Study(s) of which this Participant is a member</td>
 </tr>
 <tr>
+<td><a href="method_type/">method_type</a></td>
+<td>A type of method used in generating the Observation result</td>
+</tr>
+<tr>
 <td><a href="name/">name</a></td>
 <td>An unabridged name of a research program, project, or study</td>
 </tr>
 <tr>
 <td><a href="name_shortened/">name_shortened</a></td>
 <td>An abbreviated name of a research program, project, or study</td>
+</tr>
+<tr>
+<td><a href="observation_type/">observation_type</a></td>
+<td>The specific type of observation made - i</td>
+</tr>
+<tr>
+<td><a href="observations/">observations</a></td>
+<td>A set of one or more more atomic observations that are conceptually or logica...</td>
 </tr>
 <tr>
 <td><a href="offset_from_index/">offset_from_index</a></td>
@@ -652,8 +804,24 @@
 <td>The Organization through which a subject was enrolled on a ResearchStudy</td>
 </tr>
 <tr>
+<td><a href="parent_container/">parent_container</a></td>
+<td>A larger container of which this container is a part (e</td>
+</tr>
+<tr>
+<td><a href="parent_specimen/">parent_specimen</a></td>
+<td>An existing specimen from which the specimen of interest was directly derived...</td>
+</tr>
+<tr>
 <td><a href="part_of/">part_of</a></td>
 <td>A reference to a parent ResearchStudy (e</td>
+</tr>
+<tr>
+<td><a href="passage_number/">passage_number</a></td>
+<td>When the specimen an actively growing model system, such as a cell or tissue ...</td>
+</tr>
+<tr>
+<td><a href="performed_by/">performed_by</a></td>
+<td>The organization or group that performed the activity</td>
 </tr>
 <tr>
 <td><a href="period_end/">period_end</a></td>
@@ -668,12 +836,40 @@
 <td>The investigator or investigators leading a project</td>
 </tr>
 <tr>
+<td><a href="processing_activity/">processing_activity</a></td>
+<td>An activity that modifies the physical structure, composition, or state of a ...</td>
+</tr>
+<tr>
+<td><a href="product_type/">product_type</a></td>
+<td>The high level type of model system (e</td>
+</tr>
+<tr>
 <td><a href="publisher/">publisher</a></td>
 <td>Name of the publisher/steward (organization or individual) of this Questionna...</td>
 </tr>
 <tr>
+<td><a href="qualifier/">qualifier</a></td>
+<td>A qualifier that further refines or specifies the location of the body site -...</td>
+</tr>
+<tr>
+<td><a href="quality_measure/">quality_measure</a></td>
+<td>An observation about characteristics of a specimen that are indicative of its...</td>
+</tr>
+<tr>
+<td><a href="quantity_collected/">quantity_collected</a></td>
+<td>The quantity of material in the specimen as originally collected from its ori...</td>
+</tr>
+<tr>
+<td><a href="quantity_measure/">quantity_measure</a></td>
+<td>An observation related to the present quantity of a specimen - e</td>
+</tr>
+<tr>
 <td><a href="race/">race</a></td>
 <td>An arbitrary classification of a taxonomic group that is a division of a spec...</td>
+</tr>
+<tr>
+<td><a href="related_document/">related_document</a></td>
+<td>A reference to an external document that is about or related to the specimen ...</td>
 </tr>
 <tr>
 <td><a href="relationship_to_participant/">relationship_to_participant</a></td>
@@ -688,20 +884,60 @@
 <td></td>
 </tr>
 <tr>
+<td><a href="role/">role</a></td>
+<td>A role played by the substance in a particular application (e</td>
+</tr>
+<tr>
+<td><a href="section_location/">section_location</a></td>
+<td>The location in a parent specimen from which a section/portion was excised (e</td>
+</tr>
+<tr>
 <td><a href="sex/">sex</a></td>
 <td>The biologic character or quality that distinguishes male and female from one...</td>
+</tr>
+<tr>
+<td><a href="site/">site</a></td>
+<td>A term describing any site in the body</td>
+</tr>
+<tr>
+<td><a href="source_material_type/">source_material_type</a></td>
+<td>The general kind of material from which the specimen was derived</td>
+</tr>
+<tr>
+<td><a href="source_participant/">source_participant</a></td>
+<td>A specific Subject from which the specimen was directly or indirectly derived</td>
 </tr>
 <tr>
 <td><a href="species/">species</a></td>
 <td>The scientific binomial name for the species of the Person (e</td>
 </tr>
 <tr>
+<td><a href="specimen_order/">specimen_order</a></td>
+<td>A numeric value that represents the sequential order of this creation activit...</td>
+</tr>
+<tr>
+<td><a href="specimen_type/">specimen_type</a></td>
+<td>The high-level type of the specimen, based on its derivation provenance (i</td>
+</tr>
+<tr>
 <td><a href="sponsor/">sponsor</a></td>
 <td>An entity that is responsible for the initiation, management, and/or financin...</td>
 </tr>
 <tr>
+<td><a href="storage_activity/">storage_activity</a></td>
+<td>An activity that results in the storage or maintenance of a specimen in a par...</td>
+</tr>
+<tr>
 <td><a href="study_arm/">study_arm</a></td>
 <td>The arm(s) of the study on which the Participant is enrolled</td>
+</tr>
+<tr>
+<td><a href="substance_quantity/">substance_quantity</a></td>
+<td>The quantity of substance this instance stands for</td>
+</tr>
+<tr>
+<td><a href="substance_type/">substance_type</a></td>
+<td>The specific type of the substance - at as granular a level as possible</td>
 </tr>
 <tr>
 <td><a href="system/">system</a></td>
@@ -716,8 +952,24 @@
 <td>Name for this Questionnaire (human friendly)</td>
 </tr>
 <tr>
+<td><a href="transport_activity/">transport_activity</a></td>
+<td>An activity through which the specimen is transported between locations</td>
+</tr>
+<tr>
+<td><a href="transport_destination/">transport_destination</a></td>
+<td>An organization (facility, site, lab, etc) to which the specimen is delivered...</td>
+</tr>
+<tr>
+<td><a href="transport_origin/">transport_origin</a></td>
+<td>An organization (facility, site, lab, etc) from which the specimen was transp...</td>
+</tr>
+<tr>
 <td><a href="type/">type</a></td>
 <td></td>
+</tr>
+<tr>
+<td><a href="unit/">unit</a></td>
+<td>A coded or free text (in the</td>
 </tr>
 <tr>
 <td><a href="url/">url</a></td>
@@ -726,6 +978,18 @@
 <tr>
 <td><a href="value/">value</a></td>
 <td>A general slot to hold a value</td>
+</tr>
+<tr>
+<td><a href="value_concept/">value_concept</a></td>
+<td>A coded value representing a quantity (e</td>
+</tr>
+<tr>
+<td><a href="value_decimal/">value_decimal</a></td>
+<td>An amount, in the given units (if specified)</td>
+</tr>
+<tr>
+<td><a href="value_quantity/">value_quantity</a></td>
+<td>The result of the observation, encoded as a free-text Quantity</td>
 </tr>
 <tr>
 <td><a href="version/">version</a></td>
@@ -763,6 +1027,10 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="AnalyteTypeEnum/">AnalyteTypeEnum</a></td>
+<td></td>
+</tr>
+<tr>
 <td><a href="CellularOrganismSpeciesEnum/">CellularOrganismSpeciesEnum</a></td>
 <td>A constrained set of enumerative values containing the NCBITaxon values for c...</td>
 </tr>
@@ -799,8 +1067,44 @@
 <td>A constrained set of enumerative values containing the United States Office o...</td>
 </tr>
 <tr>
+<td><a href="SectionLocationEnum/">SectionLocationEnum</a></td>
+<td>The location in a parent specimen from which a section/portion was excised</td>
+</tr>
+<tr>
 <td><a href="SexEnum/">SexEnum</a></td>
 <td>A constrained set of enumerative values containing the OMOP values for sex</td>
+</tr>
+<tr>
+<td><a href="SourceMaterialTypeEnum/">SourceMaterialTypeEnum</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="SpecimenCollectionMethodType/">SpecimenCollectionMethodType</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="SpecimenCreationActivityTypeEnum/">SpecimenCreationActivityTypeEnum</a></td>
+<td>The high-level type of activity through which the specimen was generated (i</td>
+</tr>
+<tr>
+<td><a href="SpecimenProcessingActivityTypeEnum/">SpecimenProcessingActivityTypeEnum</a></td>
+<td>The high-level type of processing activity performed</td>
+</tr>
+<tr>
+<td><a href="SpecimenQualityObservationMethodEnum/">SpecimenQualityObservationMethodEnum</a></td>
+<td>A type of method used in determining the quantity of a specimen</td>
+</tr>
+<tr>
+<td><a href="SpecimenQualityObservationTypeEnum/">SpecimenQualityObservationTypeEnum</a></td>
+<td>Types of measurements that reflect the quality of a specimen or its suitabili...</td>
+</tr>
+<tr>
+<td><a href="SpecimenQuantityObservationTypeEnum/">SpecimenQuantityObservationTypeEnum</a></td>
+<td>Measures related to the quantity of a specimen or analyte it currently contai...</td>
+</tr>
+<tr>
+<td><a href="SpecimenTypeEnum/">SpecimenTypeEnum</a></td>
+<td>A high-level type of specimen, based on its derivation provenance (i</td>
 </tr>
 <tr>
 <td><a href="VertebrateBreedEnum/">VertebrateBreedEnum</a></td>

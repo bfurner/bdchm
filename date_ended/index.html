@@ -274,19 +274,6 @@
     Identifier and Mapping Information
   </a>
   
-    <nav class="md-nav" aria-label="Identifier and Mapping Information">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#schema-source" class="md-nav__link">
-    Schema Source
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -317,7 +304,6 @@
 
 
 <h1 id="slot-date_ended">Slot: date_ended</h1>
-<p><em>The date when the research project ended.</em></p>
 <p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/date_ended">bdchm:date_ended</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -336,29 +322,45 @@
 <td>A process where a researcher or organization plans and then executes a series...</td>
 <td>no</td>
 </tr>
+<tr>
+<td><a href="../SpecimenCreationActivity/">SpecimenCreationActivity</a></td>
+<td>The process of creating a specimen</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../SpecimenProcessingActivity/">SpecimenProcessingActivity</a></td>
+<td>An activity that modifies the physical structure, composition, or state of a ...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../SpecimenStorageActivity/">SpecimenStorageActivity</a></td>
+<td>An activity in which a specimen is stored or maintained in a particular locat...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../SpecimenTransportActivity/">SpecimenTransportActivity</a></td>
+<td>An activity through which a specimen is transported between locations or orga...</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../TimePoint/">TimePoint</a></li>
+<li>Range: <a href="../String/">String</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
-<h3 id="schema-source">Schema Source</h3>
-<ul>
-<li>from schema: https://w3id.org/nhlbidatastage/bdchm</li>
-</ul>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
 <pre><code class="language-yaml">name: date_ended
-description: The date when the research project ended.
-from_schema: https://w3id.org/nhlbidatastage/bdchm
-rank: 1000
 alias: date_ended
-owner: ResearchStudy
 domain_of:
 - ResearchStudy
-range: TimePoint
+- SpecimenCreationActivity
+- SpecimenProcessingActivity
+- SpecimenStorageActivity
+- SpecimenTransportActivity
+range: string
 
 </code></pre>
 

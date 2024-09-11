@@ -573,6 +573,9 @@ attributes:
     - Participant
     - ResearchStudy
     - Questionnaire
+    - Document
+    - Specimen
+    - BiologicProduct
     range: string
   description_shortened:
     name: description_shortened
@@ -604,6 +607,10 @@ attributes:
     owner: ResearchStudy
     domain_of:
     - ResearchStudy
+    - SpecimenCreationActivity
+    - SpecimenProcessingActivity
+    - SpecimenStorageActivity
+    - SpecimenTransportActivity
     range: TimePoint
   date_ended:
     name: date_ended
@@ -614,6 +621,10 @@ attributes:
     owner: ResearchStudy
     domain_of:
     - ResearchStudy
+    - SpecimenCreationActivity
+    - SpecimenProcessingActivity
+    - SpecimenStorageActivity
+    - SpecimenTransportActivity
     range: TimePoint
   url:
     name: url
@@ -626,6 +637,7 @@ attributes:
     domain_of:
     - ResearchStudy
     - Questionnaire
+    - Document
     range: uriorcurie
   part_of:
     name: part_of
@@ -714,6 +726,9 @@ attributes:
     - Questionnaire
     - QuestionnaireItem
     - Condition
+    - Document
+    - Specimen
+    - BiologicProduct
     range: Identifier
   id:
     name: id

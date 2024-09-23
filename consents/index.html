@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://bfurner.github.io/bdchm/consent_code/">
+        <link rel="canonical" href="https://bfurner.github.io/bdchm/consents/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
     
     
       
-        <title>Slot: consent_code - BioData Catalyst Harmonized Model</title>
+        <title>Slot: consents - BioData Catalyst Harmonized Model</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-consent_code" class="md-skip">
+        <a href="#slot-consents" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: consent_code
+              Slot: consents
             
           </span>
         </div>
@@ -274,19 +274,6 @@
     Identifier and Mapping Information
   </a>
   
-    <nav class="md-nav" aria-label="Identifier and Mapping Information">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#schema-source" class="md-nav__link">
-    Schema Source
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -310,15 +297,14 @@
                 
                   
 
-  <a href="https://github.com/bfurner/bdchm/edit/master/docs/consent_code.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/bfurner/bdchm/edit/master/docs/consents.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-consent_code">Slot: consent_code</h1>
-<p><em>Data Use Restrictions that are used to indicate permissions/restrictions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used. Based on the Data Use Ontology : see http://www.obofoundry.org/ontology/duo.html</em></p>
-<p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/consent_code">bdchm:consent_code</a></p>
+<h1 id="slot-consents">Slot: consents</h1>
+<p>URI: <a href="https://w3id.org/nhlbidatastage/bdchm/consents">bdchm:consents</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -332,37 +318,31 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Consent/">Consent</a></td>
-<td>An entity that can be used to capture consent code and other relevant data ab...</td>
+<td><a href="../Participant/">Participant</a></td>
+<td>A Participant is the entity of interest in a research study, typically a huma...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ResearchStudy/">ResearchStudy</a></td>
+<td>A process where a researcher or organization plans and then executes a series...</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../DataUseEnum/">DataUseEnum</a></li>
+<li>Range: <a href="../String/">String</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
-<h3 id="schema-source">Schema Source</h3>
-<ul>
-<li>from schema: https://w3id.org/nhlbidatastage/bdchm</li>
-</ul>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: consent_code
-description: 'Data Use Restrictions that are used to indicate permissions/restrictions
-  for datasets and/or materials, and relates to the purposes for which datasets and/or
-  material might be removed, stored or used. Based on the Data Use Ontology : see
-  http://www.obofoundry.org/ontology/duo.html'
-from_schema: https://w3id.org/nhlbidatastage/bdchm
-rank: 1000
-multivalued: false
-alias: consent_code
-owner: Consent
+<pre><code class="language-yaml">name: consents
+alias: consents
 domain_of:
-- Consent
-range: DataUseEnum
+- Participant
+- ResearchStudy
+range: string
 
 </code></pre>
 

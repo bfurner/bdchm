@@ -215,9 +215,9 @@
 
           ResearchStudy --&gt; TimePoint : associated_timepoint
 
-      ResearchStudy : consent_code
+      ResearchStudy : consents
 
-          ResearchStudy --&gt; DataUseEnum : consent_code
+          ResearchStudy --&gt; Consent : consents
 
       ResearchStudy : date_ended
 
@@ -352,8 +352,8 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../consent_code/">consent_code</a></td>
-<td>0..* <br/> <a href="../DataUseEnum/">DataUseEnum</a></td>
+<td><a href="../consents/">consents</a></td>
+<td>0..* <br/> <a href="../Consent/">Consent</a></td>
 <td>Data Use Restrictions that are used to indicate permissions/restrictions for ...</td>
 <td>direct</td>
 </tr>
@@ -515,16 +515,15 @@ attributes:
     rank: 1000
     multivalued: true
     range: string
-  consent_code:
-    name: consent_code
+  consents:
+    name: consents
     description: 'Data Use Restrictions that are used to indicate permissions/restrictions
       for datasets and/or materials, and relates to the purposes for which datasets
       and/or material might be removed, stored or used. Based on the Data Use Ontology
       : see http://www.obofoundry.org/ontology/duo.html'
     from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
     multivalued: true
-    range: DataUseEnum
+    range: Consent
 
 </code></pre>
 </details>
@@ -686,20 +685,20 @@ attributes:
     domain_of:
     - ResearchStudy
     range: string
-  consent_code:
-    name: consent_code
+  consents:
+    name: consents
     description: 'Data Use Restrictions that are used to indicate permissions/restrictions
       for datasets and/or materials, and relates to the purposes for which datasets
       and/or material might be removed, stored or used. Based on the Data Use Ontology
       : see http://www.obofoundry.org/ontology/duo.html'
     from_schema: https://w3id.org/nhlbidatastage/bdchm
-    rank: 1000
     multivalued: true
-    alias: consent_code
+    alias: consents
     owner: ResearchStudy
     domain_of:
+    - Participant
     - ResearchStudy
-    range: DataUseEnum
+    range: Consent
   identity:
     name: identity
     description: A 'business' identifier or accession number for the entity, typically

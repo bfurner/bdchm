@@ -217,6 +217,10 @@
 
           Participant --&gt; Person : associated_person
 
+      Participant : consents
+
+          Participant --&gt; Consent : consents
+
       Participant : description
 
       Participant : id
@@ -303,6 +307,12 @@
 <td><a href="../study_arm/">study_arm</a></td>
 <td>0..* <br/> <a href="../String/">String</a></td>
 <td>The arm(s) of the study on which the Participant is enrolled</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../consents/">consents</a></td>
+<td>0..* <br/> <a href="../Consent/">Consent</a></td>
+<td>Data Use Restrictions that are used to indicate permissions/restrictions for ...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -431,6 +441,16 @@ attributes:
     rank: 1000
     multivalued: true
     range: string
+  consents:
+    name: consents
+    description: 'Data Use Restrictions that are used to indicate permissions/restrictions
+      for datasets and/or materials, and relates to the purposes for which datasets
+      and/or material might be removed, stored or used. Based on the Data Use Ontology
+      : see http://www.obofoundry.org/ontology/duo.html'
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    multivalued: true
+    range: Consent
 
 </code></pre>
 </details>
@@ -515,6 +535,21 @@ attributes:
     domain_of:
     - Participant
     range: string
+  consents:
+    name: consents
+    description: 'Data Use Restrictions that are used to indicate permissions/restrictions
+      for datasets and/or materials, and relates to the purposes for which datasets
+      and/or material might be removed, stored or used. Based on the Data Use Ontology
+      : see http://www.obofoundry.org/ontology/duo.html'
+    from_schema: https://w3id.org/nhlbidatastage/bdchm
+    rank: 1000
+    multivalued: true
+    alias: consents
+    owner: Participant
+    domain_of:
+    - Participant
+    - ResearchStudy
+    range: Consent
   associated_person:
     name: associated_person
     description: A reference to the Person that is associated with this record.
